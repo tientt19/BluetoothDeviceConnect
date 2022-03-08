@@ -10,17 +10,41 @@ import CoreBluetooth
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var dataTableView : UITableView!
+    
     var centralManager: CBCentralManager!
     var heartRatePeripheral: CBPeripheral!
     
     let CharacteristicCBUUID2 = CBUUID(string: "FFF1")
     let CharacteristicCBUUID1 = CBUUID(string: "FFF4")
     
+    var holdData = [CGFloat]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         centralManager = CBCentralManager(delegate: self, queue: nil)
+        dataTableView.registerCell(nibName: tableviewCellTableViewCell.self)
     }
 }
+extension ViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
+    }
+}
+
+extension ViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return holdData.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeue(cellClass: tableviewCellTableViewCell.self, forIndexPath: indexPath)
+        cell.textLabel?.text = "\(holdData[indexPath.row])"
+        return cell
+    }
+}
+
+//MARK: - CBCentralManagerDelegate
 
 extension ViewController: CBCentralManagerDelegate {
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
@@ -60,6 +84,7 @@ extension ViewController: CBCentralManagerDelegate {
     }
 }
 
+//MARK: - CBPeripheralDelegate
 extension ViewController: CBPeripheralDelegate {
     
     func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
@@ -75,7 +100,7 @@ extension ViewController: CBPeripheralDelegate {
         guard let characteristics = service.characteristics else { return }
         
         for characteristic in characteristics {
-            print("day la cccc is \(characteristic.uuid)")
+            print("day la characteristic.uuid is \(characteristic.uuid)")
             if characteristic.properties.contains(.read) {
                 peripheral.readValue(for: characteristic)
             }
@@ -92,9 +117,12 @@ extension ViewController: CBPeripheralDelegate {
         case CharacteristicCBUUID1:
             if let xx = characteristic.value {
                 let dataa = [UInt8](xx)
-                print(dataa[4])
-                print(dataa[5])
-                let htBodyFat = HTBodyfat_NewSDK()
+                print(dataa)
+                if dataa.count >= 11 {
+                    if dataa[9] == 0 {
+                        convertData(from: dataa)
+                    }
+                }
             }
         default:
             print("Unhandled Characteristic UUID: \(characteristic.uuid)")
@@ -104,8 +132,42 @@ extension ViewController: CBPeripheralDelegate {
 
 
 extension ViewController {
-    private func heartRate(from characteristic: [UInt8]) -> Int {
-        return 0
+    private func convertData(from chaValue: [UInt8]) {
+        let htBodyFat = HTBodyfat_NewSDK()
+        
+        let weightUnit : String = {
+            var unit = String()
+            if chaValue[8] == 0 {
+                unit = "KG"
+            }
+            return unit
+        }()
+        
+        let weightFloat : Float = {
+            var weight = Float()
+            let convert = Float(chaValue[4])*256 + Float(chaValue[3])
+            weight = Float(convert) * 0.01
+            return weight
+        }()
+        
+        let impedance = Float(chaValue[2]) * 256 + Float(chaValue[1])
+        
+        htBodyFat.getBodyfatWithweightKg(CGFloat(weightFloat), heightCm: 172, sex: THTSexType(rawValue: 1)!, age: 24, impedance: Int(impedance))
+        
+        self.holdData = [htBodyFat.thtBMI,
+                         CGFloat(htBodyFat.thtBMR),
+                         htBodyFat.thtMuscleKg,
+                         htBodyFat.thtBoneKg,
+                         htBodyFat.thtWaterPercentage,
+                         htBodyFat.thtproteinPercentage,
+                         htBodyFat.thtBodyfatPercentage,
+                         CGFloat(htBodyFat.thtVFAL),
+                         htBodyFat.thtBodySMuscleControl,
+                         CGFloat(weightFloat)]
+        DispatchQueue.main.async {
+            self.dataTableView.reloadData()
+        }
+        print("\(weightFloat)\(weightUnit)")
     }
 }
 

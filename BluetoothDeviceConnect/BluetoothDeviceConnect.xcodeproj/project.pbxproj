@@ -15,6 +15,9 @@
 		5224E6C527D6444B00BA5CF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5224E6C327D6444B00BA5CF6 /* LaunchScreen.storyboard */; };
 		5224E6CE27D644B800BA5CF6 /* HTBodyfat_NewSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 5224E6CD27D644B800BA5CF6 /* HTBodyfat_NewSDK.m */; };
 		5224E6D127D644F800BA5CF6 /* HTBodyfat_SDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5224E6D027D644F800BA5CF6 /* HTBodyfat_SDK.a */; };
+		52CE096F27D707B7005DE5CB /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CE096E27D707B7005DE5CB /* UITableViewExtension.swift */; };
+		52CE097227D707E2005DE5CB /* tableviewCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CE097027D707E2005DE5CB /* tableviewCellTableViewCell.swift */; };
+		52CE097327D707E2005DE5CB /* tableviewCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52CE097127D707E2005DE5CB /* tableviewCellTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,9 @@
 		5224E6CF27D644F200BA5CF6 /* HTBodyfat_NewSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTBodyfat_NewSDK.h; sourceTree = "<group>"; };
 		5224E6D027D644F800BA5CF6 /* HTBodyfat_SDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = HTBodyfat_SDK.a; sourceTree = "<group>"; };
 		5224E6D227D6450100BA5CF6 /* HTBodyfat_SDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTBodyfat_SDK.h; sourceTree = "<group>"; };
+		52CE096E27D707B7005DE5CB /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
+		52CE097027D707E2005DE5CB /* tableviewCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableviewCellTableViewCell.swift; sourceTree = "<group>"; };
+		52CE097127D707E2005DE5CB /* tableviewCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = tableviewCellTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,10 +75,13 @@
 				5224E6B827D6444900BA5CF6 /* AppDelegate.swift */,
 				5224E6BA27D6444900BA5CF6 /* SceneDelegate.swift */,
 				5224E6BC27D6444900BA5CF6 /* ViewController.swift */,
+				52CE096E27D707B7005DE5CB /* UITableViewExtension.swift */,
+				5224E6C627D6444B00BA5CF6 /* Info.plist */,
 				5224E6BE27D6444900BA5CF6 /* Main.storyboard */,
 				5224E6C127D6444B00BA5CF6 /* Assets.xcassets */,
 				5224E6C327D6444B00BA5CF6 /* LaunchScreen.storyboard */,
-				5224E6C627D6444B00BA5CF6 /* Info.plist */,
+				52CE097027D707E2005DE5CB /* tableviewCellTableViewCell.swift */,
+				52CE097127D707E2005DE5CB /* tableviewCellTableViewCell.xib */,
 			);
 			path = BluetoothDeviceConnect;
 			sourceTree = "<group>";
@@ -148,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5224E6C527D6444B00BA5CF6 /* LaunchScreen.storyboard in Resources */,
+				52CE097327D707E2005DE5CB /* tableviewCellTableViewCell.xib in Resources */,
 				5224E6C227D6444B00BA5CF6 /* Assets.xcassets in Resources */,
 				5224E6C027D6444900BA5CF6 /* Main.storyboard in Resources */,
 			);
@@ -161,8 +171,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5224E6BD27D6444900BA5CF6 /* ViewController.swift in Sources */,
+				52CE096F27D707B7005DE5CB /* UITableViewExtension.swift in Sources */,
 				5224E6CE27D644B800BA5CF6 /* HTBodyfat_NewSDK.m in Sources */,
 				5224E6B927D6444900BA5CF6 /* AppDelegate.swift in Sources */,
+				52CE097227D707E2005DE5CB /* tableviewCellTableViewCell.swift in Sources */,
 				5224E6BB27D6444900BA5CF6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
