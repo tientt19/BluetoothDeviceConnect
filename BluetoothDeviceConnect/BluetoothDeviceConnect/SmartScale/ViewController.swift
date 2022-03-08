@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     let CharacteristicCBUUID1 = CBUUID(string: "FFF4")
     
     var holdData = [CGFloat]()
+    var titleArray = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +40,7 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeue(cellClass: tableviewCellTableViewCell.self, forIndexPath: indexPath)
-        cell.textLabel?.text = "\(holdData[indexPath.row])"
+        cell.textLabel?.text = titleArray[indexPath.row]  + ": \(holdData[indexPath.row])"
         return cell
     }
 }
@@ -150,10 +151,21 @@ extension ViewController {
             return weight
         }()
         
-        let impedance = Float(chaValue[2]) * 256 + Float(chaValue[1])
+        let impedance = (Float(chaValue[2]) * 256 + Float(chaValue[1]))
         
         htBodyFat.getBodyfatWithweightKg(CGFloat(weightFloat), heightCm: 172, sex: THTSexType(rawValue: 1)!, age: 24, impedance: Int(impedance))
         
+        
+        self.titleArray = ["htBodyFat.thtBMI",
+                           "CGFloat(htBodyFat.thtBM",
+                           "htBodyFat.thtMuscleKg",
+                           "htBodyFat.thtBoneK)",
+                           "htBodyFat.thtWaterPercentage",
+                           "htBodyFat.thtproteinPercentage",
+                           "htBodyFat.thtBodyfatPercentage",
+                           "CGFloat(htBodyFat.thtVFAL)",
+                           "htBodyFat.thtBodySMuscleControl",
+                           "CGFloat(weightFloat)"]
         self.holdData = [htBodyFat.thtBMI,
                          CGFloat(htBodyFat.thtBMR),
                          htBodyFat.thtMuscleKg,

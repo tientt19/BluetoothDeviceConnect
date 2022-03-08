@@ -18,6 +18,8 @@
 		52CE096F27D707B7005DE5CB /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CE096E27D707B7005DE5CB /* UITableViewExtension.swift */; };
 		52CE097227D707E2005DE5CB /* tableviewCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CE097027D707E2005DE5CB /* tableviewCellTableViewCell.swift */; };
 		52CE097327D707E2005DE5CB /* tableviewCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52CE097127D707E2005DE5CB /* tableviewCellTableViewCell.xib */; };
+		52CE097C27D71483005DE5CB /* BioLightConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CE097B27D71483005DE5CB /* BioLightConnect.swift */; };
+		52CE097E27D731BB005DE5CB /* Dlog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CE097D27D731BB005DE5CB /* Dlog.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		52CE096E27D707B7005DE5CB /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		52CE097027D707E2005DE5CB /* tableviewCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableviewCellTableViewCell.swift; sourceTree = "<group>"; };
 		52CE097127D707E2005DE5CB /* tableviewCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = tableviewCellTableViewCell.xib; sourceTree = "<group>"; };
+		52CE097B27D71483005DE5CB /* BioLightConnect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioLightConnect.swift; sourceTree = "<group>"; };
+		52CE097D27D731BB005DE5CB /* Dlog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dlog.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,18 +74,16 @@
 		5224E6B727D6444900BA5CF6 /* BluetoothDeviceConnect */ = {
 			isa = PBXGroup;
 			children = (
-				5224E6D327D6454300BA5CF6 /* HTBodyFat */,
-				5224E6CC27D644B700BA5CF6 /* BluetoothDeviceConnect-Bridging-Header.h */,
+				52CE097A27D7141D005DE5CB /* Cell */,
+				52CE097527D713CD005DE5CB /* BioLight */,
+				52CE097427D713BD005DE5CB /* SmartScale */,
 				5224E6B827D6444900BA5CF6 /* AppDelegate.swift */,
 				5224E6BA27D6444900BA5CF6 /* SceneDelegate.swift */,
-				5224E6BC27D6444900BA5CF6 /* ViewController.swift */,
-				52CE096E27D707B7005DE5CB /* UITableViewExtension.swift */,
 				5224E6C627D6444B00BA5CF6 /* Info.plist */,
 				5224E6BE27D6444900BA5CF6 /* Main.storyboard */,
 				5224E6C127D6444B00BA5CF6 /* Assets.xcassets */,
 				5224E6C327D6444B00BA5CF6 /* LaunchScreen.storyboard */,
-				52CE097027D707E2005DE5CB /* tableviewCellTableViewCell.swift */,
-				52CE097127D707E2005DE5CB /* tableviewCellTableViewCell.xib */,
+				52CE097D27D731BB005DE5CB /* Dlog.swift */,
 			);
 			path = BluetoothDeviceConnect;
 			sourceTree = "<group>";
@@ -95,6 +97,34 @@
 				5224E6D227D6450100BA5CF6 /* HTBodyfat_SDK.h */,
 			);
 			path = HTBodyFat;
+			sourceTree = "<group>";
+		};
+		52CE097427D713BD005DE5CB /* SmartScale */ = {
+			isa = PBXGroup;
+			children = (
+				5224E6D327D6454300BA5CF6 /* HTBodyFat */,
+				5224E6CC27D644B700BA5CF6 /* BluetoothDeviceConnect-Bridging-Header.h */,
+				5224E6BC27D6444900BA5CF6 /* ViewController.swift */,
+				52CE096E27D707B7005DE5CB /* UITableViewExtension.swift */,
+			);
+			path = SmartScale;
+			sourceTree = "<group>";
+		};
+		52CE097527D713CD005DE5CB /* BioLight */ = {
+			isa = PBXGroup;
+			children = (
+				52CE097B27D71483005DE5CB /* BioLightConnect.swift */,
+			);
+			path = BioLight;
+			sourceTree = "<group>";
+		};
+		52CE097A27D7141D005DE5CB /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				52CE097027D707E2005DE5CB /* tableviewCellTableViewCell.swift */,
+				52CE097127D707E2005DE5CB /* tableviewCellTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,7 +203,9 @@
 				5224E6BD27D6444900BA5CF6 /* ViewController.swift in Sources */,
 				52CE096F27D707B7005DE5CB /* UITableViewExtension.swift in Sources */,
 				5224E6CE27D644B800BA5CF6 /* HTBodyfat_NewSDK.m in Sources */,
+				52CE097E27D731BB005DE5CB /* Dlog.swift in Sources */,
 				5224E6B927D6444900BA5CF6 /* AppDelegate.swift in Sources */,
+				52CE097C27D71483005DE5CB /* BioLightConnect.swift in Sources */,
 				52CE097227D707E2005DE5CB /* tableviewCellTableViewCell.swift in Sources */,
 				5224E6BB27D6444900BA5CF6 /* SceneDelegate.swift in Sources */,
 			);
@@ -345,7 +377,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tientran.BluetoothDeviceConnect;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "BluetoothDeviceConnect/BluetoothDeviceConnect-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/Valerian/Documents/BluetoothDeviceConnect/BluetoothDeviceConnect/BluetoothDeviceConnect/SmartScale/BluetoothDeviceConnect-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -380,7 +412,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tientran.BluetoothDeviceConnect;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "BluetoothDeviceConnect/BluetoothDeviceConnect-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/Valerian/Documents/BluetoothDeviceConnect/BluetoothDeviceConnect/BluetoothDeviceConnect/SmartScale/BluetoothDeviceConnect-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
