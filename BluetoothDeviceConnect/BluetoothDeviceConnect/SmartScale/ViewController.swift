@@ -182,6 +182,3 @@ extension ViewController {
         print("\(weightFloat)\(weightUnit)")
     }
 }
-
-
-

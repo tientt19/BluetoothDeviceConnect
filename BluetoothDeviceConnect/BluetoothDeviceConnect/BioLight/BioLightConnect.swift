@@ -8,39 +8,15 @@
 import UIKit
 import CoreBluetooth
 
-class DataBlock {
-    var id : UInt8
-    var dataSegment : [UInt8]
+enum Bit: UInt8, CustomStringConvertible {
+    case zero, one
     
-    init(id : UInt8, dataSegment: [UInt8]) {
-        self.id = id
-        self.dataSegment = dataSegment
-    }
-    
-    func handleWithId(with id : UInt8) {
-        switch id {
-        case 40:
-            dLogDebug(dataSegment)
-        case 41:
-            dLogDebug(dataSegment)
-        case 42:
-            _ = ""
-        case 43:
-            _ = ""
-        case 44:
-            _ = ""
-        case 45:
-            _ = ""
-        case 47:
-            _ = ""
-        case 48:
-            _ = ""
-        case 49:
-            _ = ""
-        case 50:
-            _ = ""
-        default:
-            dLogDebug("error")
+    var description: String {
+        switch self {
+        case .one:
+            return "1"
+        case .zero:
+            return "0"
         }
     }
 }
@@ -48,11 +24,25 @@ class DataBlock {
 class BioLightConnect: UIViewController {
     var centralManager: CBCentralManager!
     var bioLightPeripheral: CBPeripheral!
+    var measurementState = false
+    
+    @IBOutlet weak var statusLabel : UILabel!
+    @IBOutlet weak var sysLabel : UILabel!
+    @IBOutlet weak var prLabel : UILabel!
+    @IBOutlet weak var diaLabel : UILabel!
+    @IBOutlet weak var mapLabel : UILabel!
+    @IBOutlet weak var errorLabel : UILabel!
+    
+    var sysValue = Int()
+    var diaValue = Int()
+    var mapValue = Int()
+    var prValue = Int()
     
     let CharacteristicCBUUID1 = CBUUID(string: "FFF4")
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        statusLabel.text = "None"
         centralManager = CBCentralManager(delegate: self, queue: nil)
     }
 }
@@ -111,7 +101,6 @@ extension BioLightConnect: CBPeripheralDelegate {
         guard let characteristics = service.characteristics else { return }
         
         for characteristic in characteristics {
-            //            print("day la characteristic.uuid is \(characteristic.uuid)")
             if characteristic.uuid == CharacteristicCBUUID1 {
                 if characteristic.properties.contains(.read) {
                     peripheral.readValue(for: characteristic)
@@ -140,11 +129,91 @@ extension BioLightConnect: CBPeripheralDelegate {
 
 extension BioLightConnect {
     func handePacketReceive(data : [UInt8]) {
+        
+        func bits(fromByte byte: UInt8) -> [Bit] {
+            var byte = byte
+            var bits = [Bit](repeating: .zero, count: 8)
+            for i in 0..<8 {
+                let currentBit = byte & 0x01
+                if currentBit != 0 {
+                    bits[i] = .one
+                }
+                
+                byte >>= 1
+            }
+            
+            return bits
+        }
+        
+        func turnInt(_ x : UInt8) -> Int {
+            return Int(x)
+        }
+        
         var `data` = data
         _ = data.removeFirst()
         _ = data.removeLast()
         _ = data.removeFirst()
-        let dataBlock = DataBlock(id: data.removeFirst(), dataSegment: data)
-        dataBlock.handleWithId(with: dataBlock.id)
+        let id = data.removeFirst()
+        let dataSegment = data
+        
+        switch id {
+        case 40:
+            measurementState = true
+            statusLabel.text = "Measuring"
+            guard dataSegment.count > 0 else {
+                return
+            }
+            let sys = dataSegment[0]
+            self.sysValue = Int(sys)
+            sysLabel.text = "SYS Value : \(sysValue)"
+        case 41:
+            measurementState = false
+            guard dataSegment.count > 0 else {
+                return
+            }
+            
+            let errorByte = dataSegment[1]
+            if errorByte == 0 {
+                let firstByte = dataSegment[0]
+                sysValue = turnInt(bits(fromByte: firstByte)[0].rawValue) * 256 + turnInt(dataSegment[2])
+                diaValue = turnInt(bits(fromByte: firstByte)[1].rawValue) * 256 + turnInt(dataSegment[3])
+                mapValue = turnInt(bits(fromByte: firstByte)[2].rawValue) * 256 + turnInt(dataSegment[4])
+                prValue = turnInt(bits(fromByte: firstByte)[3].rawValue) * 256 + turnInt(dataSegment[5])
+                sysLabel.text = "SYS Value : \(sysValue)"
+                diaLabel.text = "DIA Value : \(diaValue)"
+                mapLabel.text = "MAP Value : \(mapValue)"
+                prLabel.text = "PR Value : \(prValue)"
+            } else {
+                if errorByte == 6 || errorByte == 20 {
+                    dLogDebug("error device")
+                    errorLabel.text = "ERROR : error device"
+                } else if errorByte == 11 || errorByte == 13 {
+                    dLogDebug("error movement")
+                    errorLabel.text = "ERROR : error movement"
+                } else if errorByte == 19 {
+                    dLogDebug("error timeout")
+                    errorLabel.text = "ERROR : error timeout"
+                }
+            }
+            
+            guard dataSegment.count > 0 else {
+                return
+            }
+        case 42:
+            guard dataSegment.count > 0 else {
+                return
+            }
+            let status = bits(fromByte: dataSegment[0])[4].rawValue
+            if status == 0 {
+                measurementState = false
+                statusLabel.text = "none"
+            } else {
+                measurementState = true
+                statusLabel.text = "measuring"
+            }
+            print(status)
+        default:
+            break
+        }
     }
 }
