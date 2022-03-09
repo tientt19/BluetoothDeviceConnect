@@ -129,27 +129,9 @@ extension BioLightConnect: CBPeripheralDelegate {
 
 extension BioLightConnect {
     func handePacketReceive(data : [UInt8]) {
-        
-        func bits(fromByte byte: UInt8) -> [Bit] {
-            var byte = byte
-            var bits = [Bit](repeating: .zero, count: 8)
-            for i in 0..<8 {
-                let currentBit = byte & 0x01
-                if currentBit != 0 {
-                    bits[i] = .one
-                }
-                
-                byte >>= 1
-            }
-            
-            return bits
-        }
-        
-        func turnInt(_ x : UInt8) -> Int {
-            return Int(x)
-        }
-        
+    
         var `data` = data
+        
         _ = data.removeFirst()
         _ = data.removeLast()
         _ = data.removeFirst()
@@ -215,5 +197,26 @@ extension BioLightConnect {
         default:
             break
         }
+    }
+}
+
+extension BioLightConnect {
+    func bits(fromByte byte: UInt8) -> [Bit] {
+        var byte = byte
+        var bits = [Bit](repeating: .zero, count: 8)
+        for i in 0..<8 {
+            let currentBit = byte & 0x01
+            if currentBit != 0 {
+                bits[i] = .one
+            }
+            
+            byte >>= 1
+        }
+        
+        return bits
+    }
+    
+    func turnInt(_ x : UInt8) -> Int {
+        return Int(x)
     }
 }
