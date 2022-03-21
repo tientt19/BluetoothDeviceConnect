@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pPI-gR-qtm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1xN-Ys-7g2">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -41,6 +42,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-501" y="71"/>
+        </scene>
+        <!--Vong Deo Tay-->
+        <scene sceneID="VAr-Wi-Twx">
+            <objects>
+                <viewController id="1xN-Ys-7g2" customClass="VongDeoTay" customModule="BluetoothDeviceConnect" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8uo-66-H8C">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WI0-Mw-7xR">
+                                <rect key="frame" x="99" y="232.5" width="216.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="readHR_BP_BOHistoryRecord"/>
+                                <connections>
+                                    <action selector="testTap:" destination="1xN-Ys-7g2" eventType="touchUpInside" id="3zl-2J-7sZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pL2-oD-AIH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WI0-Mw-7xR" firstAttribute="centerX" secondItem="8uo-66-H8C" secondAttribute="centerX" id="LQa-oV-9jL"/>
+                            <constraint firstItem="WI0-Mw-7xR" firstAttribute="centerY" secondItem="8uo-66-H8C" secondAttribute="centerY" constant="-200" id="N80-kB-Xhh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="getRecordData" destination="WI0-Mw-7xR" id="Zh1-T0-ioF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="48X-FM-pmU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="88" y="755"/>
         </scene>
         <!--Bio Light Connect-->
         <scene sceneID="vJo-zp-zKx">
@@ -95,6 +128,15 @@
                                     <constraint firstAttribute="width" constant="300" id="qDa-Wu-7Q0"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJJ-TO-rVh">
+                                <rect key="frame" x="186" y="259" width="43" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Đo"/>
+                                <connections>
+                                    <action selector="sendCommanh:" destination="pPI-gR-qtm" eventType="touchUpInside" id="Rpp-5h-4jC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EC6-9W-VPa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -114,7 +156,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="muV-iv-Pwc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="149" y="63"/>
+            <point key="canvasLocation" x="170" y="-23"/>
         </scene>
     </scenes>
     <resources>

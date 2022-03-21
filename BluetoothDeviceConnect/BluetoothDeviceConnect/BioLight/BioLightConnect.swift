@@ -24,6 +24,7 @@ enum Bit: UInt8, CustomStringConvertible {
 class BioLightConnect: UIViewController {
     var centralManager: CBCentralManager!
     var bioLightPeripheral: CBPeripheral!
+    var bioCharacteristic: CBCharacteristic? = nil
     var measurementState = false
     
     @IBOutlet weak var statusLabel : UILabel!
@@ -44,6 +45,10 @@ class BioLightConnect: UIViewController {
         super.viewDidLoad()
         statusLabel.text = "None"
         centralManager = CBCentralManager(delegate: self, queue: nil)
+    }
+    
+    @IBAction func sendCommanh(_ sender : UIButton) {
+//        bioLightPeripheral.writeValue(Data, for: bioCharacteristic, type: .withoutResponse)
     }
 }
 
@@ -104,6 +109,10 @@ extension BioLightConnect: CBPeripheralDelegate {
             if characteristic.uuid == CharacteristicCBUUID1 {
                 if characteristic.properties.contains(.read) {
                     peripheral.readValue(for: characteristic)
+                }
+                
+                if characteristic.properties.contains(.write) {
+                    print("day la write properties \(characteristic.uuid)")
                 }
             }
             
