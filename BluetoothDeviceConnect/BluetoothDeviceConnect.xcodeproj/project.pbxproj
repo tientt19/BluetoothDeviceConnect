@@ -17,11 +17,16 @@
 		5224E6D127D644F800BA5CF6 /* HTBodyfat_SDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5224E6D027D644F800BA5CF6 /* HTBodyfat_SDK.a */; };
 		528D133827E82A28000C3AA2 /* TrusangBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528D133727E82A27000C3AA2 /* TrusangBluetooth.framework */; };
 		528D133B27E82A62000C3AA2 /* VongDeoTay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D133A27E82A62000C3AA2 /* VongDeoTay.swift */; };
+		528D134027E85D40000C3AA2 /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D133D27E85D40000C3AA2 /* Chart.swift */; };
+		528D134127E85D40000C3AA2 /* ChartColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D133E27E85D40000C3AA2 /* ChartColors.swift */; };
+		528D134227E85D40000C3AA2 /* ChartSeries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D133F27E85D40000C3AA2 /* ChartSeries.swift */; };
+		528D134527E85FE5000C3AA2 /* BasicChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D134427E85FE5000C3AA2 /* BasicChartViewController.swift */; };
 		52CE096F27D707B7005DE5CB /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CE096E27D707B7005DE5CB /* UITableViewExtension.swift */; };
 		52CE097227D707E2005DE5CB /* tableviewCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CE097027D707E2005DE5CB /* tableviewCellTableViewCell.swift */; };
 		52CE097327D707E2005DE5CB /* tableviewCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52CE097127D707E2005DE5CB /* tableviewCellTableViewCell.xib */; };
 		52CE097C27D71483005DE5CB /* BioLightConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CE097B27D71483005DE5CB /* BioLightConnect.swift */; };
 		52CE097E27D731BB005DE5CB /* Dlog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CE097D27D731BB005DE5CB /* Dlog.swift */; };
+		52E5374727E8724B006E4F60 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E5374627E8724B006E4F60 /* Date+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,11 +45,16 @@
 		5224E6D227D6450100BA5CF6 /* HTBodyfat_SDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTBodyfat_SDK.h; sourceTree = "<group>"; };
 		528D133727E82A27000C3AA2 /* TrusangBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TrusangBluetooth.framework; sourceTree = "<group>"; };
 		528D133A27E82A62000C3AA2 /* VongDeoTay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VongDeoTay.swift; path = BluetoothDeviceConnect/VongDeoTay/VongDeoTay.swift; sourceTree = SOURCE_ROOT; };
+		528D133D27E85D40000C3AA2 /* Chart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
+		528D133E27E85D40000C3AA2 /* ChartColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartColors.swift; sourceTree = "<group>"; };
+		528D133F27E85D40000C3AA2 /* ChartSeries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartSeries.swift; sourceTree = "<group>"; };
+		528D134427E85FE5000C3AA2 /* BasicChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicChartViewController.swift; sourceTree = "<group>"; };
 		52CE096E27D707B7005DE5CB /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		52CE097027D707E2005DE5CB /* tableviewCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableviewCellTableViewCell.swift; sourceTree = "<group>"; };
 		52CE097127D707E2005DE5CB /* tableviewCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = tableviewCellTableViewCell.xib; sourceTree = "<group>"; };
 		52CE097B27D71483005DE5CB /* BioLightConnect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioLightConnect.swift; sourceTree = "<group>"; };
 		52CE097D27D731BB005DE5CB /* Dlog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dlog.swift; sourceTree = "<group>"; };
+		52E5374627E8724B006E4F60 /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,10 +126,31 @@
 		528D132927E81A16000C3AA2 /* SDK */ = {
 			isa = PBXGroup;
 			children = (
+				528D134327E85FCE000C3AA2 /* BasicChartView */,
+				528D133C27E85D0C000C3AA2 /* SwiftChart */,
 				528D133727E82A27000C3AA2 /* TrusangBluetooth.framework */,
+				52E5374627E8724B006E4F60 /* Date+Extension.swift */,
 				528D133A27E82A62000C3AA2 /* VongDeoTay.swift */,
 			);
 			path = SDK;
+			sourceTree = "<group>";
+		};
+		528D133C27E85D0C000C3AA2 /* SwiftChart */ = {
+			isa = PBXGroup;
+			children = (
+				528D133D27E85D40000C3AA2 /* Chart.swift */,
+				528D133E27E85D40000C3AA2 /* ChartColors.swift */,
+				528D133F27E85D40000C3AA2 /* ChartSeries.swift */,
+			);
+			path = SwiftChart;
+			sourceTree = "<group>";
+		};
+		528D134327E85FCE000C3AA2 /* BasicChartView */ = {
+			isa = PBXGroup;
+			children = (
+				528D134427E85FE5000C3AA2 /* BasicChartViewController.swift */,
+			);
+			path = BasicChartView;
 			sourceTree = "<group>";
 		};
 		52CE097427D713BD005DE5CB /* SmartScale */ = {
@@ -223,6 +254,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				528D134527E85FE5000C3AA2 /* BasicChartViewController.swift in Sources */,
+				528D134027E85D40000C3AA2 /* Chart.swift in Sources */,
 				5224E6BD27D6444900BA5CF6 /* ViewController.swift in Sources */,
 				52CE096F27D707B7005DE5CB /* UITableViewExtension.swift in Sources */,
 				528D133B27E82A62000C3AA2 /* VongDeoTay.swift in Sources */,
@@ -231,6 +264,9 @@
 				5224E6B927D6444900BA5CF6 /* AppDelegate.swift in Sources */,
 				52CE097C27D71483005DE5CB /* BioLightConnect.swift in Sources */,
 				52CE097227D707E2005DE5CB /* tableviewCellTableViewCell.swift in Sources */,
+				528D134227E85D40000C3AA2 /* ChartSeries.swift in Sources */,
+				52E5374727E8724B006E4F60 /* Date+Extension.swift in Sources */,
+				528D134127E85D40000C3AA2 /* ChartColors.swift in Sources */,
 				5224E6BB27D6444900BA5CF6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

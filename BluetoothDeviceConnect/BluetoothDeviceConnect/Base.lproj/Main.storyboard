@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1xN-Ys-7g2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aXf-LC-69n">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -67,13 +66,47 @@
                             <constraint firstItem="WI0-Mw-7xR" firstAttribute="centerY" secondItem="8uo-66-H8C" secondAttribute="centerY" constant="-200" id="N80-kB-Xhh"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="DaX-Wg-JXw"/>
                     <connections>
                         <outlet property="getRecordData" destination="WI0-Mw-7xR" id="Zh1-T0-ioF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="48X-FM-pmU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="88" y="755"/>
+            <point key="canvasLocation" x="865" y="755"/>
+        </scene>
+        <!--Basic Chart View Controller-->
+        <scene sceneID="aL6-rH-p9x">
+            <objects>
+                <viewController storyboardIdentifier="BasicChartViewController" id="Jpz-ci-z6s" customClass="BasicChartViewController" customModule="BluetoothDeviceConnect" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9av-Tm-7Tp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UhS-ow-tc8" customClass="Chart" customModule="BluetoothDeviceConnect">
+                                <rect key="frame" x="30" y="94" width="354" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="S6e-xh-iBk"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ms5-uA-jTZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UhS-ow-tc8" firstAttribute="leading" secondItem="Ms5-uA-jTZ" secondAttribute="leading" constant="30" id="625-1e-kRU"/>
+                            <constraint firstItem="Ms5-uA-jTZ" firstAttribute="trailing" secondItem="UhS-ow-tc8" secondAttribute="trailing" constant="30" id="L0Z-2H-qll"/>
+                            <constraint firstItem="UhS-ow-tc8" firstAttribute="top" secondItem="Ms5-uA-jTZ" secondAttribute="top" constant="50" id="Lc2-Fe-KBu"/>
+                            <constraint firstItem="UhS-ow-tc8" firstAttribute="centerX" secondItem="9av-Tm-7Tp" secondAttribute="centerX" id="PMB-gP-gdr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="chart" destination="UhS-ow-tc8" id="TvI-jM-nsM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kgx-IA-49C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1593" y="755"/>
         </scene>
         <!--Bio Light Connect-->
         <scene sceneID="vJo-zp-zKx">
@@ -157,6 +190,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="muV-iv-Pwc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="170" y="-23"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vey-Qa-dyI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aXf-LC-69n" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="N9f-Ui-rsg">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="1xN-Ys-7g2" kind="relationship" relationship="rootViewController" id="gUg-CG-lP0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2J7-AH-Vsa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="86.956521739130437" y="754.6875"/>
         </scene>
     </scenes>
     <resources>
