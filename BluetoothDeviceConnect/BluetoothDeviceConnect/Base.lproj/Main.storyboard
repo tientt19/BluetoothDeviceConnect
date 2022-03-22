@@ -52,29 +52,73 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WI0-Mw-7xR">
-                                <rect key="frame" x="99" y="232.5" width="216.5" height="31"/>
+                                <rect key="frame" x="155.5" y="232.5" width="103" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="readHR_BP_BOHistoryRecord"/>
+                                <buttonConfiguration key="configuration" style="plain" title="READ DATA "/>
                                 <connections>
                                     <action selector="testTap:" destination="1xN-Ys-7g2" eventType="touchUpInside" id="3zl-2J-7sZ"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NV6-ba-Ccf">
+                                <rect key="frame" x="129.5" y="313.5" width="155" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="SLEEP DATA CHART"/>
+                                <connections>
+                                    <action selector="sleepDataChart:" destination="1xN-Ys-7g2" eventType="touchUpInside" id="jvv-wh-2WX"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pL2-oD-AIH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="NV6-ba-Ccf" firstAttribute="centerX" secondItem="8uo-66-H8C" secondAttribute="centerX" id="1eO-BY-qzm"/>
                             <constraint firstItem="WI0-Mw-7xR" firstAttribute="centerX" secondItem="8uo-66-H8C" secondAttribute="centerX" id="LQa-oV-9jL"/>
                             <constraint firstItem="WI0-Mw-7xR" firstAttribute="centerY" secondItem="8uo-66-H8C" secondAttribute="centerY" constant="-200" id="N80-kB-Xhh"/>
+                            <constraint firstItem="NV6-ba-Ccf" firstAttribute="top" secondItem="WI0-Mw-7xR" secondAttribute="bottom" constant="50" id="kdM-QK-vM1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="DaX-Wg-JXw"/>
                     <connections>
                         <outlet property="getRecordData" destination="WI0-Mw-7xR" id="Zh1-T0-ioF"/>
+                        <outlet property="sleepDataButton" destination="NV6-ba-Ccf" id="32w-d2-Ig2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="48X-FM-pmU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="865" y="755"/>
+        </scene>
+        <!--Sleep Data Chart-->
+        <scene sceneID="fmg-Ex-gyC">
+            <objects>
+                <viewController storyboardIdentifier="SleepDataChart" id="gHN-LP-L1h" customClass="SleepDataChart" customModule="BluetoothDeviceConnect" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ji9-SN-mPV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZWz-sd-uWW" customClass="BarChartView" customModule="BluetoothDeviceConnect" customModuleProvider="target">
+                                <rect key="frame" x="30" y="84" width="354" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="4Cw-hF-Syc"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="k3m-bD-1Cn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZWz-sd-uWW" firstAttribute="centerX" secondItem="ji9-SN-mPV" secondAttribute="centerX" id="0BH-ZN-Tdo"/>
+                            <constraint firstItem="ZWz-sd-uWW" firstAttribute="top" secondItem="k3m-bD-1Cn" secondAttribute="top" constant="40" id="EA3-ow-r1i"/>
+                            <constraint firstItem="ZWz-sd-uWW" firstAttribute="leading" secondItem="k3m-bD-1Cn" secondAttribute="leading" constant="30" id="OtY-DX-0sM"/>
+                            <constraint firstItem="k3m-bD-1Cn" firstAttribute="trailing" secondItem="ZWz-sd-uWW" secondAttribute="trailing" constant="30" id="qmf-pf-3ek"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="chart" destination="ZWz-sd-uWW" id="OSY-us-cjl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4RA-Ay-CbB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="864" y="1398"/>
         </scene>
         <!--Basic Chart View Controller-->
         <scene sceneID="aL6-rH-p9x">
@@ -207,7 +251,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="muV-iv-Pwc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="170" y="-23"/>
+            <point key="canvasLocation" x="158" y="71"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vey-Qa-dyI">

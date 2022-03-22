@@ -380,9 +380,9 @@ extension Date {
         return calendar.date(from: coms)
     }
     
-    func getMonthHowManyDay() -> Range<Int> {
-        return Calendar.current.range(of: .day, in: .month, for: self)!
-    }
+//    func getMonthHowManyDay() -> Range {
+//        return Calendar.current.range(of: .day, in: .month, for: self)!
+//    }
     
     func getMonthFirstDay() -> Date? {
         let calendar = Calendar.current

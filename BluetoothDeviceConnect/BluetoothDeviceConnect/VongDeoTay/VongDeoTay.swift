@@ -12,6 +12,7 @@ import CoreBluetooth
 class VongDeoTay: UIViewController {
     
     @IBOutlet weak var getRecordData : UIButton!
+    @IBOutlet weak var sleepDataButton : UIButton!
     
     let sdkConnect = ZHJBLEManagerProvider.shared
     var deviceConnected = TrusangBluetooth.ZHJBTDevice()
@@ -31,6 +32,16 @@ class VongDeoTay: UIViewController {
             let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "BasicChartViewController") as? BasicChartViewController
             vc?.dataPass = self.getDataViaTime(bloodOxygen.details)
             vc?.bloodPressure = bloodPressure.details
+            self.navigationController?.pushViewController(vc!, animated: true)
+        } historyDoneHandle: { result in
+            dLogDebug(result)
+        }
+    }
+    
+    @IBAction func sleepDataChart(_ sender : UIButton) {
+        stepDataCall.readStepAndSleepHistoryRecord(date: getCurrentDate()) { stepData, sleepData in
+            let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "SleepDataChart") as? SleepDataChart
+            vc?.dataPass = stepData.details
             self.navigationController?.pushViewController(vc!, animated: true)
         } historyDoneHandle: { result in
             dLogDebug(result)
@@ -94,9 +105,10 @@ extension VongDeoTay {
     func connect() {
         sdkConnect.connectDevice(device: self.deviceConnected) { [weak self] device in
             guard let `self` = self else { return }
-            dLogDebug("device is connected")
+            print("device is connected")
             
             self.getRecordData.isHidden = false
+            self.sleepDataButton.isHidden = false
             
             self.sdkConnect.discoverWriteCharacteristic { writeChar in
                 self.tempChar = writeChar
