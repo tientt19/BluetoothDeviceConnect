@@ -88,7 +88,7 @@ open class Chart : UIControl {
     /**
     Text alignment for the x-labels.
     */
-    open var xLabelsTextAlignment: NSTextAlignment = .center
+    open var xLabelsTextAlignment: NSTextAlignment = .left
 
     /**
     Orientation for the x-labels.
@@ -583,7 +583,7 @@ open class Chart : UIControl {
             }
 
             // Add label
-            let label = UILabel(frame: CGRect(x: x, y: drawingHeight, width: 0, height: 0))
+            let label = UILabel(frame: CGRect(x: x, y: drawingHeight + 10, width: 0, height: 0))
             label.font = labelFont
             label.text = xLabelsFormatter(i, labels[i])
             label.textColor = labelColor
@@ -595,7 +595,8 @@ open class Chart : UIControl {
             if xLabelsOrientation == .horizontal {
                 // Add left padding
                 label.frame.origin.y -= (label.frame.height - bottomInset) / 2
-                label.frame.origin.x += padding
+//                label.frame.origin.x += padding
+                label.frame.origin.x -= label.frame.width / 2
 
                 // Set label's text alignment
                 label.frame.size.width = (drawingWidth / CGFloat(labels.count)) - padding * 2
@@ -657,7 +658,7 @@ open class Chart : UIControl {
                 context.strokePath()
             }
 
-            let label = UILabel(frame: CGRect(x: padding, y: y, width: 0, height: 0))
+            let label = UILabel(frame: CGRect(x: 0, y: y, width: 0, height: 0))
             label.font = labelFont
             label.text = yLabelsFormatter(i, labels[i])
             label.textColor = labelColor
@@ -669,8 +670,12 @@ open class Chart : UIControl {
             }
 
             // Labels should be placed above the horizontal grid
-            label.frame.origin.y -= label.frame.height
+//            label.frame.origin.y -= label.frame.height + padding
+            
+            label.frame.origin.y -= padding
 
+            label.frame.origin.x -= label.frame.width + padding
+            
             self.addSubview(label)
         }
         UIGraphicsEndImageContext()

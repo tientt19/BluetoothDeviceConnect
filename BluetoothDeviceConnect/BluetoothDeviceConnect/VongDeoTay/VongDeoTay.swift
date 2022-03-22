@@ -30,6 +30,7 @@ class VongDeoTay: UIViewController {
         bloodPressureDataCall.readHR_BP_BOHistoryRecord(getCurrentDate()) { heartRate, bloodPressure, bloodOxygen in
             let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "BasicChartViewController") as? BasicChartViewController
             vc?.dataPass = self.getDataViaTime(bloodOxygen.details)
+            vc?.bloodPressure = bloodPressure.details
             self.navigationController?.pushViewController(vc!, animated: true)
         } historyDoneHandle: { result in
             dLogDebug(result)
@@ -62,7 +63,7 @@ class VongDeoTay: UIViewController {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
         let now = Date()
-        let dateString = formatter.string(from:now)
+        let dateString = formatter.string(from: now.previousDay)
         return dateString
     }
 }

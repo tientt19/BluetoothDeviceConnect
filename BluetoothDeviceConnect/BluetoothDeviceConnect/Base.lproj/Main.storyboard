@@ -91,18 +91,35 @@
                                     <constraint firstAttribute="height" constant="200" id="S6e-xh-iBk"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V3u-Ru-cXs" customClass="Chart" customModule="BluetoothDeviceConnect">
+                                <rect key="frame" x="30" y="324" width="354" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="XLV-cx-4X7"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ms5-uA-jTZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="V3u-Ru-cXs" firstAttribute="centerX" secondItem="9av-Tm-7Tp" secondAttribute="centerX" id="0mk-6g-Mho"/>
                             <constraint firstItem="UhS-ow-tc8" firstAttribute="leading" secondItem="Ms5-uA-jTZ" secondAttribute="leading" constant="30" id="625-1e-kRU"/>
                             <constraint firstItem="Ms5-uA-jTZ" firstAttribute="trailing" secondItem="UhS-ow-tc8" secondAttribute="trailing" constant="30" id="L0Z-2H-qll"/>
                             <constraint firstItem="UhS-ow-tc8" firstAttribute="top" secondItem="Ms5-uA-jTZ" secondAttribute="top" constant="50" id="Lc2-Fe-KBu"/>
                             <constraint firstItem="UhS-ow-tc8" firstAttribute="centerX" secondItem="9av-Tm-7Tp" secondAttribute="centerX" id="PMB-gP-gdr"/>
+                            <constraint firstItem="V3u-Ru-cXs" firstAttribute="top" secondItem="UhS-ow-tc8" secondAttribute="bottom" constant="30" id="W9c-QA-7o6"/>
+                            <constraint firstItem="V3u-Ru-cXs" firstAttribute="leading" secondItem="Ms5-uA-jTZ" secondAttribute="leading" constant="30" id="qKi-JV-ktl"/>
+                            <constraint firstItem="Ms5-uA-jTZ" firstAttribute="trailing" secondItem="V3u-Ru-cXs" secondAttribute="trailing" constant="30" id="vco-4y-sPH"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="chart" destination="UhS-ow-tc8" id="TvI-jM-nsM"/>
+                        <outlet property="multiLineChart" destination="V3u-Ru-cXs" id="2Hd-DM-ied"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kgx-IA-49C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

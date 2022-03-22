@@ -6,16 +6,19 @@
 //
 
 import UIKit
+import TrusangBluetooth
 
 class BasicChartViewController: UIViewController {
     
     @IBOutlet weak var chart: Chart!
+    @IBOutlet weak var multiLineChart : Chart!
     var dataPass = [(x: Double, y: Double)]()
-    
+    var bloodPressure = [TrusangBluetooth.ZHJBloodPressureDetail]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         chart.delegate = self
+        multiLineChart.delegate = self
         self.navigationItem.title = "Basic chart view"
         
         let series = ChartSeries(data: dataPass)
@@ -24,6 +27,22 @@ class BasicChartViewController: UIViewController {
         chart.yLabels = [0, 50, 100]
         chart.xLabelsFormatter = { String(Int(round($1))) + ":00"}
         chart.add(series)
+        
+        /// Multiline chart
+    
+        multiLineChart.xLabels = [0, 4, 8, 12, 16, 20, 24]
+        multiLineChart.yLabels = [0, 50, 100, 150, 200]
+        
+        let series1 = ChartSeries(data: convertDBP(bloodPressure))
+        series1.area = false
+        series1.color = ChartColors.blueColor()
+        
+        let series2 = ChartSeries(data: convertSBP(bloodPressure))
+        series2.area = false
+        series2.color = ChartColors.redColor()
+        
+        multiLineChart.xLabelsFormatter = { String(Int(round($1))) + ":00"}
+        multiLineChart.add([series1,series2])
     }
     
     func hmsFrom(seconds: Int, completion: @escaping (_ hours: Int, _ minutes: Int)->()) {
@@ -33,8 +52,40 @@ class BasicChartViewController: UIViewController {
     func getStringFrom(seconds: Int) -> String {
         return seconds < 10 ? "0\(seconds)" : "\(seconds)"
     }
+}
+
+extension BasicChartViewController {
+    func convertDBP(_ data : [TrusangBluetooth.ZHJBloodPressureDetail]) -> [(x: Double, y: Double)]{
+        var temp = [(x: Double, y: Double)]()
+        for item in data {
+            if item.DBP != 0 {
+                temp.append((x: Double(self.convertDateString(item.dateTime)), y: Double(item.DBP)))
+            }
+        }
+        return temp
+    }
     
+    func convertSBP(_ data : [TrusangBluetooth.ZHJBloodPressureDetail]) -> [(x: Double, y: Double)]{
+        var temp = [(x: Double, y: Double)]()
+        for item in data {
+            if item.SBP != 0 {
+                temp.append((x: Double(self.convertDateString(item.dateTime)), y: Double(item.SBP)))
+            }
+        }
+        return temp
+    }
     
+    func convertDateString(_ dateString: String) -> Double {
+        // Your original code
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
+        let date = dateFormatter.date(from: dateString)
+        
+        // To convert the date into an HH:mm format
+        dateFormatter.dateFormat = "HH:mm"
+        let dateString = Double(dateFormatter.string(from: date!).replacingOccurrences(of: ":", with: "."))
+        return dateString!
+    }
 }
 
 extension BasicChartViewController : ChartDelegate {
