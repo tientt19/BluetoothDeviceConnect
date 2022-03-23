@@ -60,9 +60,9 @@
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NV6-ba-Ccf">
-                                <rect key="frame" x="129.5" y="313.5" width="155" height="31"/>
+                                <rect key="frame" x="133" y="313.5" width="148" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="SLEEP DATA CHART"/>
+                                <buttonConfiguration key="configuration" style="plain" title="STEP DATA CHART"/>
                                 <connections>
                                     <action selector="sleepDataChart:" destination="1xN-Ys-7g2" eventType="touchUpInside" id="jvv-wh-2WX"/>
                                 </connections>
@@ -87,16 +87,16 @@
             </objects>
             <point key="canvasLocation" x="865" y="755"/>
         </scene>
-        <!--Sleep Data Chart-->
+        <!--Step Data Chart-->
         <scene sceneID="fmg-Ex-gyC">
             <objects>
-                <viewController storyboardIdentifier="SleepDataChart" id="gHN-LP-L1h" customClass="SleepDataChart" customModule="BluetoothDeviceConnect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SleepDataChart" id="gHN-LP-L1h" customClass="StepDataChart" customModule="BluetoothDeviceConnect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ji9-SN-mPV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZWz-sd-uWW" customClass="BarChartView" customModule="BluetoothDeviceConnect" customModuleProvider="target">
-                                <rect key="frame" x="30" y="84" width="354" height="200"/>
+                                <rect key="frame" x="40" y="84" width="334" height="200"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="4Cw-hF-Syc"/>
@@ -108,8 +108,8 @@
                         <constraints>
                             <constraint firstItem="ZWz-sd-uWW" firstAttribute="centerX" secondItem="ji9-SN-mPV" secondAttribute="centerX" id="0BH-ZN-Tdo"/>
                             <constraint firstItem="ZWz-sd-uWW" firstAttribute="top" secondItem="k3m-bD-1Cn" secondAttribute="top" constant="40" id="EA3-ow-r1i"/>
-                            <constraint firstItem="ZWz-sd-uWW" firstAttribute="leading" secondItem="k3m-bD-1Cn" secondAttribute="leading" constant="30" id="OtY-DX-0sM"/>
-                            <constraint firstItem="k3m-bD-1Cn" firstAttribute="trailing" secondItem="ZWz-sd-uWW" secondAttribute="trailing" constant="30" id="qmf-pf-3ek"/>
+                            <constraint firstItem="ZWz-sd-uWW" firstAttribute="leading" secondItem="k3m-bD-1Cn" secondAttribute="leading" constant="40" id="OtY-DX-0sM"/>
+                            <constraint firstItem="k3m-bD-1Cn" firstAttribute="trailing" secondItem="ZWz-sd-uWW" secondAttribute="trailing" constant="40" id="qmf-pf-3ek"/>
                         </constraints>
                     </view>
                     <connections>

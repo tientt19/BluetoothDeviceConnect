@@ -15,7 +15,7 @@
 		5224E6C527D6444B00BA5CF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5224E6C327D6444B00BA5CF6 /* LaunchScreen.storyboard */; };
 		5224E6CE27D644B800BA5CF6 /* HTBodyfat_NewSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 5224E6CD27D644B800BA5CF6 /* HTBodyfat_NewSDK.m */; };
 		5224E6D127D644F800BA5CF6 /* HTBodyfat_SDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5224E6D027D644F800BA5CF6 /* HTBodyfat_SDK.a */; };
-		52617CB427E979C90002FDF6 /* SleepDataChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52617CB327E979C90002FDF6 /* SleepDataChart.swift */; };
+		52617CB427E979C90002FDF6 /* StepDataChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52617CB327E979C90002FDF6 /* StepDataChart.swift */; };
 		52617D5527E984E20002FDF6 /* DataApproximator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52617CBA27E984E10002FDF6 /* DataApproximator.swift */; };
 		52617D5627E984E20002FDF6 /* DataApproximator+N.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52617CBB27E984E10002FDF6 /* DataApproximator+N.swift */; };
 		52617D5727E984E20002FDF6 /* RadarChartRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52617CBD27E984E20002FDF6 /* RadarChartRenderer.swift */; };
@@ -163,8 +163,8 @@
 		52617DF127E98D090002FDF6 /* DayAxisValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52617DED27E98D090002FDF6 /* DayAxisValueFormatter.swift */; };
 		52617DF227E98D090002FDF6 /* DateValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52617DEE27E98D090002FDF6 /* DateValueFormatter.swift */; };
 		52617DF327E98D090002FDF6 /* LargeValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52617DEF27E98D090002FDF6 /* LargeValueFormatter.swift */; };
+		5279E3DD27EAB9EA005C4A81 /* VongDeoTay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5279E3DC27EAB9EA005C4A81 /* VongDeoTay.swift */; };
 		528D133827E82A28000C3AA2 /* TrusangBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528D133727E82A27000C3AA2 /* TrusangBluetooth.framework */; };
-		528D133B27E82A62000C3AA2 /* VongDeoTay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D133A27E82A62000C3AA2 /* VongDeoTay.swift */; };
 		528D134027E85D40000C3AA2 /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D133D27E85D40000C3AA2 /* Chart.swift */; };
 		528D134127E85D40000C3AA2 /* ChartColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D133E27E85D40000C3AA2 /* ChartColors.swift */; };
 		528D134227E85D40000C3AA2 /* ChartSeries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D133F27E85D40000C3AA2 /* ChartSeries.swift */; };
@@ -190,7 +190,7 @@
 		5224E6CF27D644F200BA5CF6 /* HTBodyfat_NewSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTBodyfat_NewSDK.h; sourceTree = "<group>"; };
 		5224E6D027D644F800BA5CF6 /* HTBodyfat_SDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = HTBodyfat_SDK.a; sourceTree = "<group>"; };
 		5224E6D227D6450100BA5CF6 /* HTBodyfat_SDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTBodyfat_SDK.h; sourceTree = "<group>"; };
-		52617CB327E979C90002FDF6 /* SleepDataChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepDataChart.swift; sourceTree = "<group>"; };
+		52617CB327E979C90002FDF6 /* StepDataChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepDataChart.swift; sourceTree = "<group>"; };
 		52617CBA27E984E10002FDF6 /* DataApproximator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataApproximator.swift; sourceTree = "<group>"; };
 		52617CBB27E984E10002FDF6 /* DataApproximator+N.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DataApproximator+N.swift"; sourceTree = "<group>"; };
 		52617CBD27E984E20002FDF6 /* RadarChartRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadarChartRenderer.swift; sourceTree = "<group>"; };
@@ -337,8 +337,8 @@
 		52617DED27E98D090002FDF6 /* DayAxisValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayAxisValueFormatter.swift; sourceTree = "<group>"; };
 		52617DEE27E98D090002FDF6 /* DateValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateValueFormatter.swift; sourceTree = "<group>"; };
 		52617DEF27E98D090002FDF6 /* LargeValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LargeValueFormatter.swift; sourceTree = "<group>"; };
+		5279E3DC27EAB9EA005C4A81 /* VongDeoTay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VongDeoTay.swift; sourceTree = "<group>"; };
 		528D133727E82A27000C3AA2 /* TrusangBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TrusangBluetooth.framework; sourceTree = "<group>"; };
-		528D133A27E82A62000C3AA2 /* VongDeoTay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VongDeoTay.swift; path = BluetoothDeviceConnect/VongDeoTay/VongDeoTay.swift; sourceTree = SOURCE_ROOT; };
 		528D133D27E85D40000C3AA2 /* Chart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
 		528D133E27E85D40000C3AA2 /* ChartColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartColors.swift; sourceTree = "<group>"; };
 		528D133F27E85D40000C3AA2 /* ChartSeries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartSeries.swift; sourceTree = "<group>"; };
@@ -690,10 +690,18 @@
 			path = BluetoothDeviceConnect/Formatters;
 			sourceTree = SOURCE_ROOT;
 		};
+		5279E3DB27EAB9CB005C4A81 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5279E3DC27EAB9EA005C4A81 /* VongDeoTay.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		528D132627E814A8000C3AA2 /* VongDeoTay */ = {
 			isa = PBXGroup;
 			children = (
-				528D133A27E82A62000C3AA2 /* VongDeoTay.swift */,
+				5279E3DB27EAB9CB005C4A81 /* Controller */,
 				528D134327E85FCE000C3AA2 /* BasicChartView */,
 				52617DEB27E98D090002FDF6 /* Formatters */,
 				52617CB827E984E10002FDF6 /* Charts */,
@@ -726,7 +734,7 @@
 			isa = PBXGroup;
 			children = (
 				528D134427E85FE5000C3AA2 /* BasicChartViewController.swift */,
-				52617CB327E979C90002FDF6 /* SleepDataChart.swift */,
+				52617CB327E979C90002FDF6 /* StepDataChart.swift */,
 			);
 			path = BasicChartView;
 			sourceTree = "<group>";
@@ -910,7 +918,6 @@
 				52617D7427E984E20002FDF6 /* LineScatterCandleRadarRenderer.swift in Sources */,
 				52617D9C27E984E20002FDF6 /* Platform.swift in Sources */,
 				52617DB827E984E20002FDF6 /* CandleChartDataEntry.swift in Sources */,
-				528D133B27E82A62000C3AA2 /* VongDeoTay.swift in Sources */,
 				52617DBC27E984E20002FDF6 /* CandleChartDataSet.swift in Sources */,
 				52617D7227E984E20002FDF6 /* PieChartRenderer.swift in Sources */,
 				52617D9727E984E20002FDF6 /* ViewPortHandler.swift in Sources */,
@@ -918,7 +925,7 @@
 				52617DAD27E984E20002FDF6 /* ViewPortJob.swift in Sources */,
 				52617DDA27E984E20002FDF6 /* BarChartDataProvider.swift in Sources */,
 				5224E6CE27D644B800BA5CF6 /* HTBodyfat_NewSDK.m in Sources */,
-				52617CB427E979C90002FDF6 /* SleepDataChart.swift in Sources */,
+				52617CB427E979C90002FDF6 /* StepDataChart.swift in Sources */,
 				52617D8927E984E20002FDF6 /* ScatterChartView.swift in Sources */,
 				52617D8227E984E20002FDF6 /* LineChartView.swift in Sources */,
 				52617DDB27E984E20002FDF6 /* ChartDataProvider.swift in Sources */,
@@ -950,6 +957,7 @@
 				52617D9327E984E20002FDF6 /* FillFormatter.swift in Sources */,
 				52617D5C27E984E20002FDF6 /* YAxisRenderer.swift in Sources */,
 				52617DA827E984E20002FDF6 /* ChartLimitLine.swift in Sources */,
+				5279E3DD27EAB9EA005C4A81 /* VongDeoTay.swift in Sources */,
 				52CE097227D707E2005DE5CB /* tableviewCellTableViewCell.swift in Sources */,
 				52617D8127E984E20002FDF6 /* BarLineChartViewBase.swift in Sources */,
 				52617D5927E984E20002FDF6 /* YAxisRendererHorizontalBarChart.swift in Sources */,

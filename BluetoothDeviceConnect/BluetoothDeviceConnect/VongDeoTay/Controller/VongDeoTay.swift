@@ -26,8 +26,10 @@ class VongDeoTay: UIViewController {
         determineState()
     }
     
+
     @IBAction func testTap(_ sender: UIButton) {
         
+        /// lay data bloodpressure de hien thi bieu do
         bloodPressureDataCall.readHR_BP_BOHistoryRecord(getCurrentDate()) { heartRate, bloodPressure, bloodOxygen in
             let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "BasicChartViewController") as? BasicChartViewController
             vc?.dataPass = self.getDataViaTime(bloodOxygen.details)
@@ -39,8 +41,10 @@ class VongDeoTay: UIViewController {
     }
     
     @IBAction func sleepDataChart(_ sender : UIButton) {
+        
+        /// lay data de hien thi bieu do
         stepDataCall.readStepAndSleepHistoryRecord(date: getCurrentDate()) { stepData, sleepData in
-            let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "SleepDataChart") as? SleepDataChart
+            let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "SleepDataChart") as? StepDataChart
             vc?.dataPass = stepData.details
             self.navigationController?.pushViewController(vc!, animated: true)
         } historyDoneHandle: { result in

@@ -25,7 +25,7 @@ class BasicChartViewController: UIViewController {
         series.area = true
         chart.xLabels = [0, 4, 8, 12, 16, 20, 24]
         chart.yLabels = [0, 50, 100]
-        chart.xLabelsFormatter = { String(Int(round($1))) + ":00"}
+        chart.xLabelsFormatter = { self.timeValueFormatter($1) }
         chart.add(series)
         
         /// Multiline chart
@@ -40,17 +40,19 @@ class BasicChartViewController: UIViewController {
         let series2 = ChartSeries(data: convertSBP(bloodPressure))
         series2.area = false
         series2.color = ChartColors.redColor()
-        
-        multiLineChart.xLabelsFormatter = { String(Int(round($1))) + ":00"}
+                
+        multiLineChart.xLabelsFormatter = { self.timeValueFormatter($1) }
         multiLineChart.add([series1,series2])
     }
     
-    func hmsFrom(seconds: Int, completion: @escaping (_ hours: Int, _ minutes: Int)->()) {
-        completion(seconds / 3600, (seconds % 3600) / 60)
-    }
-    
-    func getStringFrom(seconds: Int) -> String {
-        return seconds < 10 ? "0\(seconds)" : "\(seconds)"
+    public func timeValueFormatter(_ value: Double) -> String {
+        let timestampValue = Double(round(10 * value) / 10)
+        if timestampValue < 10 {
+            return "0\(Int(timestampValue)):00"
+        } else if timestampValue == 24.00 {
+            return "23:59"
+        }
+        return "\(Int(timestampValue)):00"
     }
 }
 
