@@ -8,7 +8,7 @@
 import UIKit
 import TrusangBluetooth
 
-class SleepDataChart: UIViewController{
+class StepDataChart: UIViewController{
     
     @IBOutlet weak var chart : BarChartView!
     
@@ -22,17 +22,16 @@ class SleepDataChart: UIViewController{
     }
 }
 
-extension SleepDataChart: ChartViewDelegate {
+extension StepDataChart: ChartViewDelegate {
     
 }
 
-extension SleepDataChart {
+extension StepDataChart {
     private func setupBarChartView() {
         chart.delegate = self
         
         chart.drawBarShadowEnabled = false
         chart.drawValueAboveBarEnabled = false
-        
         chart.doubleTapToZoomEnabled = false
         chart.setScaleEnabled(false)
         chart.legend.enabled = false
@@ -46,10 +45,13 @@ extension SleepDataChart {
         yAxis.spaceTop = 0.15
         yAxis.axisMinimum = 0
         
+        let yAxisRight = chart.rightAxis
+        yAxisRight.labelTextColor = .clear
+        yAxisRight.axisLineColor = .clear
+        yAxisRight.gridColor = .clear
+        
         let xAxis = chart.xAxis
         xAxis.labelPosition = .bottom
-        xAxis.labelFont = .systemFont(ofSize: 10)
-        xAxis.granularity = 1
         xAxis.labelTextColor = UIColor(hex: "737678")
         xAxis.axisLineColor = UIColor(hex: "D3DFE8")
         xAxis.gridColor = UIColor(hex: "D3DFE8")
@@ -66,11 +68,10 @@ extension SleepDataChart {
         chart.dragEnabled = true
         chart.setScaleEnabled(true)
         chart.pinchZoomEnabled = false
-        chart.rightAxis.enabled = false
     }
 }
 
-extension SleepDataChart {
+extension StepDataChart {
     private func setUpBarChartData() {
         var stepChartDataValues: [BarChartDataEntry] = []
         
