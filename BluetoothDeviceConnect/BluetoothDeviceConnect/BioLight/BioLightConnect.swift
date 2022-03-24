@@ -48,7 +48,7 @@ class BioLightConnect: UIViewController {
     }
     
     @IBAction func sendCommanh(_ sender : UIButton) {
-//        bioLightPeripheral.writeValue(Data, for: bioCharacteristic, type: .withoutResponse)
+//        bioLightPeripheral.writeValue(Command.start.getData(), for: bioCharacteristic!, type: .withoutResponse)
     }
 }
 
@@ -112,7 +112,7 @@ extension BioLightConnect: CBPeripheralDelegate {
                 }
                 
                 if characteristic.properties.contains(.write) {
-                    print("day la write properties \(characteristic.uuid)")
+                    dLogDebug("write \(characteristic.uuid)")
                 }
             }
             
@@ -227,5 +227,15 @@ extension BioLightConnect {
     
     func turnInt(_ x : UInt8) -> Int {
         return Int(x)
+    }
+}
+
+// MARK: - BioCommand - Command
+extension BioLightConnect {
+    enum Command: String {
+        case start = "00"
+        case continueMeasurement = "01"
+        case staticPresure = "02"
+        case abandon = "08"
     }
 }

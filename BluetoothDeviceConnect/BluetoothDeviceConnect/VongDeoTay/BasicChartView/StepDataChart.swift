@@ -11,6 +11,9 @@ import TrusangBluetooth
 class StepDataChart: UIViewController{
     
     @IBOutlet weak var chart : BarChartView!
+    @IBOutlet weak var sleepChart : UIView!
+
+    var sampleData = SleepSampleData()
     
     var dataPass = [TrusangBluetooth.ZHJStepDetail]()
     
@@ -19,6 +22,7 @@ class StepDataChart: UIViewController{
         self.navigationItem.title = "Bar Chart View"
         setUpBarChartData()
         setupBarChartView()
+        setUpSleepViewData()
     }
 }
 
@@ -69,9 +73,49 @@ extension StepDataChart {
         chart.setScaleEnabled(true)
         chart.pinchZoomEnabled = false
     }
+    
 }
 
 extension StepDataChart {
+    
+    private func setUpSleepViewData() {
+        sleepChart.backgroundColor = UIColor(hex: "914FC5")
+        var views = [UIView]()
+        let prarentWidth = sleepChart.frame.width
+        for i in 0...self.sampleData.data.count - 1 {
+            views.append(UIView())
+            switch self.sampleData.data[i].type {
+            case .asleep:
+                views[i].backgroundColor = UIColor(hex: "FEC63D")
+            case .light:
+                views[i].backgroundColor = UIColor(hex: "914FC5")
+            case .deep:
+                views[i].backgroundColor = UIColor(hex: "54399F")
+            case .rem:
+                views[i].backgroundColor = UIColor(hex: "4CD864")
+            }
+            
+            if i == 0 {
+                self.sleepChart.addSubview(views[0])
+                NSLayoutConstraint.activate([
+                    views[0].topAnchor.constraint(equalTo: self.sleepChart.topAnchor),
+                    views[0].leftAnchor.constraint(equalTo: self.sleepChart.leftAnchor),
+                    views[0].bottomAnchor.constraint(equalTo: self.sleepChart.bottomAnchor),
+                    views[0].widthAnchor.constraint(equalToConstant: prarentWidth / Double(self.sampleData.data.count)),
+                ])
+                
+            } else {
+                self.sleepChart.addSubview(views[i])
+                NSLayoutConstraint.activate([
+                    views[i].topAnchor.constraint(equalTo: self.sleepChart.topAnchor),
+                    views[i].leftAnchor.constraint(equalTo: views[i-1].rightAnchor),
+                    views[i].bottomAnchor.constraint(equalTo: self.sleepChart.bottomAnchor),
+                    views[i].widthAnchor.constraint(equalToConstant: prarentWidth / Double(self.sampleData.data.count)),
+                ])
+            }
+        }
+    }
+    
     private func setUpBarChartData() {
         var stepChartDataValues: [BarChartDataEntry] = []
         

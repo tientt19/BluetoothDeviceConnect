@@ -532,6 +532,7 @@
 		528D134127E85D40000C3AA2 /* ChartColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D133E27E85D40000C3AA2 /* ChartColors.swift */; };
 		528D134227E85D40000C3AA2 /* ChartSeries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D133F27E85D40000C3AA2 /* ChartSeries.swift */; };
 		528D134527E85FE5000C3AA2 /* BasicChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D134427E85FE5000C3AA2 /* BasicChartViewController.swift */; };
+		52C0958B27ECCAB5001157BC /* SleepSampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C0958A27ECCAB5001157BC /* SleepSampleData.swift */; };
 		52CE096F27D707B7005DE5CB /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CE096E27D707B7005DE5CB /* UITableViewExtension.swift */; };
 		52CE097227D707E2005DE5CB /* tableviewCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CE097027D707E2005DE5CB /* tableviewCellTableViewCell.swift */; };
 		52CE097327D707E2005DE5CB /* tableviewCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52CE097127D707E2005DE5CB /* tableviewCellTableViewCell.xib */; };
@@ -1071,6 +1072,7 @@
 		528D133E27E85D40000C3AA2 /* ChartColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartColors.swift; sourceTree = "<group>"; };
 		528D133F27E85D40000C3AA2 /* ChartSeries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartSeries.swift; sourceTree = "<group>"; };
 		528D134427E85FE5000C3AA2 /* BasicChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicChartViewController.swift; sourceTree = "<group>"; };
+		52C0958A27ECCAB5001157BC /* SleepSampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SleepSampleData.swift; sourceTree = "<group>"; };
 		52CE096E27D707B7005DE5CB /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		52CE097027D707E2005DE5CB /* tableviewCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableviewCellTableViewCell.swift; sourceTree = "<group>"; };
 		52CE097127D707E2005DE5CB /* tableviewCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = tableviewCellTableViewCell.xib; sourceTree = "<group>"; };
@@ -2069,6 +2071,7 @@
 		528D134327E85FCE000C3AA2 /* BasicChartView */ = {
 			isa = PBXGroup;
 			children = (
+				52C0958A27ECCAB5001157BC /* SleepSampleData.swift */,
 				528D134427E85FE5000C3AA2 /* BasicChartViewController.swift */,
 				52617CB327E979C90002FDF6 /* StepDataChart.swift */,
 			);
@@ -2416,6 +2419,7 @@
 				52617D6027E984E20002FDF6 /* BarChartRenderer.swift in Sources */,
 				521B12A127EC672F00D411EB /* ServiceTransportDiscovery.swift in Sources */,
 				52617D6327E984E20002FDF6 /* BarLineScatterCandleBubbleRenderer.swift in Sources */,
+				52C0958B27ECCAB5001157BC /* SleepSampleData.swift in Sources */,
 				521B125427EC672F00D411EB /* CharacteristicSupportedSpeedRange.swift in Sources */,
 				521B122127EC672F00D411EB /* CharacteristicAerobicHeartRateUpperLimit.swift in Sources */,
 				521B12AD27EC672F00D411EB /* ServiceCyclingSpeedAndCadence.swift in Sources */,
