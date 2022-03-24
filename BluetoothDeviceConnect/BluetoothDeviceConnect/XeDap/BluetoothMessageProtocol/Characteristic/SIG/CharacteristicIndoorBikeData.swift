@@ -136,34 +136,21 @@ final public class CharacteristicIndoorBikeData: Characteristic {
     /// - Returns: Characteristic Result
     public class func decode<C: Characteristic>(with data: Data) -> Result<C, BluetoothDecodeError> {
         var decoder = DecodeData()
-        let byte11 = [UInt8](data)
-        print("data decode uint 16 : \(decoder.decodeInt16(data))")
-        print("tesstttttttttt222 value : \(decoder.decodeInt16(data).resolution(.removing, resolution: .oneHundredth))")
-        print("tesstttttttttt value : \(decoder.decodeInt16(data).resolution(.removing, resolution: .two))")
-        print("init data: \(byte11)")
-        let flags = Flags(rawValue: decoder.decodeUInt16(data))
-        
-        print("flags value : \(flags)")
-        
+ 
+        let flags = Flags(rawValue: decoder.decodeUInt16(data))        
         var heartRate: UInt8?
         var mets: Double?
         
         var iSpeed: FitnessMachineSpeedType?
         /// Available only when More data is NOT present
         if flags.contains(.moreData) == false {
-            let byte1 = [UInt8](data)
-            print("speed0 data: \(byte1)")
             iSpeed = FitnessMachineSpeedType.create(decoder.decodeUInt16(data))
-            print("isSpeed : \(iSpeed)")
-            let byte = [UInt8](data)
-            print("speed1 data: \(byte)")
         }
         
         var avgSpeed: FitnessMachineSpeedType?
         if flags.contains(.averageSpeedPresent) {
             let dataPassed = decoder.decodeUInt16(data)
             avgSpeed = FitnessMachineSpeedType.create(dataPassed)
-            let byte = [UInt8](data)
         }
         
         /// avgSpeed =  (Double(self) + 0.001) * Offset

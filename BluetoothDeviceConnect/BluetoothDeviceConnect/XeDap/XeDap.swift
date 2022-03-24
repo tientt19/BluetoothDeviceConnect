@@ -156,56 +156,54 @@ extension XeDap: CBPeripheralDelegate {
         
         switch hrData {
         case .success(let char):
-            if let averageSpeed = averageSpeed {
-                averageSpeed.text = "averageSpeed : \(averageSpeed)"
+            if let averageSpeedData = char.averageSpeed?.speed.value {
+                averageSpeed.text = "averageSpeed : \(averageSpeedData)"
             }
             
-            if let instantaneousSpeed = instantaneousSpeed {
-                instantaneousSpeed.text = "instantaneousSpeed : \(String(describing: instantaneousSpeed))"
+            if let instantaneousSpeedData = char.instantaneousSpeed?.speed.value {
+                instantaneousSpeed.text = "instantaneousSpeed : \(String(describing: instantaneousSpeedData))"
             }
             
-            if let averageCadence = averageCadence {
-                averageCadence.text = "averageCadence : \(String(describing: averageCadence))"
+            if let averageCadenceData =  char.averageCadence?.value {
+                averageCadence.text = "averageCadence : \(String(describing: averageCadenceData))"
             }
             
-            if let totalDistance = totalDistance {
-                totalDistance.text = "totalDistance : \(String(describing: totalDistance))"
+            if let totalDistanceData =  char.totalDistance?.value {
+                totalDistance.text = "totalDistance : \(String(describing: totalDistanceData))"
             }
             
-            if let resistanceLevel = resistanceLevel {
-                resistanceLevel.text = "resistanceLevel : \(String(describing: resistanceLevel))"
+            if let resistanceLevelData =  char.resistanceLevel {
+                resistanceLevel.text = "resistanceLevel : \(String(describing: resistanceLevelData))"
             }
             
-            if let instantaneousPower = instantaneousPower {
-                instantaneousPower.text = "instantaneousPower : \(String(describing: instantaneousPower))"
+            if let instantaneousPowerData =  char.instantaneousPower?.power {
+                instantaneousPower.text = "instantaneousPower : \(String(describing: instantaneousPowerData))"
             }
             
-            if let averagePower = averagePower {
-                averagePower.text = "averagePower : \(String(describing: averagePower))"
+            if let averagePowerData =  char.averagePower?.power {
+                averagePower.text = "averagePower : \(String(describing: averagePowerData))"
             }
             
-            if let energy = energy {
-                energy.text = "energy : \(String(describing: energy))"
+            energy.text = "energy : \(String(describing: char.energy.total))"
+            
+            if let heartRateData =  char.heartRate?.value {
+                heartRate.text = "heartRate : \(String(describing: heartRateData))"
             }
             
-            if let heartRate = heartRate {
-                heartRate.text = "heartRate : \(String(describing: heartRate))"
-            }
-            
-            print("========================r")
-            print(char.averageSpeed ?? 0)
-            print(char.instantaneousSpeed ?? 0)
-            print(char.averageCadence ?? 0)
-            print(char.totalDistance ?? 0)
-            print(char.resistanceLevel ?? 0)
-            print(char.instantaneousPower ?? 0)
-            print(char.averagePower ?? 0)
-            print(char.energy)
-            print(char.heartRate ?? 0)
-            print("=======================")
-            print("")
-            print("")
-            print("")
+//            print("========================r")
+//            print(char.averageSpeed ?? 0)
+//            print(char.instantaneousSpeed ?? 0)
+//            print(char.averageCadence ?? 0)
+//            print(char.totalDistance ?? 0)
+//            print(char.resistanceLevel ?? 0)
+//            print(char.instantaneousPower ?? 0)
+//            print(char.averagePower ?? 0)
+//            print(char.energy)
+//            print(char.heartRate ?? 0)
+//            print("=======================")
+//            print("")
+//            print("")
+//            print("")
             
         case .failure(let error):
             print(error)
