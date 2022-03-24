@@ -46,6 +46,16 @@ class VongDeoTay: UIViewController {
         stepDataCall.readStepAndSleepHistoryRecord(date: getCurrentDate()) { stepData, sleepData in
             let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "SleepDataChart") as? StepDataChart
             vc?.dataPass = stepData.details
+            for item in sleepData.details {
+                dLogDebug(item.duration)
+                dLogDebug(item.dateTime)
+            }
+            
+            dLogDebug(sleepData.REMDuration)
+            dLogDebug(sleepData.deepDuration)
+            dLogDebug(sleepData.awakeDuration)
+            dLogDebug(sleepData.beginDuration)
+            
             self.navigationController?.pushViewController(vc!, animated: true)
         } historyDoneHandle: { result in
             dLogDebug(result)
@@ -78,7 +88,7 @@ class VongDeoTay: UIViewController {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
         let now = Date()
-        let dateString = formatter.string(from: now.previousDay)
+        let dateString = formatter.string(from: now)
         return dateString
     }
 }

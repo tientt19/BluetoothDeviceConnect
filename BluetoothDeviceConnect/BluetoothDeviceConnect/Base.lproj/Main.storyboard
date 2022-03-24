@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aXf-LC-69n">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UcV-m0-DdK">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BluetoothDeviceConnect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="BluetoothDeviceConnect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -41,12 +41,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-501" y="71"/>
+            <point key="canvasLocation" x="-714" y="71"/>
         </scene>
         <!--Vong Deo Tay-->
         <scene sceneID="VAr-Wi-Twx">
             <objects>
-                <viewController id="1xN-Ys-7g2" customClass="VongDeoTay" customModule="BluetoothDeviceConnect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VongDeoTay" id="1xN-Ys-7g2" customClass="VongDeoTay" customModule="BluetoothDeviceConnect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8uo-66-H8C">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -85,7 +85,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="48X-FM-pmU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="865" y="755"/>
+            <point key="canvasLocation" x="1726" y="755"/>
         </scene>
         <!--Step Data Chart-->
         <scene sceneID="fmg-Ex-gyC">
@@ -118,7 +118,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4RA-Ay-CbB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="864" y="1398"/>
+            <point key="canvasLocation" x="1773.913043478261" y="1436.3839285714284"/>
         </scene>
         <!--Basic Chart View Controller-->
         <scene sceneID="aL6-rH-p9x">
@@ -168,12 +168,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kgx-IA-49C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1593" y="755"/>
+            <point key="canvasLocation" x="2502.898550724638" y="754.6875"/>
         </scene>
         <!--Bio Light Connect-->
         <scene sceneID="vJo-zp-zKx">
             <objects>
-                <viewController id="pPI-gR-qtm" customClass="BioLightConnect" customModule="BluetoothDeviceConnect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BioLightConnect" id="pPI-gR-qtm" customClass="BioLightConnect" customModule="BluetoothDeviceConnect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZCY-vz-j3h">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -223,9 +223,11 @@
                                     <constraint firstAttribute="width" constant="300" id="qDa-Wu-7Q0"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJJ-TO-rVh">
-                                <rect key="frame" x="186" y="259" width="43" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJJ-TO-rVh">
+                                <rect key="frame" x="157" y="259" width="100" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="m1y-5k-FK2"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Đo"/>
                                 <connections>
@@ -238,6 +240,8 @@
                         <constraints>
                             <constraint firstItem="liQ-Ln-HOq" firstAttribute="centerY" secondItem="ZCY-vz-j3h" secondAttribute="centerY" id="VvR-MC-7zm"/>
                             <constraint firstItem="liQ-Ln-HOq" firstAttribute="centerX" secondItem="ZCY-vz-j3h" secondAttribute="centerX" id="d2U-mj-EVf"/>
+                            <constraint firstItem="zJJ-TO-rVh" firstAttribute="centerX" secondItem="ZCY-vz-j3h" secondAttribute="centerX" id="k06-8M-TQY"/>
+                            <constraint firstItem="liQ-Ln-HOq" firstAttribute="top" secondItem="zJJ-TO-rVh" secondAttribute="bottom" constant="8" symbolic="YES" id="tD3-XH-81n"/>
                         </constraints>
                     </view>
                     <connections>
@@ -251,7 +255,165 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="muV-iv-Pwc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="158" y="71"/>
+            <point key="canvasLocation" x="87" y="71"/>
+        </scene>
+        <!--Common View Controller-->
+        <scene sceneID="KjZ-n4-NCr">
+            <objects>
+                <viewController id="Zzn-4w-9Dz" customClass="CommonViewController" customModule="BluetoothDeviceConnect" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SMt-hC-tQI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Waw-bp-oKE">
+                                <rect key="frame" x="107" y="348" width="200" height="200"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n2X-Mb-BYh">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="50"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Smart Scale"/>
+                                        <connections>
+                                            <action selector="smartScaleConnection:" destination="Zzn-4w-9Dz" eventType="touchUpInside" id="cSa-WW-4LS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tSm-Yv-TNx">
+                                        <rect key="frame" x="0.0" y="50" width="200" height="50"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Bio Light"/>
+                                        <connections>
+                                            <action selector="bioLightConnect:" destination="Zzn-4w-9Dz" eventType="touchUpInside" id="Nci-JP-6FK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BRR-rj-kl4">
+                                        <rect key="frame" x="0.0" y="100" width="200" height="50"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Vong Deo Tay"/>
+                                        <connections>
+                                            <action selector="s5_smartWatch:" destination="Zzn-4w-9Dz" eventType="touchUpInside" id="L4e-IM-wlc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="37T-vG-aYt">
+                                        <rect key="frame" x="0.0" y="150" width="200" height="50"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Xe Dap"/>
+                                        <connections>
+                                            <action selector="xe_dap:" destination="Zzn-4w-9Dz" eventType="touchUpInside" id="2A0-ht-HfF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="5vd-oN-oHw"/>
+                                    <constraint firstAttribute="width" constant="200" id="tZ0-oW-xLW"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="In2-2x-faa"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Waw-bp-oKE" firstAttribute="centerY" secondItem="SMt-hC-tQI" secondAttribute="centerY" id="MCX-3m-LXP"/>
+                            <constraint firstItem="Waw-bp-oKE" firstAttribute="centerX" secondItem="SMt-hC-tQI" secondAttribute="centerX" id="fSc-Cd-gFu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="E0T-Zm-8Ll"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ch9-pG-kgH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="87" y="755"/>
+        </scene>
+        <!--Xe Dap-->
+        <scene sceneID="NHR-LG-BZS">
+            <objects>
+                <viewController storyboardIdentifier="XeDap" id="1Iw-20-esq" customClass="XeDap" customModule="BluetoothDeviceConnect" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="W4y-lS-cnB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="6PX-wj-UmI">
+                                <rect key="frame" x="107" y="248" width="200" height="400"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2u-Sb-cUa">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="44.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mi4-Y7-lR8">
+                                        <rect key="frame" x="0.0" y="44.5" width="200" height="44.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oZ8-70-WJV">
+                                        <rect key="frame" x="0.0" y="89" width="200" height="44.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="piQ-oj-hEG">
+                                        <rect key="frame" x="0.0" y="133.5" width="200" height="44.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HOc-qH-Tbm">
+                                        <rect key="frame" x="0.0" y="178" width="200" height="44"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Cg-78-e61">
+                                        <rect key="frame" x="0.0" y="222" width="200" height="44.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="znR-ko-Phv">
+                                        <rect key="frame" x="0.0" y="266.5" width="200" height="44.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kBS-A0-OLH">
+                                        <rect key="frame" x="0.0" y="311" width="200" height="44.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IYg-RR-CoO">
+                                        <rect key="frame" x="0.0" y="355.5" width="200" height="44.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="14O-b7-QDJ"/>
+                                    <constraint firstAttribute="width" constant="200" id="dd7-R2-yzn"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hXz-tr-qTT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6PX-wj-UmI" firstAttribute="centerY" secondItem="W4y-lS-cnB" secondAttribute="centerY" id="5Hi-z0-p1Z"/>
+                            <constraint firstItem="6PX-wj-UmI" firstAttribute="centerX" secondItem="W4y-lS-cnB" secondAttribute="centerX" id="bpT-If-Jib"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="averageCadence" destination="g2u-Sb-cUa" id="tN5-bA-EtR"/>
+                        <outlet property="averagePower" destination="mi4-Y7-lR8" id="cTU-yF-8CN"/>
+                        <outlet property="averageSpeed" destination="oZ8-70-WJV" id="fdc-gn-vmO"/>
+                        <outlet property="energy" destination="piQ-oj-hEG" id="spB-mI-3uf"/>
+                        <outlet property="heartRate" destination="HOc-qH-Tbm" id="PJN-2T-tuc"/>
+                        <outlet property="instantaneousPower" destination="8Cg-78-e61" id="Igh-Ww-SgC"/>
+                        <outlet property="instantaneousSpeed" destination="znR-ko-Phv" id="Wce-4p-dAH"/>
+                        <outlet property="resistanceLevel" destination="kBS-A0-OLH" id="DIf-gM-gim"/>
+                        <outlet property="totalDistance" destination="IYg-RR-CoO" id="Otg-Ee-msT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0WC-9P-5uX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="87" y="1436"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vey-Qa-dyI">
@@ -269,7 +431,25 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2J7-AH-Vsa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="86.956521739130437" y="754.6875"/>
+            <point key="canvasLocation" x="926" y="755"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3YX-6D-oAv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UcV-m0-DdK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jMz-K6-eJa">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Zzn-4w-9Dz" kind="relationship" relationship="rootViewController" id="QZ8-Sc-9N4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5uF-8q-tCU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-714" y="755"/>
         </scene>
     </scenes>
     <resources>
