@@ -22,6 +22,7 @@ class StepDataChart: UIViewController{
         self.navigationItem.title = "Bar Chart View"
         setUpBarChartData()
         setupBarChartView()
+        sleepChart.backgroundColor = UIColor(hex: "914FC5")
         setUpSleepViewData()
     }
 }
@@ -78,10 +79,10 @@ extension StepDataChart {
 
 extension StepDataChart {
     
+    //MARK: - set up sleep bar char
     private func setUpSleepViewData() {
-        sleepChart.backgroundColor = UIColor(hex: "914FC5")
         var views = [UIView]()
-        let prarentWidth = sleepChart.frame.width
+        let prarentWidth = UIScreen.main.bounds.size.width - 30*2
         for i in 0...self.sampleData.data.count - 1 {
             views.append(UIView())
             switch self.sampleData.data[i].type {
@@ -96,6 +97,7 @@ extension StepDataChart {
             }
             
             if i == 0 {
+                views[0].translatesAutoresizingMaskIntoConstraints = false
                 self.sleepChart.addSubview(views[0])
                 NSLayoutConstraint.activate([
                     views[0].topAnchor.constraint(equalTo: self.sleepChart.topAnchor),
@@ -105,6 +107,7 @@ extension StepDataChart {
                 ])
                 
             } else {
+                views[i].translatesAutoresizingMaskIntoConstraints = false
                 self.sleepChart.addSubview(views[i])
                 NSLayoutConstraint.activate([
                     views[i].topAnchor.constraint(equalTo: self.sleepChart.topAnchor),
