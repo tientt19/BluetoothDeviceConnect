@@ -235,9 +235,9 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJJ-TO-rVh">
-                                <rect key="frame" x="185.5" y="259" width="43" height="31"/>
+                                <rect key="frame" x="146.5" y="259" width="121.5" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Đo"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Command Test"/>
                                 <connections>
                                     <action selector="sendCommanh:" destination="pPI-gR-qtm" eventType="touchUpInside" id="Rpp-5h-4jC"/>
                                 </connections>
@@ -253,6 +253,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="commandButton" destination="zJJ-TO-rVh" id="r8W-Yx-90S"/>
                         <outlet property="diaLabel" destination="S0J-6S-Lch" id="fln-Dv-J5V"/>
                         <outlet property="errorLabel" destination="pth-kC-Rxj" id="cmV-Sj-UgS"/>
                         <outlet property="mapLabel" destination="UAY-gG-5K8" id="UCd-1k-TVn"/>

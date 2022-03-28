@@ -541,6 +541,8 @@
 		52CB2C8527F16B32002A103E /* VongDeoTayInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CB2C8427F16B32002A103E /* VongDeoTayInteractor.swift */; };
 		52CB2C8827F16B83002A103E /* VongDeoTayPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CB2C8727F16B83002A103E /* VongDeoTayPresenter.swift */; };
 		52CB2C8B27F16BCE002A103E /* VongDeoTayRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CB2C8A27F16BCE002A103E /* VongDeoTayRouter.swift */; };
+		52CB2C8D27F18CBF002A103E /* BioLightData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CB2C8C27F18CBF002A103E /* BioLightData.swift */; };
+		52CB2C8F27F18D4F002A103E /* ByteConvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CB2C8E27F18D4F002A103E /* ByteConvert.swift */; };
 		52CE096F27D707B7005DE5CB /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CE096E27D707B7005DE5CB /* UITableViewExtension.swift */; };
 		52CE097227D707E2005DE5CB /* tableviewCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CE097027D707E2005DE5CB /* tableviewCellTableViewCell.swift */; };
 		52CE097327D707E2005DE5CB /* tableviewCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52CE097127D707E2005DE5CB /* tableviewCellTableViewCell.xib */; };
@@ -1089,6 +1091,8 @@
 		52CB2C8427F16B32002A103E /* VongDeoTayInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VongDeoTayInteractor.swift; sourceTree = "<group>"; };
 		52CB2C8727F16B83002A103E /* VongDeoTayPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VongDeoTayPresenter.swift; sourceTree = "<group>"; };
 		52CB2C8A27F16BCE002A103E /* VongDeoTayRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VongDeoTayRouter.swift; sourceTree = "<group>"; };
+		52CB2C8C27F18CBF002A103E /* BioLightData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioLightData.swift; sourceTree = "<group>"; };
+		52CB2C8E27F18D4F002A103E /* ByteConvert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByteConvert.swift; sourceTree = "<group>"; };
 		52CE096E27D707B7005DE5CB /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		52CE097027D707E2005DE5CB /* tableviewCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableviewCellTableViewCell.swift; sourceTree = "<group>"; };
 		52CE097127D707E2005DE5CB /* tableviewCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = tableviewCellTableViewCell.xib; sourceTree = "<group>"; };
@@ -2189,6 +2193,8 @@
 			isa = PBXGroup;
 			children = (
 				52CE097B27D71483005DE5CB /* BioLightConnect.swift */,
+				52CB2C8C27F18CBF002A103E /* BioLightData.swift */,
+				52CB2C8E27F18D4F002A103E /* ByteConvert.swift */,
 			);
 			path = BioLight;
 			sourceTree = "<group>";
@@ -2510,6 +2516,7 @@
 				52CB2C7B27F15ED4002A103E /* XeDapRouter.swift in Sources */,
 				521B11FC27EC672F00D411EB /* CharacteristicFitnessMachineStatus.swift in Sources */,
 				521B118C27EC672E00D411EB /* CompanyIdentifier+Range1000.swift in Sources */,
+				52CB2C8D27F18CBF002A103E /* BioLightData.swift in Sources */,
 				521B123827EC672F00D411EB /* CharacteristicPressure.swift in Sources */,
 				521B119727EC672E00D411EB /* HeartRateTypes.swift in Sources */,
 				521B11D027EC672E00D411EB /* ServiceHapLockManagement.swift in Sources */,
@@ -2762,6 +2769,7 @@
 				521B11ED27EC672E00D411EB /* CharacteristicStairClimberData.swift in Sources */,
 				52617DB027E984E20002FDF6 /* AnimatedViewPortJob.swift in Sources */,
 				52617D9527E984E20002FDF6 /* Transformer.swift in Sources */,
+				52CB2C8F27F18D4F002A103E /* ByteConvert.swift in Sources */,
 				52617DC527E984E20002FDF6 /* ScatterChartDataSet.swift in Sources */,
 				52617DC027E984E20002FDF6 /* ChartDataEntryBase.swift in Sources */,
 				521B126C27EC672F00D411EB /* CharacteristicGymConnectWorkoutProgramName.swift in Sources */,

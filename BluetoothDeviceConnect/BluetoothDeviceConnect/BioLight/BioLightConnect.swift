@@ -8,6 +8,16 @@
 import UIKit
 import CoreBluetooth
 
+protocol BLECommand {
+    var bytes: [UInt8] { get }
+}
+
+extension BLECommand {
+    func getData() -> Data {
+        return Data(bytes)
+    }
+}
+
 enum Bit: UInt8, CustomStringConvertible {
     case zero, one
     
@@ -26,13 +36,16 @@ class BioLightConnect: UIViewController {
     var bioLightPeripheral: CBPeripheral!
     var bioCharacteristic: CBCharacteristic? = nil
     var measurementState = false
-    
+    var writeUUIDs : [CBUUID] = []
+    var writeCharacteristics: [CBCharacteristic] = []
+     
     @IBOutlet weak var statusLabel : UILabel!
     @IBOutlet weak var sysLabel : UILabel!
     @IBOutlet weak var prLabel : UILabel!
     @IBOutlet weak var diaLabel : UILabel!
     @IBOutlet weak var mapLabel : UILabel!
     @IBOutlet weak var errorLabel : UILabel!
+    @IBOutlet weak var commandButton : UIButton!
     
     var sysValue = Int()
     var diaValue = Int()
@@ -44,11 +57,16 @@ class BioLightConnect: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         statusLabel.text = "None"
+        self.writeUUIDs = ["0xFFF4"].map({ CBUUID(string: $0) })
         centralManager = CBCentralManager(delegate: self, queue: nil)
     }
     
     @IBAction func sendCommanh(_ sender : UIButton) {
-//        bioLightPeripheral.writeValue(Command.start.getData(), for: bioCharacteristic!, type: .withoutResponse)
+        if measurementState == false {
+            sendCommand(BioLightCommand.Command.start)
+        } else {
+            sendCommand(BioLightCommand.Command.abandon)
+        }
     }
 }
 
@@ -78,8 +96,9 @@ extension BioLightConnect: CBCentralManagerDelegate {
         if peripheral.name == "AL_WBP" {
             bioLightPeripheral = peripheral
             bioLightPeripheral.delegate = self
-            centralManager.stopScan()
             centralManager.connect(bioLightPeripheral)
+            centralManager.stopScan()
+            print("connected!!!")
         }
         
     }
@@ -111,9 +130,10 @@ extension BioLightConnect: CBPeripheralDelegate {
                     peripheral.readValue(for: characteristic)
                 }
                 
-                if characteristic.properties.contains(.write) {
-                    dLogDebug("write \(characteristic.uuid)")
+                if writeUUIDs.contains(characteristic.uuid) {
+                    writeCharacteristics.append(characteristic)
                 }
+                peripheral.setNotifyValue(true, for: characteristic)
             }
             
             // thong bao neu gia tri thay doi
@@ -137,6 +157,7 @@ extension BioLightConnect: CBPeripheralDelegate {
 }
 
 extension BioLightConnect {
+    //MARK: - Handle data receive
     func handePacketReceive(data : [UInt8]) {
     
         var `data` = data
@@ -210,6 +231,7 @@ extension BioLightConnect {
 }
 
 extension BioLightConnect {
+    //MARK: -  convert byte to bit array
     func bits(fromByte byte: UInt8) -> [Bit] {
         var byte = byte
         var bits = [Bit](repeating: .zero, count: 8)
@@ -228,10 +250,26 @@ extension BioLightConnect {
     func turnInt(_ x : UInt8) -> Int {
         return Int(x)
     }
+   
+    //MARK: - Send command
+    private func sendCommand(_ command: BioLightCommand.Command) {
+        let bioCommand = BioLightCommand(command: command)
+        guard let peripheral = self.bioLightPeripheral else {
+            return
+        }
+        sendCommandTask(peripheral, bioCommand, to: writeCharacteristics.first)
+    }
+    
+    func sendCommandTask(_ peripheral: CBPeripheral, _ command: BLECommand, to writeCharateristic: CBCharacteristic?, type: CBCharacteristicWriteType = .withResponse) {
+        guard let writeCharateristic = writeCharateristic else {
+            return
+        }
+        self.bioLightPeripheral.writeValue(command.getData(), for: writeCharateristic, type: type)
+    }
 }
 
 // MARK: - BioCommand - Command
-extension BioLightConnect {
+extension BioLightCommand {
     enum Command: String {
         case start = "00"
         case continueMeasurement = "01"
@@ -239,3 +277,26 @@ extension BioLightConnect {
         case abandon = "08"
     }
 }
+
+// MARK: - BioCommand
+struct BioLightCommand: BLECommand {
+    var command: Command
+
+    var bytes: [UInt8] {
+        var startCommandString = "78"
+        startCommandString.append(command.rawValue) // command
+        startCommandString.append("00") // Ble connection time
+        startCommandString.append("00") // Ble connection time 2 digit higer
+        startCommandString.append("00") // Ignore
+        startCommandString.append("7e") // Remark
+        let dataBlock = BiolightData.DataBlock(data: startCommandString.hexaBytes)
+        let bioData = BiolightData(header: UInt8(170), dataBlock: dataBlock?.getBytes() ?? [])
+        return bioData.getBytes()
+    }
+
+    init(command: Command) {
+        self.command = command
+    }
+}
+
+
