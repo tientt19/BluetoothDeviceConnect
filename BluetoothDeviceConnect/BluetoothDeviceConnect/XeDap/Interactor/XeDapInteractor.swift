@@ -16,10 +16,10 @@ class XeDapInteractor : NSObject, XeDapInteractorInputProtocols {
     var weightPeripheral: CBPeripheral!
     
     func setUpCentralManager() {
-        centralManager = CBCentralManager(delegate: self, queue: nil)
-    }
+        self.centralManager = CBCentralManager(delegate: self, queue: nil)
+    }   
     
-    
+    //MARK: - Handle task
     func handleDecodeHRMess(sensorData: Data) {
         //        let bytes:[UInt8] = [0x01, 0x02]
         var uint16array = [UInt16]()
@@ -58,22 +58,22 @@ extension XeDapInteractor : CBCentralManagerDelegate {
             print("central.state is .poweredOn")
             self.centralManager.scanForPeripherals(withServices: nil)
         }
+    }
+    
+    func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
         
-        func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
-            
-            if peripheral.name == "YESOUL2803083" {
-                weightPeripheral = peripheral
-                self.centralManager.stopScan()
-                self.centralManager.connect(weightPeripheral)
-                weightPeripheral.delegate = self
-            }
+        if peripheral.name == "YESOUL2803083" {
+            weightPeripheral = peripheral
+            self.centralManager.stopScan()
+            self.centralManager.connect(weightPeripheral)
+            weightPeripheral.delegate = self
         }
-        
-        
-        func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
-            print("Connected!")
-            weightPeripheral.discoverServices(nil)
-        }
+    }
+    
+    
+    func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
+        print("Connected!")
+        weightPeripheral.discoverServices(nil)
     }
 }
 
@@ -107,7 +107,6 @@ extension XeDapInteractor: CBPeripheralDelegate {
             if characteristics.properties.contains(.notify) {
                 //                            print("\(characteristics.uuid): properties contains .notify")
                 peripheral.setNotifyValue(true, for: characteristics)
-                
             }
         }
     }
