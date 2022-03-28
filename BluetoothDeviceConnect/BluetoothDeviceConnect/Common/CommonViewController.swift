@@ -26,14 +26,12 @@ class CommonViewController: UIViewController {
     }
     
     @IBAction func s5_smartWatch(_ sender: UIButton) {
-        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "VongDeoTay") as? VongDeoTay
-        self.navigationController?.pushViewController(vc!, animated: true)
+        let vongDeoTayVC = VongDeoTayRouter.createVongDeoTayModule()
+        self.navigationController?.pushViewController(vongDeoTayVC, animated: true)
     }
     
     @IBAction func xe_dap(_ sender: UIButton) {
-        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "XeDap") as? XeDap
-        self.navigationController?.pushViewController(vc!, animated: true)
+        let xeDapVC = XeDapRouter.createXeDapModule()
+        self.navigationController?.pushViewController(xeDapVC, animated: true)
     }
-
-
 }

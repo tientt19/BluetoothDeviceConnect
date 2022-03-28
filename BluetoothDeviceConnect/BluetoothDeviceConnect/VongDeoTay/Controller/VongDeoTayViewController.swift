@@ -9,7 +9,9 @@ import UIKit
 import TrusangBluetooth
 import CoreBluetooth
 
-class VongDeoTay: UIViewController {
+class VongDeoTayViewController: UIViewController {
+    
+    var presenter : VongDeoTayPresenter?
     
     @IBOutlet weak var getRecordData : UIButton!
     @IBOutlet weak var sleepDataButton : UIButton!
@@ -93,7 +95,7 @@ class VongDeoTay: UIViewController {
     }
 }
 
-extension VongDeoTay {
+extension VongDeoTayViewController {
     //MARK: -- Determine Bluetooth status
     func determineState() {
         sdkConnect.bluetoothProviderManagerStateDidUpdate { [weak self] status in
@@ -139,3 +141,6 @@ extension VongDeoTay {
     }
 }
 
+extension VongDeoTayViewController : VongDeoTayViewProtocols {
+    
+}

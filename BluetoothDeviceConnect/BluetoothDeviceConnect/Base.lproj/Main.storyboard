@@ -43,10 +43,10 @@
             </objects>
             <point key="canvasLocation" x="-714" y="71"/>
         </scene>
-        <!--Vong Deo Tay-->
+        <!--Vong Deo Tay View Controller-->
         <scene sceneID="VAr-Wi-Twx">
             <objects>
-                <viewController storyboardIdentifier="VongDeoTay" id="1xN-Ys-7g2" customClass="VongDeoTay" customModule="BluetoothDeviceConnect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VongDeoTay" id="1xN-Ys-7g2" customClass="VongDeoTayViewController" customModule="BluetoothDeviceConnect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8uo-66-H8C">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -328,10 +328,10 @@
             </objects>
             <point key="canvasLocation" x="87" y="755"/>
         </scene>
-        <!--Xe Dap-->
+        <!--Xe Dap View Controller-->
         <scene sceneID="NHR-LG-BZS">
             <objects>
-                <viewController storyboardIdentifier="XeDap" id="1Iw-20-esq" customClass="XeDap" customModule="BluetoothDeviceConnect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="XeDap" id="1Iw-20-esq" customClass="XeDapViewController" customModule="BluetoothDeviceConnect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="W4y-lS-cnB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

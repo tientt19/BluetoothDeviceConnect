@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		521B0FEC27EC5EB400D411EB /* CommonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B0FEB27EC5EB400D411EB /* CommonViewController.swift */; };
-		521B0FEF27EC630100D411EB /* XeDap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B0FEE27EC630100D411EB /* XeDap.swift */; };
+		521B0FEF27EC630100D411EB /* XeDapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B0FEE27EC630100D411EB /* XeDapViewController.swift */; };
 		521B117427EC672E00D411EB /* MeshModelIdentifierExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B0FF327EC672D00D411EB /* MeshModelIdentifierExtension.swift */; };
 		521B117527EC672E00D411EB /* MeshModelIdentifierVendorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B0FF427EC672D00D411EB /* MeshModelIdentifierVendorExtension.swift */; };
 		521B117627EC672E00D411EB /* MeshMessageGenericOnOff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B0FF627EC672D00D411EB /* MeshMessageGenericOnOff.swift */; };
@@ -526,13 +526,21 @@
 		52617DF127E98D090002FDF6 /* DayAxisValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52617DED27E98D090002FDF6 /* DayAxisValueFormatter.swift */; };
 		52617DF227E98D090002FDF6 /* DateValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52617DEE27E98D090002FDF6 /* DateValueFormatter.swift */; };
 		52617DF327E98D090002FDF6 /* LargeValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52617DEF27E98D090002FDF6 /* LargeValueFormatter.swift */; };
-		5279E3DD27EAB9EA005C4A81 /* VongDeoTay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5279E3DC27EAB9EA005C4A81 /* VongDeoTay.swift */; };
+		5279E3DD27EAB9EA005C4A81 /* VongDeoTayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5279E3DC27EAB9EA005C4A81 /* VongDeoTayViewController.swift */; };
 		528D133827E82A28000C3AA2 /* TrusangBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528D133727E82A27000C3AA2 /* TrusangBluetooth.framework */; };
 		528D134027E85D40000C3AA2 /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D133D27E85D40000C3AA2 /* Chart.swift */; };
 		528D134127E85D40000C3AA2 /* ChartColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D133E27E85D40000C3AA2 /* ChartColors.swift */; };
 		528D134227E85D40000C3AA2 /* ChartSeries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D133F27E85D40000C3AA2 /* ChartSeries.swift */; };
 		528D134527E85FE5000C3AA2 /* BasicChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D134427E85FE5000C3AA2 /* BasicChartViewController.swift */; };
 		52C0958B27ECCAB5001157BC /* SleepSampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C0958A27ECCAB5001157BC /* SleepSampleData.swift */; };
+		52CB2C7927F15D59002A103E /* XeDap_Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CB2C7827F15D59002A103E /* XeDap_Protocols.swift */; };
+		52CB2C7B27F15ED4002A103E /* XeDapRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CB2C7A27F15ED4002A103E /* XeDapRouter.swift */; };
+		52CB2C7D27F15F7E002A103E /* XeDapInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CB2C7C27F15F7E002A103E /* XeDapInteractor.swift */; };
+		52CB2C7F27F15FEE002A103E /* XeDapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CB2C7E27F15FEE002A103E /* XeDapPresenter.swift */; };
+		52CB2C8227F16ADE002A103E /* VongDeoTayProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CB2C8127F16ADE002A103E /* VongDeoTayProtocols.swift */; };
+		52CB2C8527F16B32002A103E /* VongDeoTayInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CB2C8427F16B32002A103E /* VongDeoTayInteractor.swift */; };
+		52CB2C8827F16B83002A103E /* VongDeoTayPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CB2C8727F16B83002A103E /* VongDeoTayPresenter.swift */; };
+		52CB2C8B27F16BCE002A103E /* VongDeoTayRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CB2C8A27F16BCE002A103E /* VongDeoTayRouter.swift */; };
 		52CE096F27D707B7005DE5CB /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CE096E27D707B7005DE5CB /* UITableViewExtension.swift */; };
 		52CE097227D707E2005DE5CB /* tableviewCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CE097027D707E2005DE5CB /* tableviewCellTableViewCell.swift */; };
 		52CE097327D707E2005DE5CB /* tableviewCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52CE097127D707E2005DE5CB /* tableviewCellTableViewCell.xib */; };
@@ -544,7 +552,7 @@
 /* Begin PBXFileReference section */
 		10B069EEFD60052BB6642BB5 /* Pods-BluetoothDeviceConnect.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BluetoothDeviceConnect.debug.xcconfig"; path = "Target Support Files/Pods-BluetoothDeviceConnect/Pods-BluetoothDeviceConnect.debug.xcconfig"; sourceTree = "<group>"; };
 		521B0FEB27EC5EB400D411EB /* CommonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonViewController.swift; sourceTree = "<group>"; };
-		521B0FEE27EC630100D411EB /* XeDap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XeDap.swift; sourceTree = "<group>"; };
+		521B0FEE27EC630100D411EB /* XeDapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XeDapViewController.swift; sourceTree = "<group>"; };
 		521B0FF327EC672D00D411EB /* MeshModelIdentifierExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeshModelIdentifierExtension.swift; sourceTree = "<group>"; };
 		521B0FF427EC672D00D411EB /* MeshModelIdentifierVendorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeshModelIdentifierVendorExtension.swift; sourceTree = "<group>"; };
 		521B0FF627EC672D00D411EB /* MeshMessageGenericOnOff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeshMessageGenericOnOff.swift; sourceTree = "<group>"; };
@@ -1066,13 +1074,21 @@
 		52617DED27E98D090002FDF6 /* DayAxisValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayAxisValueFormatter.swift; sourceTree = "<group>"; };
 		52617DEE27E98D090002FDF6 /* DateValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateValueFormatter.swift; sourceTree = "<group>"; };
 		52617DEF27E98D090002FDF6 /* LargeValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LargeValueFormatter.swift; sourceTree = "<group>"; };
-		5279E3DC27EAB9EA005C4A81 /* VongDeoTay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VongDeoTay.swift; sourceTree = "<group>"; };
+		5279E3DC27EAB9EA005C4A81 /* VongDeoTayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VongDeoTayViewController.swift; sourceTree = "<group>"; };
 		528D133727E82A27000C3AA2 /* TrusangBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TrusangBluetooth.framework; sourceTree = "<group>"; };
 		528D133D27E85D40000C3AA2 /* Chart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
 		528D133E27E85D40000C3AA2 /* ChartColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartColors.swift; sourceTree = "<group>"; };
 		528D133F27E85D40000C3AA2 /* ChartSeries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartSeries.swift; sourceTree = "<group>"; };
 		528D134427E85FE5000C3AA2 /* BasicChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicChartViewController.swift; sourceTree = "<group>"; };
 		52C0958A27ECCAB5001157BC /* SleepSampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SleepSampleData.swift; sourceTree = "<group>"; };
+		52CB2C7827F15D59002A103E /* XeDap_Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XeDap_Protocols.swift; sourceTree = "<group>"; };
+		52CB2C7A27F15ED4002A103E /* XeDapRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XeDapRouter.swift; sourceTree = "<group>"; };
+		52CB2C7C27F15F7E002A103E /* XeDapInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XeDapInteractor.swift; sourceTree = "<group>"; };
+		52CB2C7E27F15FEE002A103E /* XeDapPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XeDapPresenter.swift; sourceTree = "<group>"; };
+		52CB2C8127F16ADE002A103E /* VongDeoTayProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VongDeoTayProtocols.swift; sourceTree = "<group>"; };
+		52CB2C8427F16B32002A103E /* VongDeoTayInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VongDeoTayInteractor.swift; sourceTree = "<group>"; };
+		52CB2C8727F16B83002A103E /* VongDeoTayPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VongDeoTayPresenter.swift; sourceTree = "<group>"; };
+		52CB2C8A27F16BCE002A103E /* VongDeoTayRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VongDeoTayRouter.swift; sourceTree = "<group>"; };
 		52CE096E27D707B7005DE5CB /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		52CE097027D707E2005DE5CB /* tableviewCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableviewCellTableViewCell.swift; sourceTree = "<group>"; };
 		52CE097127D707E2005DE5CB /* tableviewCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = tableviewCellTableViewCell.xib; sourceTree = "<group>"; };
@@ -1117,7 +1133,11 @@
 			isa = PBXGroup;
 			children = (
 				521B0FF027EC672D00D411EB /* BluetoothMessageProtocol */,
-				521B0FEE27EC630100D411EB /* XeDap.swift */,
+				52CB2C7727F15D2D002A103E /* Protocols */,
+				52CB2C7627F15D23002A103E /* Router */,
+				52CB2C7527F15D1C002A103E /* Interactor */,
+				52CB2C7427F15D12002A103E /* Presenter */,
+				52CB2C7327F15D07002A103E /* Controller */,
 			);
 			path = XeDap;
 			sourceTree = "<group>";
@@ -2031,7 +2051,7 @@
 		5279E3DB27EAB9CB005C4A81 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				5279E3DC27EAB9EA005C4A81 /* VongDeoTay.swift */,
+				5279E3DC27EAB9EA005C4A81 /* VongDeoTayViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -2039,6 +2059,10 @@
 		528D132627E814A8000C3AA2 /* VongDeoTay */ = {
 			isa = PBXGroup;
 			children = (
+				52CB2C8927F16BC0002A103E /* Router */,
+				52CB2C8627F16B6E002A103E /* Presenter */,
+				52CB2C8327F16B23002A103E /* Interactor */,
+				52CB2C8027F16AC5002A103E /* Protocols */,
 				5279E3DB27EAB9CB005C4A81 /* Controller */,
 				528D134327E85FCE000C3AA2 /* BasicChartView */,
 				52617DEB27E98D090002FDF6 /* Formatters */,
@@ -2076,6 +2100,78 @@
 				52617CB327E979C90002FDF6 /* StepDataChart.swift */,
 			);
 			path = BasicChartView;
+			sourceTree = "<group>";
+		};
+		52CB2C7327F15D07002A103E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				521B0FEE27EC630100D411EB /* XeDapViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		52CB2C7427F15D12002A103E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				52CB2C7E27F15FEE002A103E /* XeDapPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		52CB2C7527F15D1C002A103E /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				52CB2C7C27F15F7E002A103E /* XeDapInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		52CB2C7627F15D23002A103E /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				52CB2C7A27F15ED4002A103E /* XeDapRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		52CB2C7727F15D2D002A103E /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				52CB2C7827F15D59002A103E /* XeDap_Protocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		52CB2C8027F16AC5002A103E /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				52CB2C8127F16ADE002A103E /* VongDeoTayProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		52CB2C8327F16B23002A103E /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				52CB2C8427F16B32002A103E /* VongDeoTayInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		52CB2C8627F16B6E002A103E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				52CB2C8727F16B83002A103E /* VongDeoTayPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		52CB2C8927F16BC0002A103E /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				52CB2C8A27F16BCE002A103E /* VongDeoTayRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		52CE097427D713BD005DE5CB /* SmartScale */ = {
@@ -2238,6 +2334,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52CB2C8227F16ADE002A103E /* VongDeoTayProtocols.swift in Sources */,
 				521B126527EC672F00D411EB /* CharacteristicMaximumRecommendedHeartRate.swift in Sources */,
 				521B118427EC672E00D411EB /* ProvisioningDataUnits.swift in Sources */,
 				52617DCF27E984E20002FDF6 /* PieChartDataSetProtocol.swift in Sources */,
@@ -2339,6 +2436,7 @@
 				52617D8B27E984E20002FDF6 /* ChartAnimationEasing.swift in Sources */,
 				521B12BC27EC672F00D411EB /* ServiceBodyComposition.swift in Sources */,
 				521B122927EC672F00D411EB /* CharacteristicAerobicHeartRateLowerLimit.swift in Sources */,
+				52CB2C8B27F16BCE002A103E /* VongDeoTayRouter.swift in Sources */,
 				521B11D627EC672E00D411EB /* ServiceHapLeakSensor.swift in Sources */,
 				521B124E27EC672F00D411EB /* CharacteristicAnaerobicThreshold.swift in Sources */,
 				521B11E527EC672E00D411EB /* CharacteristicAerobicThreshold.swift in Sources */,
@@ -2409,6 +2507,7 @@
 				521B12B227EC672F00D411EB /* ServiceGenericAccess.swift in Sources */,
 				52617DF127E98D090002FDF6 /* DayAxisValueFormatter.swift in Sources */,
 				521B118227EC672E00D411EB /* ProxyMessageType.swift in Sources */,
+				52CB2C7B27F15ED4002A103E /* XeDapRouter.swift in Sources */,
 				521B11FC27EC672F00D411EB /* CharacteristicFitnessMachineStatus.swift in Sources */,
 				521B118C27EC672E00D411EB /* CompanyIdentifier+Range1000.swift in Sources */,
 				521B123827EC672F00D411EB /* CharacteristicPressure.swift in Sources */,
@@ -2438,6 +2537,7 @@
 				52617DD227E984E20002FDF6 /* BubbleChartDataSetProtocol.swift in Sources */,
 				521B119F27EC672E00D411EB /* DateTimeType.swift in Sources */,
 				521B11F427EC672E00D411EB /* CharacteristicStepClimberData.swift in Sources */,
+				52CB2C7F27F15FEE002A103E /* XeDapPresenter.swift in Sources */,
 				521B11AE27EC672E00D411EB /* AccessoryCategory.swift in Sources */,
 				521B11B727EC672E00D411EB /* ServiceHapWindowCovering.swift in Sources */,
 				521B12B327EC672F00D411EB /* ServiceCurrentTime.swift in Sources */,
@@ -2518,6 +2618,7 @@
 				52617D7B27E984E20002FDF6 /* Range.swift in Sources */,
 				521B123227EC672F00D411EB /* CharacteristicPnPID.swift in Sources */,
 				52617DAD27E984E20002FDF6 /* ViewPortJob.swift in Sources */,
+				52CB2C8827F16B83002A103E /* VongDeoTayPresenter.swift in Sources */,
 				52617DDA27E984E20002FDF6 /* BarChartDataProvider.swift in Sources */,
 				521B11E727EC672E00D411EB /* CharacteristicTreadmillData.swift in Sources */,
 				5224E6CE27D644B800BA5CF6 /* HTBodyfat_NewSDK.m in Sources */,
@@ -2533,6 +2634,7 @@
 				521B11C527EC672E00D411EB /* ServiceHapValve.swift in Sources */,
 				521B11DA27EC672E00D411EB /* ServiceHapHeaterCooler.swift in Sources */,
 				52617D6527E984E20002FDF6 /* SquareShapeRenderer.swift in Sources */,
+				52CB2C8527F16B32002A103E /* VongDeoTayInteractor.swift in Sources */,
 				521B12AC27EC672F00D411EB /* ServiceEnvironmentalSensing.swift in Sources */,
 				521B11A027EC672E00D411EB /* YearMonthDay.swift in Sources */,
 				52617DCB27E984E20002FDF6 /* RadarChartDataSet.swift in Sources */,
@@ -2555,6 +2657,7 @@
 				521B126027EC672F00D411EB /* CharacteristicNewAlert.swift in Sources */,
 				521B118E27EC672E00D411EB /* CompanyIdentifierNonAssigned.swift in Sources */,
 				521B129427EC672F00D411EB /* ServiceScanParameters.swift in Sources */,
+				52CB2C7D27F15F7E002A103E /* XeDapInteractor.swift in Sources */,
 				521B128427EC672F00D411EB /* GapEventType.swift in Sources */,
 				521B127827EC672F00D411EB /* AppleBeaconExtension.swift in Sources */,
 				521B12D227EC672F00D411EB /* ServiceNorthPoleAweHeartRate.swift in Sources */,
@@ -2608,6 +2711,7 @@
 				521B125827EC672F00D411EB /* CharacteristicUnreadAlertStatus.swift in Sources */,
 				521B129027EC672F00D411EB /* ServiceReferenceTimeUpdate.swift in Sources */,
 				52617DBB27E984E20002FDF6 /* RadarChartData.swift in Sources */,
+				52CB2C7927F15D59002A103E /* XeDap_Protocols.swift in Sources */,
 				521B122627EC672F00D411EB /* CharacteristicHeartRateMax.swift in Sources */,
 				521B12CB27EC672F00D411EB /* ServiceCycleOps.swift in Sources */,
 				521B123A27EC672F00D411EB /* CharacteristicAlertCategoryID.swift in Sources */,
@@ -2629,7 +2733,7 @@
 				52617D5C27E984E20002FDF6 /* YAxisRenderer.swift in Sources */,
 				521B127627EC672F00D411EB /* ManufacturerDataAppleHomeKitEncryptedNotification.swift in Sources */,
 				52617DA827E984E20002FDF6 /* ChartLimitLine.swift in Sources */,
-				5279E3DD27EAB9EA005C4A81 /* VongDeoTay.swift in Sources */,
+				5279E3DD27EAB9EA005C4A81 /* VongDeoTayViewController.swift in Sources */,
 				52CE097227D707E2005DE5CB /* tableviewCellTableViewCell.swift in Sources */,
 				521B120327EC672F00D411EB /* CharacteristicWeight.swift in Sources */,
 				521B118727EC672E00D411EB /* ProvisioningDataUnitStart.swift in Sources */,
@@ -2742,7 +2846,7 @@
 				521B12BF27EC672F00D411EB /* ServicePhoneAlertStatus.swift in Sources */,
 				52617D6D27E984E20002FDF6 /* HorizontalBarChartRenderer.swift in Sources */,
 				52617DCD27E984E20002FDF6 /* LineScatterCandleRadarChartDataSet.swift in Sources */,
-				521B0FEF27EC630100D411EB /* XeDap.swift in Sources */,
+				521B0FEF27EC630100D411EB /* XeDapViewController.swift in Sources */,
 				521B120527EC672F00D411EB /* CharacteristicBloodPressureMeasurement.swift in Sources */,
 				521B122D27EC672F00D411EB /* CharacteristicRowerData.swift in Sources */,
 				52617D6427E984E20002FDF6 /* XShapeRenderer.swift in Sources */,
