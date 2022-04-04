@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="68" id="KGk-i7-Jjw" customClass="ExerciseInfoCell" customModule="_SK_Tranning_Demo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="68"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="390" height="68"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E3H-ef-998">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="67"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="run" translatesAutoresizingMaskIntoConstraints="NO" id="vmP-Jf-3S7">
+                                <rect key="frame" x="0.0" y="21.5" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="LQl-D3-1WK"/>
+                                    <constraint firstAttribute="height" constant="24" id="YZa-tj-D65"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 phút" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKB-h3-E9H">
+                                <rect key="frame" x="48" y="25" width="42" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Làm ấm, khởi động" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T8o-4j-3qZ">
+                                <rect key="frame" x="130" y="25" width="123" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.29767274859999998" green="0.74774563309999997" blue="0.82492679359999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YKB-h3-E9H" firstAttribute="leading" secondItem="vmP-Jf-3S7" secondAttribute="trailing" constant="24" id="BLF-hU-1Ho"/>
+                            <constraint firstItem="vmP-Jf-3S7" firstAttribute="centerY" secondItem="E3H-ef-998" secondAttribute="centerY" id="E7a-zc-30i"/>
+                            <constraint firstItem="T8o-4j-3qZ" firstAttribute="leading" secondItem="YKB-h3-E9H" secondAttribute="trailing" constant="40" id="RM1-zo-f1p"/>
+                            <constraint firstItem="vmP-Jf-3S7" firstAttribute="leading" secondItem="E3H-ef-998" secondAttribute="leading" id="Spb-QB-7aF"/>
+                            <constraint firstItem="YKB-h3-E9H" firstAttribute="centerY" secondItem="E3H-ef-998" secondAttribute="centerY" id="kZg-S9-iy5"/>
+                            <constraint firstItem="T8o-4j-3qZ" firstAttribute="centerY" secondItem="E3H-ef-998" secondAttribute="centerY" id="oVW-VG-sb7"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="E3H-ef-998" secondAttribute="trailing" id="1cO-YJ-gNb"/>
+                    <constraint firstAttribute="bottom" secondItem="E3H-ef-998" secondAttribute="bottom" constant="1" id="T4L-CG-TaH"/>
+                    <constraint firstItem="E3H-ef-998" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="iIR-Nk-Gew"/>
+                    <constraint firstItem="E3H-ef-998" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="tYj-WT-YxL"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="182.60869565217394" y="103.79464285714285"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="run" width="45" height="40"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
