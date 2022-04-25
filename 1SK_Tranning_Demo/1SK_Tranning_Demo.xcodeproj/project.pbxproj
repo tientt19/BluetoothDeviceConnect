@@ -59,6 +59,13 @@
 		5279F45227F9A0D900A1F151 /* TrainingDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5279F44D27F9A0D900A1F151 /* TrainingDetailViewModel.swift */; };
 		5279F45327F9A0D900A1F151 /* TrainingDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5279F44E27F9A0D900A1F151 /* TrainingDetailViewController.xib */; };
 		5279F45527F9ABD500A1F151 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5279F45427F9ABD500A1F151 /* UIView.swift */; };
+		529504492816795D00B54BAD /* DayNhayScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529504442816795D00B54BAD /* DayNhayScreenRouter.swift */; };
+		5295044A2816795D00B54BAD /* DayNhayScreenInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529504452816795D00B54BAD /* DayNhayScreenInteractorInput.swift */; };
+		5295044B2816795D00B54BAD /* DayNhayScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529504462816795D00B54BAD /* DayNhayScreenViewController.swift */; };
+		5295044C2816795D00B54BAD /* DayNhayScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529504472816795D00B54BAD /* DayNhayScreenViewModel.swift */; };
+		5295044D2816795D00B54BAD /* DayNhayScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 529504482816795D00B54BAD /* DayNhayScreenViewController.xib */; };
+		5295045128169DAB00B54BAD /* DsachBaiTapTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5295044F28169DAB00B54BAD /* DsachBaiTapTableViewCell.swift */; };
+		5295045228169DAB00B54BAD /* DsachBaiTapTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5295045028169DAB00B54BAD /* DsachBaiTapTableViewCell.xib */; };
 		874E3FF5C63DFE60C194969E /* Pods_1SK_Tranning_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FFF611006EDAB5A5830D231 /* Pods_1SK_Tranning_Demo.framework */; };
 /* End PBXBuildFile section */
 
@@ -119,6 +126,13 @@
 		5279F44D27F9A0D900A1F151 /* TrainingDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingDetailViewModel.swift; sourceTree = "<group>"; };
 		5279F44E27F9A0D900A1F151 /* TrainingDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainingDetailViewController.xib; sourceTree = "<group>"; };
 		5279F45427F9ABD500A1F151 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		529504442816795D00B54BAD /* DayNhayScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayNhayScreenRouter.swift; sourceTree = "<group>"; };
+		529504452816795D00B54BAD /* DayNhayScreenInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayNhayScreenInteractorInput.swift; sourceTree = "<group>"; };
+		529504462816795D00B54BAD /* DayNhayScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayNhayScreenViewController.swift; sourceTree = "<group>"; };
+		529504472816795D00B54BAD /* DayNhayScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayNhayScreenViewModel.swift; sourceTree = "<group>"; };
+		529504482816795D00B54BAD /* DayNhayScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DayNhayScreenViewController.xib; sourceTree = "<group>"; };
+		5295044F28169DAB00B54BAD /* DsachBaiTapTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DsachBaiTapTableViewCell.swift; sourceTree = "<group>"; };
+		5295045028169DAB00B54BAD /* DsachBaiTapTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DsachBaiTapTableViewCell.xib; sourceTree = "<group>"; };
 		A794E2C45423E3C258DEF754 /* Pods-1SK_Tranning_Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-1SK_Tranning_Demo.debug.xcconfig"; path = "Target Support Files/Pods-1SK_Tranning_Demo/Pods-1SK_Tranning_Demo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -191,6 +205,7 @@
 		522A58C627F8B2D4008B45E0 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				529504432816793100B54BAD /* DayNhayScreen */,
 				5279F44927F9A0BE00A1F151 /* Training Detail */,
 				522A58F427F8B369008B45E0 /* Profile */,
 				522A58E927F8B34D008B45E0 /* Training */,
@@ -291,6 +306,28 @@
 			path = "Training Detail";
 			sourceTree = "<group>";
 		};
+		529504432816793100B54BAD /* DayNhayScreen */ = {
+			isa = PBXGroup;
+			children = (
+				529504442816795D00B54BAD /* DayNhayScreenRouter.swift */,
+				529504452816795D00B54BAD /* DayNhayScreenInteractorInput.swift */,
+				529504462816795D00B54BAD /* DayNhayScreenViewController.swift */,
+				529504472816795D00B54BAD /* DayNhayScreenViewModel.swift */,
+				529504482816795D00B54BAD /* DayNhayScreenViewController.xib */,
+				5295044E28169D7000B54BAD /* Cell DsachBaiTap TableView */,
+			);
+			path = DayNhayScreen;
+			sourceTree = "<group>";
+		};
+		5295044E28169D7000B54BAD /* Cell DsachBaiTap TableView */ = {
+			isa = PBXGroup;
+			children = (
+				5295044F28169DAB00B54BAD /* DsachBaiTapTableViewCell.swift */,
+				5295045028169DAB00B54BAD /* DsachBaiTapTableViewCell.xib */,
+			);
+			path = "Cell DsachBaiTap TableView";
+			sourceTree = "<group>";
+		};
 		52A25C3927F8C1BF0034555B /* App&Scene */ = {
 			isa = PBXGroup;
 			children = (
@@ -381,11 +418,13 @@
 				5239C58127F9D1F70001D634 /* ExerciseInfoCell.xib in Resources */,
 				5238E74A27F9F62400235A2D /* CustomCell.xib in Resources */,
 				5279F45327F9A0D900A1F151 /* TrainingDetailViewController.xib in Resources */,
+				5295045228169DAB00B54BAD /* DsachBaiTapTableViewCell.xib in Resources */,
 				522A58FE27F8B37A008B45E0 /* ProfileScreenViewController.xib in Resources */,
 				522A58B527F8A3B4008B45E0 /* LaunchScreen.storyboard in Resources */,
 				5238E74627F9F61300235A2D /* CustomHeader.xib in Resources */,
 				5279F44627F998D500A1F151 /* TrainingTableViewCell.xib in Resources */,
 				522A58B227F8A3B4008B45E0 /* Assets.xcassets in Resources */,
+				5295044D2816795D00B54BAD /* DayNhayScreenViewController.xib in Resources */,
 				522A58D127F8B2F1008B45E0 /* HomeScreenViewController.xib in Resources */,
 				522A58C027F8AE91008B45E0 /* MainTabBarController.xib in Resources */,
 				522A58E727F8B329008B45E0 /* StoreScreenViewController.xib in Resources */,
@@ -446,6 +485,7 @@
 				522A58E627F8B329008B45E0 /* StoreScreenViewModel.swift in Sources */,
 				5239C58027F9D1F70001D634 /* ExerciseInfoCell.swift in Sources */,
 				522A590327F8B4A2008B45E0 /* UIColor.swift in Sources */,
+				5295045128169DAB00B54BAD /* DsachBaiTapTableViewCell.swift in Sources */,
 				522A58F027F8B361008B45E0 /* TrainingScreenInteractorInput.swift in Sources */,
 				522A58CD27F8B2F1008B45E0 /* HomeScreenRouter.swift in Sources */,
 				522A58FA27F8B37A008B45E0 /* ProfileScreenRouter.swift in Sources */,
@@ -459,12 +499,15 @@
 				522A58C527F8B027008B45E0 /* TabBarItem.swift in Sources */,
 				5279F45227F9A0D900A1F151 /* TrainingDetailViewModel.swift in Sources */,
 				522A58E527F8B329008B45E0 /* StoreScreenViewController.swift in Sources */,
+				5295044B2816795D00B54BAD /* DayNhayScreenViewController.swift in Sources */,
 				522A58DA27F8B310008B45E0 /* MessagesScreenViewController.swift in Sources */,
 				522A58AD27F8A3B2008B45E0 /* ViewController.swift in Sources */,
+				5295044C2816795D00B54BAD /* DayNhayScreenViewModel.swift in Sources */,
 				522A58E427F8B329008B45E0 /* StoreScreenInteractorInput.swift in Sources */,
 				522A58FB27F8B37A008B45E0 /* ProfileScreenInteractorInput.swift in Sources */,
 				522A58F127F8B361008B45E0 /* TrainingScreenViewController.swift in Sources */,
 				5279F44827F999BB00A1F151 /* UITableView.swift in Sources */,
+				5295044A2816795D00B54BAD /* DayNhayScreenInteractorInput.swift in Sources */,
 				522A58A927F8A3B2008B45E0 /* AppDelegate.swift in Sources */,
 				5279F45127F9A0D900A1F151 /* TrainingDetailViewController.swift in Sources */,
 				522A58FD27F8B37A008B45E0 /* ProfileScreenViewModel.swift in Sources */,
@@ -481,6 +524,7 @@
 				522A58AB27F8A3B2008B45E0 /* SceneDelegate.swift in Sources */,
 				522A58D027F8B2F1008B45E0 /* HomeScreenViewModel.swift in Sources */,
 				522A58D827F8B310008B45E0 /* MessagesScreenRouter.swift in Sources */,
+				529504492816795D00B54BAD /* DayNhayScreenRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -637,7 +681,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -668,7 +712,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

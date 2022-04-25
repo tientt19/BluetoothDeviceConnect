@@ -14,7 +14,6 @@ class BaseViewController: UIViewController {
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
         UINavigationBar.appearance().tintColor = UIColor.white
     }
-    
 
     func showProgressHud() { }
     func hideProgressHud() { }

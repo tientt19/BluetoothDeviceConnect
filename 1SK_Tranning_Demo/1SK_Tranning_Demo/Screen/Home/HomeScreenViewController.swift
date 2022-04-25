@@ -21,6 +21,7 @@ class HomeScreenViewController: BaseViewController {
     var viewModel: HomeScreenViewModelProtocol!
     
     @IBOutlet weak var openExercise : UIView!
+    @IBOutlet weak var view_OpenDayNhay: UIView!
 
     
     // MARK: - LifeCycle
@@ -33,11 +34,16 @@ class HomeScreenViewController: BaseViewController {
     // MARK: - Init
     private func setupInit() {
         openExercise.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(openView)))
+        view_OpenDayNhay.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(openDayNhay)))
     }
     
     // MARK: - Action
     @objc func openView() {
         router.openExerciseView()
+    }
+     
+    @objc func openDayNhay() {
+        router.openDayNhayScreen()
     }
 }
 

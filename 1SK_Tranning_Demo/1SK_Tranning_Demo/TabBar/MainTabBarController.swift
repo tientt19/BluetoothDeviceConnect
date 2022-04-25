@@ -52,7 +52,9 @@ class MainTabBarController: UITabBarController {
         homeController.tabBarItem.image = UIImage(named: "home")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
         homeController.tabBarItem.selectedImage = UIImage(named: "home")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
         let homeNavController = BaseNavigationController(rootViewController: homeController)
-        homeNavController.setHiddenNavigationBarViewControllers([HomeScreenViewController.self,TrainingDetailViewController.self])
+        homeNavController.setHiddenNavigationBarViewControllers([HomeScreenViewController.self,
+                                                                 TrainingDetailViewController.self,
+                                                                 DayNhayScreenViewController.self])
 
         
         //MESSAGES

@@ -12,6 +12,7 @@ import UIKit
 // MARK: - RouterProtocol
 protocol HomeScreenRouterProtocol {
     func openExerciseView()
+    func openDayNhayScreen()
 }
 
 // MARK: - HomeScreen Router
@@ -40,5 +41,11 @@ extension HomeScreenRouter: HomeScreenRouterProtocol {
         let exerciseViewController = TrainingScreenRouter.setupModule()
         exerciseViewController.hidesBottomBarWhenPushed = true
         viewController?.navigationController?.pushViewController(exerciseViewController, animated: true)
+    }
+    
+    func openDayNhayScreen() {
+        let daynhayScreen = DayNhayScreenRouter.setupModule()
+        daynhayScreen.hidesBottomBarWhenPushed = true
+        viewController?.navigationController?.pushViewController(daynhayScreen, animated: true)
     }
 }

@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="openExercise" destination="cSs-rY-v3c" id="Vdu-cH-poE"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="Tfs-51-fS4"/>
+                <outlet property="view_OpenDayNhay" destination="fuu-hj-EEk" id="Blo-j9-s1G"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -24,7 +25,7 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VcY-pz-ENj">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="669"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="518"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="JLl-Bf-11b">
                                     <rect key="frame" x="0.0" y="16" width="414" height="70"/>
@@ -111,14 +112,14 @@
                                     </constraints>
                                 </stackView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cSs-rY-v3c">
-                                    <rect key="frame" x="16" y="106" width="382" height="340"/>
+                                    <rect key="frame" x="16" y="106" width="382" height="189"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d03-uT-Geq">
-                                            <rect key="frame" x="0.0" y="0.0" width="382" height="340"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="382" height="189"/>
                                             <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         </imageView>
                                         <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mSk-8S-P9a">
-                                            <rect key="frame" x="0.0" y="260" width="382" height="80"/>
+                                            <rect key="frame" x="0.0" y="109" width="382" height="80"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đạp xe trong nhà" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGY-t1-CJK">
                                                     <rect key="frame" x="116" y="28" width="150" height="24"/>
@@ -142,7 +143,7 @@
                                         <constraint firstAttribute="trailing" secondItem="d03-uT-Geq" secondAttribute="trailing" id="JxI-JI-qGf"/>
                                         <constraint firstAttribute="bottom" secondItem="mSk-8S-P9a" secondAttribute="bottom" id="L80-5W-1IG"/>
                                         <constraint firstItem="d03-uT-Geq" firstAttribute="leading" secondItem="cSs-rY-v3c" secondAttribute="leading" id="SKn-f7-RMy"/>
-                                        <constraint firstAttribute="height" constant="340" id="mgz-ZH-oMW"/>
+                                        <constraint firstAttribute="height" constant="189" id="mgz-ZH-oMW"/>
                                         <constraint firstAttribute="bottom" secondItem="d03-uT-Geq" secondAttribute="bottom" id="vY9-Jc-xIK"/>
                                         <constraint firstAttribute="trailing" secondItem="mSk-8S-P9a" secondAttribute="trailing" id="y5r-5F-3Pr"/>
                                     </constraints>
@@ -153,7 +154,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fuu-hj-EEk">
-                                    <rect key="frame" x="16" y="464" width="382" height="189"/>
+                                    <rect key="frame" x="16" y="313" width="382" height="189"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bua-Qx-mBA">
                                             <rect key="frame" x="0.0" y="0.0" width="382" height="189"/>
@@ -167,8 +168,8 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h3D-3t-7I5">
                                             <rect key="frame" x="0.0" y="128" width="382" height="61"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thư viện video" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSg-yn-3C8">
-                                                    <rect key="frame" x="127" y="18.5" width="128" height="24"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dây nhảy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSg-yn-3C8">
+                                                    <rect key="frame" x="150.5" y="18.5" width="81.5" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -234,7 +235,7 @@
                 <constraint firstItem="qBq-hk-EpO" firstAttribute="bottom" secondItem="KlH-tW-6zV" secondAttribute="bottom" id="qQo-ZP-EN0"/>
                 <constraint firstItem="qBq-hk-EpO" firstAttribute="trailing" secondItem="KlH-tW-6zV" secondAttribute="trailing" id="zf7-hk-2T8"/>
             </constraints>
-            <point key="canvasLocation" x="127.53623188405798" y="-217.63392857142856"/>
+            <point key="canvasLocation" x="254" y="-514"/>
         </view>
     </objects>
     <resources>
