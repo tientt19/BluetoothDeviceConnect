@@ -22,6 +22,8 @@ class DayNhayScreenViewController: BaseViewController {
     
     @IBOutlet weak var view_DsachBaitap: UIView!
     @IBOutlet weak var tbv_DsachBaiTap: UITableView!
+    @IBOutlet weak var view_jumpCycle1: UIView!
+    @IBOutlet weak var view_jumpCycle2: UIView!
     
     // MARK: - LifeCycle
     override func viewDidLoad() {
@@ -30,11 +32,18 @@ class DayNhayScreenViewController: BaseViewController {
         self.viewModel.onViewDidLoad()
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        view_jumpCycle1.layer.masksToBounds = true
+        view_jumpCycle2.layer.masksToBounds = true
+        view_jumpCycle1.layer.cornerRadius = view_jumpCycle1.frame.height / 2
+        view_jumpCycle2.layer.cornerRadius = view_jumpCycle2.frame.height / 2
+    }
+    
     // MARK: - Init
     private func setupInit() {
         setTbvInit()
-//        tbv_DsachBaiTap.layer.cornerRadius = 20
-//        tbv_DsachBaiTap.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         view_DsachBaitap.layer.cornerRadius = 20
         view_DsachBaitap.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
     }
@@ -45,6 +54,7 @@ class DayNhayScreenViewController: BaseViewController {
     }
 }
 
+//MARK: - UITableViewDataSource
 extension DayNhayScreenViewController: UITableViewDataSource {
 
     func setTbvInit(){
@@ -64,8 +74,11 @@ extension DayNhayScreenViewController: UITableViewDataSource {
     }
 }
 
+//MARK: - UITableViewDelegate
 extension DayNhayScreenViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        router.goToDayNhayDetailScreen()
+    }
 }
 
 // MARK: - DayNhayScreen ViewProtocol

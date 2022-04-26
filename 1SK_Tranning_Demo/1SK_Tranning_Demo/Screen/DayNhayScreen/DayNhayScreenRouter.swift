@@ -11,7 +11,7 @@ import UIKit
 
 // MARK: - RouterProtocol
 protocol DayNhayScreenRouterProtocol {
-
+    func goToDayNhayDetailScreen()
 }
 
 // MARK: - DayNhayScreen Router
@@ -36,5 +36,8 @@ class DayNhayScreenRouter {
 
 // MARK: - DayNhayScreen RouterProtocol
 extension DayNhayScreenRouter: DayNhayScreenRouterProtocol {
-    
+    func goToDayNhayDetailScreen() {
+        let vc = DayNhayDetailScreenRouter.setupModule()
+        self.viewController?.navigationController?.pushViewController(vc, animated: true)
+    }
 }

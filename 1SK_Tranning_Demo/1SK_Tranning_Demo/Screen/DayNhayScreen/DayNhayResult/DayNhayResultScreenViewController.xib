@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DayNhayResultScreenViewController" customModule="_SK_Tranning_Demo" customModuleProvider="target">
+            <connections>
+                <outlet property="tbv_Result" destination="6SC-OU-XsN" id="9E8-29-O5g"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cLZ-1u-3Fr">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Prd-ZH-1Za">
+                            <rect key="frame" x="0.0" y="44" width="375" height="48"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q68-VG-YjW">
+                                    <rect key="frame" x="341.5" y="15" width="17.5" height="17.5"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="22" id="OgU-2z-R6Z"/>
+                                    </constraints>
+                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" backgroundImage="xmark" catalog="system"/>
+                                    <connections>
+                                        <action selector="onDismissVC:" destination="-1" eventType="touchUpInside" id="SnP-GH-XcQ"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kết quả luyện tập" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NFT-75-Axo">
+                                    <rect key="frame" x="121.5" y="14" width="132" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="48" id="DSy-rM-S7S"/>
+                                <constraint firstItem="Q68-VG-YjW" firstAttribute="trailing" secondItem="Prd-ZH-1Za" secondAttribute="trailing" constant="-16" id="W9g-T3-xqD"/>
+                                <constraint firstItem="NFT-75-Axo" firstAttribute="centerY" secondItem="Prd-ZH-1Za" secondAttribute="centerY" id="cLi-bu-JO2"/>
+                                <constraint firstItem="NFT-75-Axo" firstAttribute="centerX" secondItem="Prd-ZH-1Za" secondAttribute="centerX" id="fxv-ei-Rst"/>
+                                <constraint firstAttribute="height" constant="48" id="vP1-5x-S7k"/>
+                                <constraint firstItem="Q68-VG-YjW" firstAttribute="centerY" secondItem="Prd-ZH-1Za" secondAttribute="centerY" id="yI3-g3-6lX"/>
+                            </constraints>
+                        </view>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="6SC-OU-XsN">
+                            <rect key="frame" x="0.0" y="92" width="375" height="575"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Prd-ZH-1Za" secondAttribute="trailing" id="7EB-Qx-Zcg"/>
+                        <constraint firstAttribute="trailing" secondItem="6SC-OU-XsN" secondAttribute="trailing" id="KYg-b2-YX3"/>
+                        <constraint firstItem="6SC-OU-XsN" firstAttribute="leading" secondItem="cLZ-1u-3Fr" secondAttribute="leading" id="PZa-7j-Bgh"/>
+                        <constraint firstItem="6SC-OU-XsN" firstAttribute="top" secondItem="Prd-ZH-1Za" secondAttribute="bottom" id="dIH-68-ERA"/>
+                        <constraint firstItem="Prd-ZH-1Za" firstAttribute="top" secondItem="cLZ-1u-3Fr" secondAttribute="top" constant="44" id="dlg-UO-vod"/>
+                        <constraint firstAttribute="bottom" secondItem="6SC-OU-XsN" secondAttribute="bottom" id="oaQ-SU-1cM"/>
+                        <constraint firstItem="Prd-ZH-1Za" firstAttribute="leading" secondItem="cLZ-1u-3Fr" secondAttribute="leading" id="xtx-Ti-nHj"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="KlH-tW-6zV"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="cLZ-1u-3Fr" secondAttribute="bottom" id="Bei-cj-c3g"/>
+                <constraint firstItem="KlH-tW-6zV" firstAttribute="trailing" secondItem="cLZ-1u-3Fr" secondAttribute="trailing" id="GRT-pc-zKR"/>
+                <constraint firstItem="cLZ-1u-3Fr" firstAttribute="leading" secondItem="KlH-tW-6zV" secondAttribute="leading" id="aRa-SG-QYv"/>
+                <constraint firstItem="cLZ-1u-3Fr" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="uzV-6V-VI3"/>
+            </constraints>
+            <point key="canvasLocation" x="216" y="-76"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

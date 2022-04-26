@@ -66,6 +66,22 @@
 		5295044D2816795D00B54BAD /* DayNhayScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 529504482816795D00B54BAD /* DayNhayScreenViewController.xib */; };
 		5295045128169DAB00B54BAD /* DsachBaiTapTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5295044F28169DAB00B54BAD /* DsachBaiTapTableViewCell.swift */; };
 		5295045228169DAB00B54BAD /* DsachBaiTapTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5295045028169DAB00B54BAD /* DsachBaiTapTableViewCell.xib */; };
+		52FDF74E2817C8020019E372 /* DayNhayDetailScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FDF7492817C8020019E372 /* DayNhayDetailScreenRouter.swift */; };
+		52FDF74F2817C8020019E372 /* DayNhayDetailScreenInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FDF74A2817C8020019E372 /* DayNhayDetailScreenInteractorInput.swift */; };
+		52FDF7502817C8020019E372 /* DayNhayDetailScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FDF74B2817C8020019E372 /* DayNhayDetailScreenViewController.swift */; };
+		52FDF7512817C8020019E372 /* DayNhayDetailScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FDF74C2817C8020019E372 /* DayNhayDetailScreenViewModel.swift */; };
+		52FDF7522817C8020019E372 /* DayNhayDetailScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52FDF74D2817C8020019E372 /* DayNhayDetailScreenViewController.xib */; };
+		52FDF7592817E00D0019E372 /* DayNhayResultScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FDF7542817E00D0019E372 /* DayNhayResultScreenRouter.swift */; };
+		52FDF75A2817E00D0019E372 /* DayNhayResultScreenInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FDF7552817E00D0019E372 /* DayNhayResultScreenInteractorInput.swift */; };
+		52FDF75B2817E00D0019E372 /* DayNhayResultScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FDF7562817E00D0019E372 /* DayNhayResultScreenViewController.swift */; };
+		52FDF75C2817E00D0019E372 /* DayNhayResultScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FDF7572817E00D0019E372 /* DayNhayResultScreenViewModel.swift */; };
+		52FDF75D2817E00D0019E372 /* DayNhayResultScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52FDF7582817E00D0019E372 /* DayNhayResultScreenViewController.xib */; };
+		52FDF7652817E7F70019E372 /* CellResultTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FDF7632817E7F70019E372 /* CellResultTableViewHeader.swift */; };
+		52FDF7662817E7F70019E372 /* CellResultTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52FDF7642817E7F70019E372 /* CellResultTableViewHeader.xib */; };
+		52FDF76A2817E81E0019E372 /* CellResultTableViewCellBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FDF7682817E81E0019E372 /* CellResultTableViewCellBody.swift */; };
+		52FDF76B2817E81E0019E372 /* CellResultTableViewCellBody.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52FDF7692817E81E0019E372 /* CellResultTableViewCellBody.xib */; };
+		52FDF76F2817E8510019E372 /* CellResultTableViewFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FDF76D2817E8510019E372 /* CellResultTableViewFooter.swift */; };
+		52FDF7702817E8510019E372 /* CellResultTableViewFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52FDF76E2817E8510019E372 /* CellResultTableViewFooter.xib */; };
 		874E3FF5C63DFE60C194969E /* Pods_1SK_Tranning_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FFF611006EDAB5A5830D231 /* Pods_1SK_Tranning_Demo.framework */; };
 /* End PBXBuildFile section */
 
@@ -133,6 +149,22 @@
 		529504482816795D00B54BAD /* DayNhayScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DayNhayScreenViewController.xib; sourceTree = "<group>"; };
 		5295044F28169DAB00B54BAD /* DsachBaiTapTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DsachBaiTapTableViewCell.swift; sourceTree = "<group>"; };
 		5295045028169DAB00B54BAD /* DsachBaiTapTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DsachBaiTapTableViewCell.xib; sourceTree = "<group>"; };
+		52FDF7492817C8020019E372 /* DayNhayDetailScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayNhayDetailScreenRouter.swift; sourceTree = "<group>"; };
+		52FDF74A2817C8020019E372 /* DayNhayDetailScreenInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayNhayDetailScreenInteractorInput.swift; sourceTree = "<group>"; };
+		52FDF74B2817C8020019E372 /* DayNhayDetailScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayNhayDetailScreenViewController.swift; sourceTree = "<group>"; };
+		52FDF74C2817C8020019E372 /* DayNhayDetailScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayNhayDetailScreenViewModel.swift; sourceTree = "<group>"; };
+		52FDF74D2817C8020019E372 /* DayNhayDetailScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DayNhayDetailScreenViewController.xib; sourceTree = "<group>"; };
+		52FDF7542817E00D0019E372 /* DayNhayResultScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayNhayResultScreenRouter.swift; sourceTree = "<group>"; };
+		52FDF7552817E00D0019E372 /* DayNhayResultScreenInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayNhayResultScreenInteractorInput.swift; sourceTree = "<group>"; };
+		52FDF7562817E00D0019E372 /* DayNhayResultScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayNhayResultScreenViewController.swift; sourceTree = "<group>"; };
+		52FDF7572817E00D0019E372 /* DayNhayResultScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayNhayResultScreenViewModel.swift; sourceTree = "<group>"; };
+		52FDF7582817E00D0019E372 /* DayNhayResultScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DayNhayResultScreenViewController.xib; sourceTree = "<group>"; };
+		52FDF7632817E7F70019E372 /* CellResultTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellResultTableViewHeader.swift; sourceTree = "<group>"; };
+		52FDF7642817E7F70019E372 /* CellResultTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellResultTableViewHeader.xib; sourceTree = "<group>"; };
+		52FDF7682817E81E0019E372 /* CellResultTableViewCellBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellResultTableViewCellBody.swift; sourceTree = "<group>"; };
+		52FDF7692817E81E0019E372 /* CellResultTableViewCellBody.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellResultTableViewCellBody.xib; sourceTree = "<group>"; };
+		52FDF76D2817E8510019E372 /* CellResultTableViewFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellResultTableViewFooter.swift; sourceTree = "<group>"; };
+		52FDF76E2817E8510019E372 /* CellResultTableViewFooter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellResultTableViewFooter.xib; sourceTree = "<group>"; };
 		A794E2C45423E3C258DEF754 /* Pods-1SK_Tranning_Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-1SK_Tranning_Demo.debug.xcconfig"; path = "Target Support Files/Pods-1SK_Tranning_Demo/Pods-1SK_Tranning_Demo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -314,6 +346,8 @@
 				529504462816795D00B54BAD /* DayNhayScreenViewController.swift */,
 				529504472816795D00B54BAD /* DayNhayScreenViewModel.swift */,
 				529504482816795D00B54BAD /* DayNhayScreenViewController.xib */,
+				52FDF7532817DFF00019E372 /* DayNhayResult */,
+				52FDF7482817C7E80019E372 /* DayNhayDetail */,
 				5295044E28169D7000B54BAD /* Cell DsachBaiTap TableView */,
 			);
 			path = DayNhayScreen;
@@ -335,6 +369,60 @@
 				522A58AA27F8A3B2008B45E0 /* SceneDelegate.swift */,
 			);
 			path = "App&Scene";
+			sourceTree = "<group>";
+		};
+		52FDF7482817C7E80019E372 /* DayNhayDetail */ = {
+			isa = PBXGroup;
+			children = (
+				52FDF7492817C8020019E372 /* DayNhayDetailScreenRouter.swift */,
+				52FDF74A2817C8020019E372 /* DayNhayDetailScreenInteractorInput.swift */,
+				52FDF74B2817C8020019E372 /* DayNhayDetailScreenViewController.swift */,
+				52FDF74C2817C8020019E372 /* DayNhayDetailScreenViewModel.swift */,
+				52FDF74D2817C8020019E372 /* DayNhayDetailScreenViewController.xib */,
+			);
+			path = DayNhayDetail;
+			sourceTree = "<group>";
+		};
+		52FDF7532817DFF00019E372 /* DayNhayResult */ = {
+			isa = PBXGroup;
+			children = (
+				52FDF7542817E00D0019E372 /* DayNhayResultScreenRouter.swift */,
+				52FDF7552817E00D0019E372 /* DayNhayResultScreenInteractorInput.swift */,
+				52FDF7562817E00D0019E372 /* DayNhayResultScreenViewController.swift */,
+				52FDF7572817E00D0019E372 /* DayNhayResultScreenViewModel.swift */,
+				52FDF7582817E00D0019E372 /* DayNhayResultScreenViewController.xib */,
+				52FDF76C2817E8260019E372 /* Cell Result TableView Footer */,
+				52FDF7672817E7FC0019E372 /* Cell Result TableView Body */,
+				52FDF75E2817E7650019E372 /* Cell Result TableView Header */,
+			);
+			path = DayNhayResult;
+			sourceTree = "<group>";
+		};
+		52FDF75E2817E7650019E372 /* Cell Result TableView Header */ = {
+			isa = PBXGroup;
+			children = (
+				52FDF7632817E7F70019E372 /* CellResultTableViewHeader.swift */,
+				52FDF7642817E7F70019E372 /* CellResultTableViewHeader.xib */,
+			);
+			path = "Cell Result TableView Header";
+			sourceTree = "<group>";
+		};
+		52FDF7672817E7FC0019E372 /* Cell Result TableView Body */ = {
+			isa = PBXGroup;
+			children = (
+				52FDF7682817E81E0019E372 /* CellResultTableViewCellBody.swift */,
+				52FDF7692817E81E0019E372 /* CellResultTableViewCellBody.xib */,
+			);
+			path = "Cell Result TableView Body";
+			sourceTree = "<group>";
+		};
+		52FDF76C2817E8260019E372 /* Cell Result TableView Footer */ = {
+			isa = PBXGroup;
+			children = (
+				52FDF76D2817E8510019E372 /* CellResultTableViewFooter.swift */,
+				52FDF76E2817E8510019E372 /* CellResultTableViewFooter.xib */,
+			);
+			path = "Cell Result TableView Footer";
 			sourceTree = "<group>";
 		};
 		E0E694E1FCE75D595C3BAD37 /* Pods */ = {
@@ -414,20 +502,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52FDF76B2817E81E0019E372 /* CellResultTableViewCellBody.xib in Resources */,
+				52FDF7702817E8510019E372 /* CellResultTableViewFooter.xib in Resources */,
 				522A58F327F8B361008B45E0 /* TrainingScreenViewController.xib in Resources */,
 				5239C58127F9D1F70001D634 /* ExerciseInfoCell.xib in Resources */,
+				52FDF75D2817E00D0019E372 /* DayNhayResultScreenViewController.xib in Resources */,
 				5238E74A27F9F62400235A2D /* CustomCell.xib in Resources */,
 				5279F45327F9A0D900A1F151 /* TrainingDetailViewController.xib in Resources */,
 				5295045228169DAB00B54BAD /* DsachBaiTapTableViewCell.xib in Resources */,
 				522A58FE27F8B37A008B45E0 /* ProfileScreenViewController.xib in Resources */,
 				522A58B527F8A3B4008B45E0 /* LaunchScreen.storyboard in Resources */,
 				5238E74627F9F61300235A2D /* CustomHeader.xib in Resources */,
+				52FDF7522817C8020019E372 /* DayNhayDetailScreenViewController.xib in Resources */,
 				5279F44627F998D500A1F151 /* TrainingTableViewCell.xib in Resources */,
 				522A58B227F8A3B4008B45E0 /* Assets.xcassets in Resources */,
 				5295044D2816795D00B54BAD /* DayNhayScreenViewController.xib in Resources */,
 				522A58D127F8B2F1008B45E0 /* HomeScreenViewController.xib in Resources */,
 				522A58C027F8AE91008B45E0 /* MainTabBarController.xib in Resources */,
 				522A58E727F8B329008B45E0 /* StoreScreenViewController.xib in Resources */,
+				52FDF7662817E7F70019E372 /* CellResultTableViewHeader.xib in Resources */,
 				522A58DC27F8B310008B45E0 /* MessagesScreenViewController.xib in Resources */,
 				522A58B027F8A3B2008B45E0 /* Main.storyboard in Resources */,
 			);
@@ -483,13 +576,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				522A58E627F8B329008B45E0 /* StoreScreenViewModel.swift in Sources */,
+				52FDF7512817C8020019E372 /* DayNhayDetailScreenViewModel.swift in Sources */,
 				5239C58027F9D1F70001D634 /* ExerciseInfoCell.swift in Sources */,
 				522A590327F8B4A2008B45E0 /* UIColor.swift in Sources */,
 				5295045128169DAB00B54BAD /* DsachBaiTapTableViewCell.swift in Sources */,
+				52FDF76A2817E81E0019E372 /* CellResultTableViewCellBody.swift in Sources */,
 				522A58F027F8B361008B45E0 /* TrainingScreenInteractorInput.swift in Sources */,
 				522A58CD27F8B2F1008B45E0 /* HomeScreenRouter.swift in Sources */,
+				52FDF74F2817C8020019E372 /* DayNhayDetailScreenInteractorInput.swift in Sources */,
 				522A58FA27F8B37A008B45E0 /* ProfileScreenRouter.swift in Sources */,
 				522A58EF27F8B361008B45E0 /* TrainingScreenRouter.swift in Sources */,
+				52FDF74E2817C8020019E372 /* DayNhayDetailScreenRouter.swift in Sources */,
 				522A590027F8B3E0008B45E0 /* BaseViewController.swift in Sources */,
 				5238E74927F9F62400235A2D /* CustomCell.swift in Sources */,
 				522A58E327F8B329008B45E0 /* StoreScreenRouter.swift in Sources */,
@@ -497,18 +594,24 @@
 				522A58F227F8B361008B45E0 /* TrainingScreenViewModel.swift in Sources */,
 				5279F45527F9ABD500A1F151 /* UIView.swift in Sources */,
 				522A58C527F8B027008B45E0 /* TabBarItem.swift in Sources */,
+				52FDF75C2817E00D0019E372 /* DayNhayResultScreenViewModel.swift in Sources */,
 				5279F45227F9A0D900A1F151 /* TrainingDetailViewModel.swift in Sources */,
 				522A58E527F8B329008B45E0 /* StoreScreenViewController.swift in Sources */,
 				5295044B2816795D00B54BAD /* DayNhayScreenViewController.swift in Sources */,
+				52FDF7502817C8020019E372 /* DayNhayDetailScreenViewController.swift in Sources */,
+				52FDF75B2817E00D0019E372 /* DayNhayResultScreenViewController.swift in Sources */,
 				522A58DA27F8B310008B45E0 /* MessagesScreenViewController.swift in Sources */,
 				522A58AD27F8A3B2008B45E0 /* ViewController.swift in Sources */,
+				52FDF7592817E00D0019E372 /* DayNhayResultScreenRouter.swift in Sources */,
 				5295044C2816795D00B54BAD /* DayNhayScreenViewModel.swift in Sources */,
 				522A58E427F8B329008B45E0 /* StoreScreenInteractorInput.swift in Sources */,
+				52FDF7652817E7F70019E372 /* CellResultTableViewHeader.swift in Sources */,
 				522A58FB27F8B37A008B45E0 /* ProfileScreenInteractorInput.swift in Sources */,
 				522A58F127F8B361008B45E0 /* TrainingScreenViewController.swift in Sources */,
 				5279F44827F999BB00A1F151 /* UITableView.swift in Sources */,
 				5295044A2816795D00B54BAD /* DayNhayScreenInteractorInput.swift in Sources */,
 				522A58A927F8A3B2008B45E0 /* AppDelegate.swift in Sources */,
+				52FDF75A2817E00D0019E372 /* DayNhayResultScreenInteractorInput.swift in Sources */,
 				5279F45127F9A0D900A1F151 /* TrainingDetailViewController.swift in Sources */,
 				522A58FD27F8B37A008B45E0 /* ProfileScreenViewModel.swift in Sources */,
 				5279F44527F998D500A1F151 /* TrainingTableViewCell.swift in Sources */,
@@ -521,6 +624,7 @@
 				522A58C327F8AF11008B45E0 /* BaseNavigationController.swift in Sources */,
 				5238E74527F9F61300235A2D /* CustomHeader.swift in Sources */,
 				522A58CE27F8B2F1008B45E0 /* HomeScreenInteractorInput.swift in Sources */,
+				52FDF76F2817E8510019E372 /* CellResultTableViewFooter.swift in Sources */,
 				522A58AB27F8A3B2008B45E0 /* SceneDelegate.swift in Sources */,
 				522A58D027F8B2F1008B45E0 /* HomeScreenViewModel.swift in Sources */,
 				522A58D827F8B310008B45E0 /* MessagesScreenRouter.swift in Sources */,

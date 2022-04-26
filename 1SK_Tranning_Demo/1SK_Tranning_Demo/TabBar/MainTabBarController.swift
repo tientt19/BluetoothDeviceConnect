@@ -54,7 +54,8 @@ class MainTabBarController: UITabBarController {
         let homeNavController = BaseNavigationController(rootViewController: homeController)
         homeNavController.setHiddenNavigationBarViewControllers([HomeScreenViewController.self,
                                                                  TrainingDetailViewController.self,
-                                                                 DayNhayScreenViewController.self])
+                                                                 DayNhayScreenViewController.self,
+                                                                 DayNhayResultScreenViewController.self])
 
         
         //MESSAGES

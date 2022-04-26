@@ -14,6 +14,8 @@
                 <outlet property="tbv_DsachBaiTap" destination="LGY-qF-68m" id="z4o-ua-Gda"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="view_DsachBaitap" destination="lCK-N8-5s8" id="emj-SE-T83"/>
+                <outlet property="view_jumpCycle1" destination="ZhH-Je-QHe" id="Z8o-8P-ZMH"/>
+                <outlet property="view_jumpCycle2" destination="hev-P7-CcJ" id="qfX-J0-XJ7"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -147,7 +149,7 @@
                                             </constraints>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                    <real key="value" value="80"/>
+                                                    <real key="value" value="0.0"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </view>
@@ -163,7 +165,7 @@
                                     </constraints>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                            <real key="value" value="89"/>
+                                            <real key="value" value="0.0"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
@@ -347,7 +349,7 @@
                 <constraint firstAttribute="trailing" secondItem="Yqf-Gu-qSN" secondAttribute="trailing" id="Vqc-Wc-LQY"/>
                 <constraint firstItem="Yqf-Gu-qSN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="nnA-4c-RG0"/>
             </constraints>
-            <point key="canvasLocation" x="-238" y="-208"/>
+            <point key="canvasLocation" x="133" y="-214"/>
         </view>
     </objects>
     <resources>
