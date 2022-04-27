@@ -11,31 +11,51 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="194" id="KGk-i7-Jjw" customClass="CellResultTableViewCellBody" customModule="_SK_Tranning_Demo" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="321" height="194"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="210" id="KGk-i7-Jjw" customClass="CellResultTableViewCellBody" customModule="_SK_Tranning_Demo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="469" height="210"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="321" height="194"/>
+                <rect key="frame" x="0.0" y="0.0" width="469" height="210"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zkb-Ag-ePu">
-                        <rect key="frame" x="0.0" y="0.0" width="318" height="193"/>
+                        <rect key="frame" x="0.0" y="0.0" width="469" height="211"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="hZP-uB-0W8">
+                                <rect key="frame" x="60.5" y="0.0" width="348" height="211"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="211" id="Plk-2b-KQh"/>
+                                    <constraint firstAttribute="width" secondItem="hZP-uB-0W8" secondAttribute="height" multiplier="348:211" id="yfG-LD-8dp"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OSL-gk-MQ9">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="193" id="Fgy-3c-gKh"/>
-                            <constraint firstAttribute="width" secondItem="zkb-Ag-ePu" secondAttribute="height" multiplier="318:193" id="HEe-bb-S1u"/>
+                            <constraint firstItem="hZP-uB-0W8" firstAttribute="centerY" secondItem="zkb-Ag-ePu" secondAttribute="centerY" id="INP-23-UCS"/>
+                            <constraint firstAttribute="height" constant="211" id="KIc-25-07h"/>
+                            <constraint firstItem="hZP-uB-0W8" firstAttribute="centerX" secondItem="zkb-Ag-ePu" secondAttribute="centerX" id="ff9-QX-zRy"/>
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="zkb-Ag-ePu" secondAttribute="trailing" id="2vc-IH-hjq"/>
-                    <constraint firstAttribute="bottom" secondItem="zkb-Ag-ePu" secondAttribute="bottom" id="GtW-28-WTx"/>
-                    <constraint firstItem="zkb-Ag-ePu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="hcc-ER-Uri"/>
-                    <constraint firstItem="zkb-Ag-ePu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="p0r-zY-dgo"/>
+                    <constraint firstItem="zkb-Ag-ePu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="IsT-sh-yg0"/>
+                    <constraint firstAttribute="trailing" secondItem="zkb-Ag-ePu" secondAttribute="trailing" id="XMN-j1-mSo"/>
+                    <constraint firstItem="zkb-Ag-ePu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="hMp-ys-6P8"/>
+                    <constraint firstAttribute="bottom" secondItem="zkb-Ag-ePu" secondAttribute="bottom" id="wAB-3W-J34"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="132.60869565217394" y="125.22321428571428"/>
+            <connections>
+                <outlet property="clv_ResultCollectionView" destination="hZP-uB-0W8" id="2vK-AK-BRv"/>
+            </connections>
+            <point key="canvasLocation" x="239.85507246376812" y="30.803571428571427"/>
         </tableViewCell>
     </objects>
     <resources>

@@ -52,6 +52,9 @@ extension DayNhayResultScreenViewController: UITableViewDataSource {
 
         tbv_Result.dataSource = self
         tbv_Result.delegate = self
+        
+        tbv_Result.estimatedRowHeight = 1000
+        tbv_Result.rowHeight = UITableView.automaticDimension
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -77,7 +80,7 @@ extension DayNhayResultScreenViewController: UITableViewDataSource {
 }
 
 extension DayNhayResultScreenViewController: UITableViewDelegate {
-    
+
 }
 // MARK: - DayNhayResultScreen ViewProtocol
 extension DayNhayResultScreenViewController: DayNhayResultScreenViewProtocol {

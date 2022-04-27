@@ -66,6 +66,11 @@
 		5295044D2816795D00B54BAD /* DayNhayScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 529504482816795D00B54BAD /* DayNhayScreenViewController.xib */; };
 		5295045128169DAB00B54BAD /* DsachBaiTapTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5295044F28169DAB00B54BAD /* DsachBaiTapTableViewCell.swift */; };
 		5295045228169DAB00B54BAD /* DsachBaiTapTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5295045028169DAB00B54BAD /* DsachBaiTapTableViewCell.xib */; };
+		52A45FA92818EFEF00F89CAB /* CellResultTBV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A45FA72818EFEF00F89CAB /* CellResultTBV.swift */; };
+		52A45FAA2818EFEF00F89CAB /* CellResultTBV.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52A45FA82818EFEF00F89CAB /* CellResultTBV.xib */; };
+		52C59FA32818E133007A69AE /* CellResultColletionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C59FA12818E133007A69AE /* CellResultColletionViewCell.swift */; };
+		52C59FA42818E133007A69AE /* CellResultColletionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52C59FA22818E133007A69AE /* CellResultColletionViewCell.xib */; };
+		52C59FA62818E1A7007A69AE /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C59FA52818E1A7007A69AE /* UICollectionView.swift */; };
 		52FDF74E2817C8020019E372 /* DayNhayDetailScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FDF7492817C8020019E372 /* DayNhayDetailScreenRouter.swift */; };
 		52FDF74F2817C8020019E372 /* DayNhayDetailScreenInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FDF74A2817C8020019E372 /* DayNhayDetailScreenInteractorInput.swift */; };
 		52FDF7502817C8020019E372 /* DayNhayDetailScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FDF74B2817C8020019E372 /* DayNhayDetailScreenViewController.swift */; };
@@ -149,6 +154,11 @@
 		529504482816795D00B54BAD /* DayNhayScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DayNhayScreenViewController.xib; sourceTree = "<group>"; };
 		5295044F28169DAB00B54BAD /* DsachBaiTapTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DsachBaiTapTableViewCell.swift; sourceTree = "<group>"; };
 		5295045028169DAB00B54BAD /* DsachBaiTapTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DsachBaiTapTableViewCell.xib; sourceTree = "<group>"; };
+		52A45FA72818EFEF00F89CAB /* CellResultTBV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellResultTBV.swift; sourceTree = "<group>"; };
+		52A45FA82818EFEF00F89CAB /* CellResultTBV.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellResultTBV.xib; sourceTree = "<group>"; };
+		52C59FA12818E133007A69AE /* CellResultColletionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellResultColletionViewCell.swift; sourceTree = "<group>"; };
+		52C59FA22818E133007A69AE /* CellResultColletionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellResultColletionViewCell.xib; sourceTree = "<group>"; };
+		52C59FA52818E1A7007A69AE /* UICollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
 		52FDF7492817C8020019E372 /* DayNhayDetailScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayNhayDetailScreenRouter.swift; sourceTree = "<group>"; };
 		52FDF74A2817C8020019E372 /* DayNhayDetailScreenInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayNhayDetailScreenInteractorInput.swift; sourceTree = "<group>"; };
 		52FDF74B2817C8020019E372 /* DayNhayDetailScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayNhayDetailScreenViewController.swift; sourceTree = "<group>"; };
@@ -317,6 +327,7 @@
 		522A590127F8B48D008B45E0 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				52C59FA52818E1A7007A69AE /* UICollectionView.swift */,
 				5279F45427F9ABD500A1F151 /* UIView.swift */,
 				5279F44727F999BB00A1F151 /* UITableView.swift */,
 				522A590227F8B4A2008B45E0 /* UIColor.swift */,
@@ -371,6 +382,24 @@
 			path = "App&Scene";
 			sourceTree = "<group>";
 		};
+		52A45FA62818EFB900F89CAB /* Cell Result TableView  */ = {
+			isa = PBXGroup;
+			children = (
+				52A45FA72818EFEF00F89CAB /* CellResultTBV.swift */,
+				52A45FA82818EFEF00F89CAB /* CellResultTBV.xib */,
+			);
+			path = "Cell Result TableView ";
+			sourceTree = "<group>";
+		};
+		52C59FA02818E111007A69AE /* Cell ResultCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				52C59FA12818E133007A69AE /* CellResultColletionViewCell.swift */,
+				52C59FA22818E133007A69AE /* CellResultColletionViewCell.xib */,
+			);
+			path = "Cell ResultCollectionView";
+			sourceTree = "<group>";
+		};
 		52FDF7482817C7E80019E372 /* DayNhayDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -412,6 +441,7 @@
 			children = (
 				52FDF7682817E81E0019E372 /* CellResultTableViewCellBody.swift */,
 				52FDF7692817E81E0019E372 /* CellResultTableViewCellBody.xib */,
+				52C59FA02818E111007A69AE /* Cell ResultCollectionView */,
 			);
 			path = "Cell Result TableView Body";
 			sourceTree = "<group>";
@@ -421,6 +451,7 @@
 			children = (
 				52FDF76D2817E8510019E372 /* CellResultTableViewFooter.swift */,
 				52FDF76E2817E8510019E372 /* CellResultTableViewFooter.xib */,
+				52A45FA62818EFB900F89CAB /* Cell Result TableView  */,
 			);
 			path = "Cell Result TableView Footer";
 			sourceTree = "<group>";
@@ -505,8 +536,10 @@
 				52FDF76B2817E81E0019E372 /* CellResultTableViewCellBody.xib in Resources */,
 				52FDF7702817E8510019E372 /* CellResultTableViewFooter.xib in Resources */,
 				522A58F327F8B361008B45E0 /* TrainingScreenViewController.xib in Resources */,
+				52A45FAA2818EFEF00F89CAB /* CellResultTBV.xib in Resources */,
 				5239C58127F9D1F70001D634 /* ExerciseInfoCell.xib in Resources */,
 				52FDF75D2817E00D0019E372 /* DayNhayResultScreenViewController.xib in Resources */,
+				52C59FA42818E133007A69AE /* CellResultColletionViewCell.xib in Resources */,
 				5238E74A27F9F62400235A2D /* CustomCell.xib in Resources */,
 				5279F45327F9A0D900A1F151 /* TrainingDetailViewController.xib in Resources */,
 				5295045228169DAB00B54BAD /* DsachBaiTapTableViewCell.xib in Resources */,
@@ -585,6 +618,7 @@
 				522A58CD27F8B2F1008B45E0 /* HomeScreenRouter.swift in Sources */,
 				52FDF74F2817C8020019E372 /* DayNhayDetailScreenInteractorInput.swift in Sources */,
 				522A58FA27F8B37A008B45E0 /* ProfileScreenRouter.swift in Sources */,
+				52A45FA92818EFEF00F89CAB /* CellResultTBV.swift in Sources */,
 				522A58EF27F8B361008B45E0 /* TrainingScreenRouter.swift in Sources */,
 				52FDF74E2817C8020019E372 /* DayNhayDetailScreenRouter.swift in Sources */,
 				522A590027F8B3E0008B45E0 /* BaseViewController.swift in Sources */,
@@ -605,6 +639,7 @@
 				52FDF7592817E00D0019E372 /* DayNhayResultScreenRouter.swift in Sources */,
 				5295044C2816795D00B54BAD /* DayNhayScreenViewModel.swift in Sources */,
 				522A58E427F8B329008B45E0 /* StoreScreenInteractorInput.swift in Sources */,
+				52C59FA62818E1A7007A69AE /* UICollectionView.swift in Sources */,
 				52FDF7652817E7F70019E372 /* CellResultTableViewHeader.swift in Sources */,
 				522A58FB27F8B37A008B45E0 /* ProfileScreenInteractorInput.swift in Sources */,
 				522A58F127F8B361008B45E0 /* TrainingScreenViewController.swift in Sources */,
@@ -622,6 +657,7 @@
 				522A58FC27F8B37A008B45E0 /* ProfileScreenViewController.swift in Sources */,
 				522A58CF27F8B2F1008B45E0 /* HomeScreenViewController.swift in Sources */,
 				522A58C327F8AF11008B45E0 /* BaseNavigationController.swift in Sources */,
+				52C59FA32818E133007A69AE /* CellResultColletionViewCell.swift in Sources */,
 				5238E74527F9F61300235A2D /* CustomHeader.swift in Sources */,
 				522A58CE27F8B2F1008B45E0 /* HomeScreenInteractorInput.swift in Sources */,
 				52FDF76F2817E8510019E372 /* CellResultTableViewFooter.swift in Sources */,
@@ -776,7 +812,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = CY4CXRJ4H3;
+				DEVELOPMENT_TEAM = 699J3RXKFC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = 1SK_Tranning_Demo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -807,7 +843,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = CY4CXRJ4H3;
+				DEVELOPMENT_TEAM = 699J3RXKFC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = 1SK_Tranning_Demo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

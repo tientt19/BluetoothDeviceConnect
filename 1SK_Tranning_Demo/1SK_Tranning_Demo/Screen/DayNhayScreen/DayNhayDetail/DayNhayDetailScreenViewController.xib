@@ -256,7 +256,7 @@
                             </constraints>
                         </stackView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CFt-YI-8ns">
-                            <rect key="frame" x="146.5" y="539" width="82" height="82"/>
+                            <rect key="frame" x="146.5" y="555" width="82" height="82"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="82" id="PD9-tA-hyd"/>
                                 <constraint firstAttribute="width" constant="82" id="sN5-6W-l2c"/>
@@ -278,7 +278,7 @@
                         <constraint firstItem="RZc-p5-z8P" firstAttribute="centerX" secondItem="xmr-zi-ujK" secondAttribute="centerX" id="cX5-13-JdT"/>
                         <constraint firstItem="K9f-UJ-7a1" firstAttribute="centerX" secondItem="xmr-zi-ujK" secondAttribute="centerX" id="k3u-bE-qeA"/>
                         <constraint firstItem="wef-OB-B63" firstAttribute="top" secondItem="xmr-zi-ujK" secondAttribute="top" constant="14" id="mqW-PH-xCC"/>
-                        <constraint firstAttribute="bottom" secondItem="CFt-YI-8ns" secondAttribute="bottom" constant="46" id="r0K-7r-ira"/>
+                        <constraint firstAttribute="bottom" secondItem="CFt-YI-8ns" secondAttribute="bottom" constant="30" id="r0K-7r-ira"/>
                         <constraint firstItem="oWk-vU-bLO" firstAttribute="top" secondItem="RZc-p5-z8P" secondAttribute="bottom" constant="24" id="voT-Z9-G1U"/>
                     </constraints>
                 </view>
