@@ -12,6 +12,7 @@ import UIKit
 // MARK: - RouterProtocol
 protocol DayNhayScreenRouterProtocol {
     func goToDayNhayDetailScreen()
+    func goToCountDownScreen()
 }
 
 // MARK: - DayNhayScreen Router
@@ -39,5 +40,10 @@ extension DayNhayScreenRouter: DayNhayScreenRouterProtocol {
     func goToDayNhayDetailScreen() {
         let vc = DayNhayDetailScreenRouter.setupModule()
         self.viewController?.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func goToCountDownScreen() {
+        let vc = CountDownScreenRouter.setupModule()
+        self.viewController?.present(vc, animated: true, completion: nil)
     }
 }

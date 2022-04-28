@@ -17,6 +17,7 @@ protocol DayNhayScreenViewProtocol: AnyObject {
 
 // MARK: - DayNhayScreen ViewController
 class DayNhayScreenViewController: BaseViewController {
+    
     var router: DayNhayScreenRouterProtocol!
     var viewModel: DayNhayScreenViewModelProtocol!
     
@@ -35,17 +36,17 @@ class DayNhayScreenViewController: BaseViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        view_jumpCycle1.layer.masksToBounds = true
-        view_jumpCycle2.layer.masksToBounds = true
-        view_jumpCycle1.layer.cornerRadius = view_jumpCycle1.frame.height / 2
-        view_jumpCycle2.layer.cornerRadius = view_jumpCycle2.frame.height / 2
+        self.view_jumpCycle1.layer.masksToBounds = true
+        self.view_jumpCycle2.layer.masksToBounds = true
+        self.view_jumpCycle1.layer.cornerRadius = view_jumpCycle1.frame.height / 2
+        self.view_jumpCycle2.layer.cornerRadius = view_jumpCycle2.frame.height / 2
     }
     
     // MARK: - Init
     private func setupInit() {
         setTbvInit()
-        view_DsachBaitap.layer.cornerRadius = 20
-        view_DsachBaitap.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        self.view_DsachBaitap.layer.cornerRadius = 20
+        self.view_DsachBaitap.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
     }
     
     // MARK: - Action
@@ -77,7 +78,7 @@ extension DayNhayScreenViewController: UITableViewDataSource {
 //MARK: - UITableViewDelegate
 extension DayNhayScreenViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        router.goToDayNhayDetailScreen()
+        self.router.goToCountDownScreen()
     }
 }
 
@@ -89,5 +90,12 @@ extension DayNhayScreenViewController: DayNhayScreenViewProtocol {
     
     func hideHud() {
         self.hideProgressHud()
+    }
+}
+
+extension DayNhayScreenViewController: CountDownResponeProtocol {
+    func goToDetailScreen(_ vc: UIViewController) {
+        let detailVC = DayNhayDetailScreenRouter.setupModule()
+        self.navigationController?.pushViewController(detailVC, animated: true)
     }
 }

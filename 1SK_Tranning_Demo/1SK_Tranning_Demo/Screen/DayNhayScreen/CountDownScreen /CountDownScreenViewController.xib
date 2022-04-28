@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CountDownScreenViewController" customModule="_SK_Tranning_Demo" customModuleProvider="target">
+            <connections>
+                <outlet property="lbl_start" destination="7jj-YW-3Nz" id="vZq-Kd-19T"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="view_countDown" destination="Vyo-cU-yEK" id="tAJ-s8-wbw"/>
+                <outlet property="view_countDown_Parent" destination="DlY-0A-pyU" id="EOA-4L-Zrf"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mow-3p-BUi">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DlY-0A-pyU">
+                            <rect key="frame" x="71.5" y="312.5" width="271" height="271"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vyo-cU-yEK">
+                                    <rect key="frame" x="25" y="25" width="221" height="221"/>
+                                    <color key="backgroundColor" red="0.0" green="0.76078431372549016" blue="0.77254901960784317" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="221" id="8TU-45-1Av"/>
+                                        <constraint firstAttribute="width" secondItem="Vyo-cU-yEK" secondAttribute="height" id="qbV-N2-p7n"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="271" id="BQc-2x-1Gn"/>
+                                <constraint firstAttribute="width" secondItem="DlY-0A-pyU" secondAttribute="height" id="E8W-FI-afh"/>
+                                <constraint firstItem="Vyo-cU-yEK" firstAttribute="centerY" secondItem="DlY-0A-pyU" secondAttribute="centerY" id="FRB-jc-rMT"/>
+                                <constraint firstItem="Vyo-cU-yEK" firstAttribute="centerX" secondItem="DlY-0A-pyU" secondAttribute="centerX" id="RAQ-pU-hHr"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="viewBorderWidth">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="viewBorderColor">
+                                    <color key="value" red="0.264341414" green="0.82769560809999998" blue="0.83472031349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BẮT ĐẦU" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7jj-YW-3Nz">
+                            <rect key="frame" x="111.5" y="419.5" width="191.5" height="57.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.030892457809999999" green="0.7745527029" blue="0.78499704599999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="7jj-YW-3Nz" firstAttribute="centerY" secondItem="mow-3p-BUi" secondAttribute="centerY" id="6Ue-tF-MAF"/>
+                        <constraint firstItem="DlY-0A-pyU" firstAttribute="centerY" secondItem="mow-3p-BUi" secondAttribute="centerY" id="aAX-hD-VeD"/>
+                        <constraint firstItem="7jj-YW-3Nz" firstAttribute="centerX" secondItem="mow-3p-BUi" secondAttribute="centerX" id="spN-8s-gCz"/>
+                        <constraint firstItem="DlY-0A-pyU" firstAttribute="centerX" secondItem="mow-3p-BUi" secondAttribute="centerX" id="uN8-5C-9j2"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="KlH-tW-6zV"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="KlH-tW-6zV" firstAttribute="trailing" secondItem="mow-3p-BUi" secondAttribute="trailing" id="41J-e8-NA3"/>
+                <constraint firstAttribute="bottom" secondItem="mow-3p-BUi" secondAttribute="bottom" id="GfK-Kh-Xgi"/>
+                <constraint firstItem="mow-3p-BUi" firstAttribute="leading" secondItem="KlH-tW-6zV" secondAttribute="leading" id="PKC-7b-kHW"/>
+                <constraint firstItem="mow-3p-BUi" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="o78-wQ-xYN"/>
+            </constraints>
+            <point key="canvasLocation" x="348" y="-152"/>
+        </view>
+    </objects>
+</document>
