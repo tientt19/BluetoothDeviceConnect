@@ -11,7 +11,7 @@ import UIKit
 
 // MARK: - RouterProtocol
 protocol DayNhayResultScreenRouterProtocol {
-
+    func goToHomeScreen() 
 }
 
 // MARK: - DayNhayResultScreen Router
@@ -36,5 +36,7 @@ class DayNhayResultScreenRouter {
 
 // MARK: - DayNhayResultScreen RouterProtocol
 extension DayNhayResultScreenRouter: DayNhayResultScreenRouterProtocol {
-    
+    func goToHomeScreen() {
+        self.viewController?.navigationController?.popToRootViewController(animated: true)
+    }
 }

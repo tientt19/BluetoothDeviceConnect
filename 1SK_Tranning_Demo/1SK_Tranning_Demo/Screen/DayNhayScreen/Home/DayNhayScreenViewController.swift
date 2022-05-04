@@ -95,7 +95,6 @@ extension DayNhayScreenViewController: DayNhayScreenViewProtocol {
 
 extension DayNhayScreenViewController: CountDownResponeProtocol {
     func goToDetailScreen(_ vc: UIViewController) {
-        let detailVC = DayNhayDetailScreenRouter.setupModule()
-        self.navigationController?.pushViewController(detailVC, animated: true)
+        router.goToDayNhayDetailScreen()
     }
 }

@@ -43,7 +43,9 @@ extension DayNhayScreenRouter: DayNhayScreenRouterProtocol {
     }
     
     func goToCountDownScreen() {
-        let vc = CountDownScreenRouter.setupModule()
-        self.viewController?.present(vc, animated: true, completion: nil)
+        let preController = CountDownScreenRouter.setupModule()
+        preController.countDownResponseDelegate = viewController
+        preController.modalPresentationStyle = .fullScreen
+        self.viewController?.present(preController, animated: true, completion: nil)
     }
 }

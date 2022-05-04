@@ -23,12 +23,10 @@ class CountDownScreenRouter {
         let router = CountDownScreenRouter()
         let interactorInput = CountDownScreenInteractorInput()
         let viewModel = CountDownScreenViewModel(interactor: interactorInput)
-        let homeVC = DayNhayScreenViewController()
         
         viewController.viewModel = viewModel
         viewController.router = router
         viewModel.view = viewController
-        viewController.countDownResponseDelegate = homeVC
         interactorInput.output = viewModel
         router.viewController = viewController
         

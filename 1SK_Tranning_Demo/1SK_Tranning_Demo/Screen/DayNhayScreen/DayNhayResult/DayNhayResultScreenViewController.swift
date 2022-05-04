@@ -39,7 +39,7 @@ class DayNhayResultScreenViewController: BaseViewController {
     
     // MARK: - Action
     @IBAction func onDismissVC(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
+        router.goToHomeScreen()
     }
 }
 

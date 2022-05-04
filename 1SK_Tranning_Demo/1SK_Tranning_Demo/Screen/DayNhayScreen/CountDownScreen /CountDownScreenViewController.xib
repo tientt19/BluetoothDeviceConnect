@@ -28,10 +28,10 @@
                             <rect key="frame" x="71.5" y="312.5" width="271" height="271"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vyo-cU-yEK">
-                                    <rect key="frame" x="25" y="25" width="221" height="221"/>
+                                    <rect key="frame" x="20.5" y="20.5" width="230" height="230"/>
                                     <color key="backgroundColor" red="0.0" green="0.76078431372549016" blue="0.77254901960784317" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="221" id="8TU-45-1Av"/>
+                                        <constraint firstAttribute="height" constant="230" id="8TU-45-1Av"/>
                                         <constraint firstAttribute="width" secondItem="Vyo-cU-yEK" secondAttribute="height" id="qbV-N2-p7n"/>
                                     </constraints>
                                 </view>
