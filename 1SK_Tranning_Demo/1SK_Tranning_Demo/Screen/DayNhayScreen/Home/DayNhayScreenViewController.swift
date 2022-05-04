@@ -25,6 +25,7 @@ class DayNhayScreenViewController: BaseViewController {
     @IBOutlet weak var tbv_DsachBaiTap: UITableView!
     @IBOutlet weak var view_jumpCycle1: UIView!
     @IBOutlet weak var view_jumpCycle2: UIView!
+    @IBOutlet weak var view_parentView: UIView!
     
     // MARK: - LifeCycle
     override func viewDidLoad() {
@@ -59,6 +60,7 @@ class DayNhayScreenViewController: BaseViewController {
 extension DayNhayScreenViewController: UITableViewDataSource {
 
     func setTbvInit(){
+        self.view_parentView.backgroundColor = UIColor.init(hex: "0DB3B6")
         self.tbv_DsachBaiTap.delegate = self
         self.tbv_DsachBaiTap.dataSource = self
         self.tbv_DsachBaiTap.separatorStyle = .none
