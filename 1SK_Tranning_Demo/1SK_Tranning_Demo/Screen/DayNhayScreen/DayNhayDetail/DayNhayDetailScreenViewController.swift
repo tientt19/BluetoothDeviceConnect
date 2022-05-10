@@ -19,11 +19,11 @@ protocol DayNhayDetailScreenViewProtocol: AnyObject {
 class DayNhayDetailScreenViewController: BaseViewController {
     var router: DayNhayDetailScreenRouterProtocol!
     var viewModel: DayNhayDetailScreenViewModelProtocol!
+    var exerciseType: ExerciseTypes!
     
     @IBOutlet weak var view_jumpCycle1: UIView!
     @IBOutlet weak var view_jumpCycle2: UIView!
     
-
     
     // MARK: - LifeCycle
     override func viewDidLoad() {
@@ -43,17 +43,42 @@ class DayNhayDetailScreenViewController: BaseViewController {
     
     // MARK: - Init
     private func setupInit() {
-        self.title = "Nhảy tự do"
+        self.title = self.exerciseType.rawValue
         self.dayNhayNavigationView()
         self.setUpShadow()
         let rightBarButtonItem = UIBarButtonItem.init(image: UIImage(named: "bell_image"), style: .done, target: self, action: nil)
         self.navigationItem.rightBarButtonItem = rightBarButtonItem
+        
+        self.view_jumpCycle1.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onOpenAlertView)))
+        
+        switch self.exerciseType.rawValue {
+        case "nhay_tu_do":
+            view_jumpCycle1.backgroundColor = UIColor(hex: "F1FAEA")
+            view_jumpCycle2.backgroundColor = UIColor(hex: "81C24B")
+        case "nhay_hen_gio":
+            view_jumpCycle1.backgroundColor = UIColor(hex: "FFFAE9")
+            view_jumpCycle2.backgroundColor = UIColor(hex: "FEB11A")
+        case "nhay_dem_nguoc":
+            view_jumpCycle1.backgroundColor = UIColor(hex: "E3E6FE")
+            view_jumpCycle2.backgroundColor = UIColor(hex: "7065F3")
+        default:
+            break
+        }
     }
     
     // MARK: - Action
     
     @IBAction func onCompleteTap(_ sender: UIButton) {
-        router.goToResultScreen()
+        let controller = AlertStopJumpViewController()
+        controller.modalPresentationStyle = .custom
+        controller.confirmDelegate = self
+        self.present(controller, animated: false, completion: nil)
+    }
+    
+    @objc func onOpenAlertView() {
+        let controller = AlertTimePickerView()
+        controller.modalPresentationStyle = .custom
+        self.navigationController?.present(controller, animated: false)
     }
 }
 
@@ -65,5 +90,11 @@ extension DayNhayDetailScreenViewController: DayNhayDetailScreenViewProtocol {
     
     func hideHud() {
         self.hideProgressHud()
+    }
+}
+
+extension DayNhayDetailScreenViewController: ComfirmStopProtocol {
+    func confirm() {
+        router.goToResultScreen()
     }
 }

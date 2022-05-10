@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5224F60F282A0E990040BC27 /* AlertTimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5224F60D282A0E990040BC27 /* AlertTimePickerView.swift */; };
+		5224F610282A0E990040BC27 /* AlertTimePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5224F60E282A0E990040BC27 /* AlertTimePickerView.xib */; };
+		5224F614282A11CD0040BC27 /* CellTableViewTimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5224F612282A11CD0040BC27 /* CellTableViewTimePicker.swift */; };
+		5224F615282A11CD0040BC27 /* CellTableViewTimePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5224F613282A11CD0040BC27 /* CellTableViewTimePicker.xib */; };
+		5224F619282A26310040BC27 /* AlertInputTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5224F617282A26310040BC27 /* AlertInputTime.swift */; };
+		5224F61A282A26310040BC27 /* AlertInputTime.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5224F618282A26310040BC27 /* AlertInputTime.xib */; };
 		522A58A927F8A3B2008B45E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522A58A827F8A3B2008B45E0 /* AppDelegate.swift */; };
 		522A58AB27F8A3B2008B45E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522A58AA27F8A3B2008B45E0 /* SceneDelegate.swift */; };
 		522A58AD27F8A3B2008B45E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522A58AC27F8A3B2008B45E0 /* ViewController.swift */; };
@@ -59,6 +65,8 @@
 		5279F45227F9A0D900A1F151 /* TrainingDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5279F44D27F9A0D900A1F151 /* TrainingDetailViewModel.swift */; };
 		5279F45327F9A0D900A1F151 /* TrainingDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5279F44E27F9A0D900A1F151 /* TrainingDetailViewController.xib */; };
 		5279F45527F9ABD500A1F151 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5279F45427F9ABD500A1F151 /* UIView.swift */; };
+		5287C5A6282A445F003C6A8A /* AlertStopJumpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5287C5A4282A445F003C6A8A /* AlertStopJumpViewController.swift */; };
+		5287C5A7282A445F003C6A8A /* AlertStopJumpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5287C5A5282A445F003C6A8A /* AlertStopJumpViewController.xib */; };
 		529504492816795D00B54BAD /* DayNhayScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529504442816795D00B54BAD /* DayNhayScreenRouter.swift */; };
 		5295044A2816795D00B54BAD /* DayNhayScreenInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529504452816795D00B54BAD /* DayNhayScreenInteractorInput.swift */; };
 		5295044B2816795D00B54BAD /* DayNhayScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529504462816795D00B54BAD /* DayNhayScreenViewController.swift */; };
@@ -100,6 +108,12 @@
 /* Begin PBXFileReference section */
 		1FFF611006EDAB5A5830D231 /* Pods_1SK_Tranning_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_1SK_Tranning_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		23168498CFEE1E0BA3608024 /* Pods-1SK_Tranning_Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-1SK_Tranning_Demo.release.xcconfig"; path = "Target Support Files/Pods-1SK_Tranning_Demo/Pods-1SK_Tranning_Demo.release.xcconfig"; sourceTree = "<group>"; };
+		5224F60D282A0E990040BC27 /* AlertTimePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertTimePickerView.swift; sourceTree = "<group>"; };
+		5224F60E282A0E990040BC27 /* AlertTimePickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertTimePickerView.xib; sourceTree = "<group>"; };
+		5224F612282A11CD0040BC27 /* CellTableViewTimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTableViewTimePicker.swift; sourceTree = "<group>"; };
+		5224F613282A11CD0040BC27 /* CellTableViewTimePicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellTableViewTimePicker.xib; sourceTree = "<group>"; };
+		5224F617282A26310040BC27 /* AlertInputTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertInputTime.swift; sourceTree = "<group>"; };
+		5224F618282A26310040BC27 /* AlertInputTime.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertInputTime.xib; sourceTree = "<group>"; };
 		522A58A527F8A3B2008B45E0 /* 1SK_Tranning_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 1SK_Tranning_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		522A58A827F8A3B2008B45E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		522A58AA27F8A3B2008B45E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +168,8 @@
 		5279F44D27F9A0D900A1F151 /* TrainingDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingDetailViewModel.swift; sourceTree = "<group>"; };
 		5279F44E27F9A0D900A1F151 /* TrainingDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainingDetailViewController.xib; sourceTree = "<group>"; };
 		5279F45427F9ABD500A1F151 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		5287C5A4282A445F003C6A8A /* AlertStopJumpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertStopJumpViewController.swift; sourceTree = "<group>"; };
+		5287C5A5282A445F003C6A8A /* AlertStopJumpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertStopJumpViewController.xib; sourceTree = "<group>"; };
 		529504442816795D00B54BAD /* DayNhayScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayNhayScreenRouter.swift; sourceTree = "<group>"; };
 		529504452816795D00B54BAD /* DayNhayScreenInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayNhayScreenInteractorInput.swift; sourceTree = "<group>"; };
 		529504462816795D00B54BAD /* DayNhayScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayNhayScreenViewController.swift; sourceTree = "<group>"; };
@@ -204,6 +220,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5224F60B282A0E4A0040BC27 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				5287C5A3282A4442003C6A8A /* Alert Stop Jump */,
+				5224F616282A25E50040BC27 /* Alert Input Time */,
+				5224F60C282A0E700040BC27 /* Alert Time Pick */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		5224F60C282A0E700040BC27 /* Alert Time Pick */ = {
+			isa = PBXGroup;
+			children = (
+				5224F611282A11A00040BC27 /* Cell TableView Time Picker */,
+				5224F60D282A0E990040BC27 /* AlertTimePickerView.swift */,
+				5224F60E282A0E990040BC27 /* AlertTimePickerView.xib */,
+			);
+			path = "Alert Time Pick";
+			sourceTree = "<group>";
+		};
+		5224F611282A11A00040BC27 /* Cell TableView Time Picker */ = {
+			isa = PBXGroup;
+			children = (
+				5224F612282A11CD0040BC27 /* CellTableViewTimePicker.swift */,
+				5224F613282A11CD0040BC27 /* CellTableViewTimePicker.xib */,
+			);
+			path = "Cell TableView Time Picker";
+			sourceTree = "<group>";
+		};
+		5224F616282A25E50040BC27 /* Alert Input Time */ = {
+			isa = PBXGroup;
+			children = (
+				5224F617282A26310040BC27 /* AlertInputTime.swift */,
+				5224F618282A26310040BC27 /* AlertInputTime.xib */,
+			);
+			path = "Alert Input Time";
+			sourceTree = "<group>";
+		};
 		522A589C27F8A3B2008B45E0 = {
 			isa = PBXGroup;
 			children = (
@@ -365,9 +419,19 @@
 			path = "Training Detail";
 			sourceTree = "<group>";
 		};
+		5287C5A3282A4442003C6A8A /* Alert Stop Jump */ = {
+			isa = PBXGroup;
+			children = (
+				5287C5A4282A445F003C6A8A /* AlertStopJumpViewController.swift */,
+				5287C5A5282A445F003C6A8A /* AlertStopJumpViewController.xib */,
+			);
+			path = "Alert Stop Jump";
+			sourceTree = "<group>";
+		};
 		529504432816793100B54BAD /* DayNhayScreen */ = {
 			isa = PBXGroup;
 			children = (
+				5224F60B282A0E4A0040BC27 /* Alert */,
 				52D09241281A303C00F192BC /* Home */,
 				52FDF7532817DFF00019E372 /* DayNhayResult */,
 				52D09242281A304300F192BC /* CountDownScreen  */,
@@ -573,12 +637,14 @@
 				52FDF76B2817E81E0019E372 /* CellResultTableViewCellBody.xib in Resources */,
 				52FDF7702817E8510019E372 /* CellResultTableViewFooter.xib in Resources */,
 				522A58F327F8B361008B45E0 /* TrainingScreenViewController.xib in Resources */,
+				5224F610282A0E990040BC27 /* AlertTimePickerView.xib in Resources */,
 				52A45FAA2818EFEF00F89CAB /* CellResultTBV.xib in Resources */,
 				5239C58127F9D1F70001D634 /* ExerciseInfoCell.xib in Resources */,
 				52FDF75D2817E00D0019E372 /* DayNhayResultScreenViewController.xib in Resources */,
 				52C59FA42818E133007A69AE /* CellResultColletionViewCell.xib in Resources */,
 				5238E74A27F9F62400235A2D /* CustomCell.xib in Resources */,
 				5279F45327F9A0D900A1F151 /* TrainingDetailViewController.xib in Resources */,
+				5224F61A282A26310040BC27 /* AlertInputTime.xib in Resources */,
 				5295045228169DAB00B54BAD /* DsachBaiTapTableViewCell.xib in Resources */,
 				522A58FE27F8B37A008B45E0 /* ProfileScreenViewController.xib in Resources */,
 				522A58B527F8A3B4008B45E0 /* LaunchScreen.storyboard in Resources */,
@@ -587,11 +653,13 @@
 				5279F44627F998D500A1F151 /* TrainingTableViewCell.xib in Resources */,
 				522A58B227F8A3B4008B45E0 /* Assets.xcassets in Resources */,
 				5295044D2816795D00B54BAD /* DayNhayScreenViewController.xib in Resources */,
+				5224F615282A11CD0040BC27 /* CellTableViewTimePicker.xib in Resources */,
 				522A58D127F8B2F1008B45E0 /* HomeScreenViewController.xib in Resources */,
 				522A58C027F8AE91008B45E0 /* MainTabBarController.xib in Resources */,
 				522A58E727F8B329008B45E0 /* StoreScreenViewController.xib in Resources */,
 				52FDF7662817E7F70019E372 /* CellResultTableViewHeader.xib in Resources */,
 				522A58DC27F8B310008B45E0 /* MessagesScreenViewController.xib in Resources */,
+				5287C5A7282A445F003C6A8A /* AlertStopJumpViewController.xib in Resources */,
 				52D0924C281A305F00F192BC /* CountDownScreenViewController.xib in Resources */,
 				522A58B027F8A3B2008B45E0 /* Main.storyboard in Resources */,
 			);
@@ -662,7 +730,9 @@
 				52FDF74E2817C8020019E372 /* DayNhayDetailScreenRouter.swift in Sources */,
 				522A590027F8B3E0008B45E0 /* BaseViewController.swift in Sources */,
 				5238E74927F9F62400235A2D /* CustomCell.swift in Sources */,
+				5224F614282A11CD0040BC27 /* CellTableViewTimePicker.swift in Sources */,
 				522A58E327F8B329008B45E0 /* StoreScreenRouter.swift in Sources */,
+				5287C5A6282A445F003C6A8A /* AlertStopJumpViewController.swift in Sources */,
 				522A58D927F8B310008B45E0 /* MessagesScreenInteractorInput.swift in Sources */,
 				522A58F227F8B361008B45E0 /* TrainingScreenViewModel.swift in Sources */,
 				5279F45527F9ABD500A1F151 /* UIView.swift in Sources */,
@@ -698,6 +768,7 @@
 				5279F44F27F9A0D900A1F151 /* TrainingDetailRouter.swift in Sources */,
 				522A58BF27F8AE91008B45E0 /* MainTabBarController.swift in Sources */,
 				5279F45027F9A0D900A1F151 /* TrainingDetailInteractorInput.swift in Sources */,
+				5224F60F282A0E990040BC27 /* AlertTimePickerView.swift in Sources */,
 				522A58FC27F8B37A008B45E0 /* ProfileScreenViewController.swift in Sources */,
 				522A58CF27F8B2F1008B45E0 /* HomeScreenViewController.swift in Sources */,
 				522A58C327F8AF11008B45E0 /* BaseNavigationController.swift in Sources */,
@@ -708,6 +779,7 @@
 				522A58AB27F8A3B2008B45E0 /* SceneDelegate.swift in Sources */,
 				522A58D027F8B2F1008B45E0 /* HomeScreenViewModel.swift in Sources */,
 				522A58D827F8B310008B45E0 /* MessagesScreenRouter.swift in Sources */,
+				5224F619282A26310040BC27 /* AlertInputTime.swift in Sources */,
 				529504492816795D00B54BAD /* DayNhayScreenRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

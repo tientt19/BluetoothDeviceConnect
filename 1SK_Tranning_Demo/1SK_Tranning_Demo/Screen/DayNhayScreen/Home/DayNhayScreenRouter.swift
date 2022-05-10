@@ -11,8 +11,8 @@ import UIKit
 
 // MARK: - RouterProtocol
 protocol DayNhayScreenRouterProtocol {
-    func goToDayNhayDetailScreen()
-    func goToCountDownScreen()
+    func goToDayNhayDetailScreen(with exerciseType: ExerciseTypes)
+    func goToCountDownScreen(with exerciseType: ExerciseTypes)
 }
 
 // MARK: - DayNhayScreen Router
@@ -37,13 +37,13 @@ class DayNhayScreenRouter {
 
 // MARK: - DayNhayScreen RouterProtocol
 extension DayNhayScreenRouter: DayNhayScreenRouterProtocol {
-    func goToDayNhayDetailScreen() {
-        let vc = DayNhayDetailScreenRouter.setupModule()
+    func goToDayNhayDetailScreen(with exerciseType: ExerciseTypes) {
+        let vc = DayNhayDetailScreenRouter.setupModule(with: exerciseType)
         self.viewController?.navigationController?.pushViewController(vc, animated: true)
     }
     
-    func goToCountDownScreen() {
-        let preController = CountDownScreenRouter.setupModule()
+    func goToCountDownScreen(with exerciseType: ExerciseTypes) {
+        let preController = CountDownScreenRouter.setupModule(with: exerciseType)
         preController.countDownResponseDelegate = viewController
         preController.modalPresentationStyle = .fullScreen
         self.viewController?.present(preController, animated: true, completion: nil)

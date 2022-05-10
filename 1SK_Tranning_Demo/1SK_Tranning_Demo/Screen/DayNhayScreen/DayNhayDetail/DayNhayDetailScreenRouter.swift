@@ -18,7 +18,7 @@ protocol DayNhayDetailScreenRouterProtocol {
 class DayNhayDetailScreenRouter {
     weak var viewController: DayNhayDetailScreenViewController?
     
-    static func setupModule() -> DayNhayDetailScreenViewController {
+    static func setupModule(with exerciseType: ExerciseTypes) -> DayNhayDetailScreenViewController {
         let viewController = DayNhayDetailScreenViewController()
         let router = DayNhayDetailScreenRouter()
         let interactorInput = DayNhayDetailScreenInteractorInput()
@@ -29,6 +29,7 @@ class DayNhayDetailScreenRouter {
         viewModel.view = viewController
         interactorInput.output = viewModel
         router.viewController = viewController
+        viewController.exerciseType = exerciseType
         
         return viewController
     }

@@ -25,30 +25,44 @@
                                 <rect key="frame" x="16" y="12" width="311" height="65"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jkQ-eT-GCs">
-                                        <rect key="frame" x="0.0" y="0.0" width="105" height="65"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="135" height="65"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nhảy tự do" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wqN-vA-mSL">
-                                                <rect key="frame" x="0.0" y="0.0" width="105" height="22"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="135" height="16.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="47j-ol-IXs">
-                                                <rect key="frame" x="0.0" y="32" width="105" height="33"/>
-                                                <color key="backgroundColor" red="0.0" green="0.76117885110000005" blue="0.77155977490000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="Bắt đầu">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="8"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="srq-Jc-wXx">
+                                                <rect key="frame" x="0.0" y="26.5" width="135" height="38.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="47j-ol-IXs">
+                                                        <rect key="frame" x="0.0" y="0.0" width="86" height="38.5"/>
+                                                        <color key="backgroundColor" red="0.0" green="0.76117885110000005" blue="0.77155977490000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="86" id="y2u-kU-oeb"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Bắt đầu">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="8"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="47j-ol-IXs" secondAttribute="bottom" id="5PL-UX-v7F"/>
+                                                    <constraint firstItem="47j-ol-IXs" firstAttribute="leading" secondItem="srq-Jc-wXx" secondAttribute="leading" id="UI4-11-dpA"/>
+                                                    <constraint firstItem="47j-ol-IXs" firstAttribute="top" secondItem="srq-Jc-wXx" secondAttribute="top" id="hoV-yB-eZF"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="105" id="t10-9r-cYu"/>
+                                            <constraint firstAttribute="width" constant="135" id="t10-9r-cYu"/>
                                         </constraints>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5nX-CF-JUT">
@@ -102,6 +116,9 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="lbl_exerciseName" destination="wqN-vA-mSL" id="Zsw-fQ-Yuw"/>
+            </connections>
             <point key="canvasLocation" x="233.33333333333334" y="18.080357142857142"/>
         </tableViewCell>
     </objects>

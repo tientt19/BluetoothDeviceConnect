@@ -9,6 +9,13 @@
 
 import UIKit
 
+
+enum ExerciseTypes: String {
+    case nhay_tu_do
+    case nhay_hen_gio
+    case nhay_dem_nguoc
+}
+
 // MARK: - ViewProtocol
 protocol DayNhayScreenViewProtocol: AnyObject {
     func showHud()
@@ -73,6 +80,16 @@ extension DayNhayScreenViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeue(cellClass: DsachBaiTapTableViewCell.self, forIndexPath: indexPath)
+        switch indexPath.item {
+        case 0:
+            cell.lbl_exerciseName.text = "Nhảy tự do"
+        case 1:
+            cell.lbl_exerciseName.text = "Nhảy hẹn giờ"
+        case 2:
+            cell.lbl_exerciseName.text = "Nhảy đếm ngược"
+        default:
+            break
+        }
         return cell
     }
 }
@@ -80,7 +97,16 @@ extension DayNhayScreenViewController: UITableViewDataSource {
 //MARK: - UITableViewDelegate
 extension DayNhayScreenViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.router.goToCountDownScreen()
+        switch indexPath.item {
+        case 0:
+            self.router.goToCountDownScreen(with: .nhay_tu_do)
+        case 1:
+            self.router.goToCountDownScreen(with: .nhay_hen_gio)
+        case 2:
+            self.router.goToCountDownScreen(with: .nhay_dem_nguoc)
+        default:
+            break
+        }
     }
 }
 
@@ -96,7 +122,7 @@ extension DayNhayScreenViewController: DayNhayScreenViewProtocol {
 }
 
 extension DayNhayScreenViewController: CountDownResponeProtocol {
-    func goToDetailScreen(_ vc: UIViewController) {
-        router.goToDayNhayDetailScreen()
+    func goToDetailScreen(_ vc: UIViewController, with exerciseType: ExerciseTypes) {
+        self.router.goToDayNhayDetailScreen(with: exerciseType)
     }
 }

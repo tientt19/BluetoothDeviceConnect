@@ -16,7 +16,7 @@ protocol CountDownScreenViewProtocol: AnyObject {
 }
 
 protocol CountDownResponeProtocol: AnyObject {
-    func goToDetailScreen(_ vc : UIViewController)
+    func goToDetailScreen(_ vc : UIViewController, with exerciseType: ExerciseTypes)
 }
 
 // MARK: - CountDownScreen ViewController
@@ -24,7 +24,7 @@ class CountDownScreenViewController: BaseViewController {
     var router: CountDownScreenRouterProtocol!
     var viewModel: CountDownScreenViewModelProtocol!
     var countDownResponseDelegate: CountDownResponeProtocol?
-
+    var exerciseType: ExerciseTypes!
     var circleProgressView = CircleProgressView()
     
     @IBOutlet weak var view_countDown: UIView!
@@ -77,7 +77,7 @@ extension CountDownScreenViewController: CircleProgressViewDelegate {
     
     @objc func goToDetailScreen() {
         self.dismiss(animated: false) {
-            self.countDownResponseDelegate?.goToDetailScreen(DayNhayScreenRouter.setupModule())
+            self.countDownResponseDelegate?.goToDetailScreen(DayNhayScreenRouter.setupModule(), with: self.exerciseType)
         }
     }
 }
