@@ -76,6 +76,15 @@
 		5295045228169DAB00B54BAD /* DsachBaiTapTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5295045028169DAB00B54BAD /* DsachBaiTapTableViewCell.xib */; };
 		52A45FA92818EFEF00F89CAB /* CellResultTBV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A45FA72818EFEF00F89CAB /* CellResultTBV.swift */; };
 		52A45FAA2818EFEF00F89CAB /* CellResultTBV.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52A45FA82818EFEF00F89CAB /* CellResultTBV.xib */; };
+		52B46AC0284DCC9C00998BDF /* LeaderBoardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B46ABB284DCC9C00998BDF /* LeaderBoardRouter.swift */; };
+		52B46AC1284DCC9C00998BDF /* LeaderBoardInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B46ABC284DCC9C00998BDF /* LeaderBoardInteractorInput.swift */; };
+		52B46AC2284DCC9C00998BDF /* LeaderBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B46ABD284DCC9C00998BDF /* LeaderBoardViewController.swift */; };
+		52B46AC3284DCC9C00998BDF /* LeaderBoardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B46ABE284DCC9C00998BDF /* LeaderBoardViewModel.swift */; };
+		52B46AC4284DCC9C00998BDF /* LeaderBoardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52B46ABF284DCC9C00998BDF /* LeaderBoardViewController.xib */; };
+		52B46ACD284DD09700998BDF /* CellTableViewStatisticalLeaderBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B46ACB284DD09700998BDF /* CellTableViewStatisticalLeaderBoard.swift */; };
+		52B46ACE284DD09700998BDF /* CellTableViewStatisticalLeaderBoard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52B46ACC284DD09700998BDF /* CellTableViewStatisticalLeaderBoard.xib */; };
+		52B46AD3284DD0BD00998BDF /* CellTableViewRankingLeaderBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B46AD1284DD0BD00998BDF /* CellTableViewRankingLeaderBoard.swift */; };
+		52B46AD4284DD0BD00998BDF /* CellTableViewRankingLeaderBoard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52B46AD2284DD0BD00998BDF /* CellTableViewRankingLeaderBoard.xib */; };
 		52C59FA32818E133007A69AE /* CellResultColletionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C59FA12818E133007A69AE /* CellResultColletionViewCell.swift */; };
 		52C59FA42818E133007A69AE /* CellResultColletionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52C59FA22818E133007A69AE /* CellResultColletionViewCell.xib */; };
 		52C59FA62818E1A7007A69AE /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C59FA52818E1A7007A69AE /* UICollectionView.swift */; };
@@ -179,6 +188,15 @@
 		5295045028169DAB00B54BAD /* DsachBaiTapTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DsachBaiTapTableViewCell.xib; sourceTree = "<group>"; };
 		52A45FA72818EFEF00F89CAB /* CellResultTBV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellResultTBV.swift; sourceTree = "<group>"; };
 		52A45FA82818EFEF00F89CAB /* CellResultTBV.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellResultTBV.xib; sourceTree = "<group>"; };
+		52B46ABB284DCC9C00998BDF /* LeaderBoardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderBoardRouter.swift; sourceTree = "<group>"; };
+		52B46ABC284DCC9C00998BDF /* LeaderBoardInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderBoardInteractorInput.swift; sourceTree = "<group>"; };
+		52B46ABD284DCC9C00998BDF /* LeaderBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderBoardViewController.swift; sourceTree = "<group>"; };
+		52B46ABE284DCC9C00998BDF /* LeaderBoardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderBoardViewModel.swift; sourceTree = "<group>"; };
+		52B46ABF284DCC9C00998BDF /* LeaderBoardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeaderBoardViewController.xib; sourceTree = "<group>"; };
+		52B46ACB284DD09700998BDF /* CellTableViewStatisticalLeaderBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTableViewStatisticalLeaderBoard.swift; sourceTree = "<group>"; };
+		52B46ACC284DD09700998BDF /* CellTableViewStatisticalLeaderBoard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellTableViewStatisticalLeaderBoard.xib; sourceTree = "<group>"; };
+		52B46AD1284DD0BD00998BDF /* CellTableViewRankingLeaderBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTableViewRankingLeaderBoard.swift; sourceTree = "<group>"; };
+		52B46AD2284DD0BD00998BDF /* CellTableViewRankingLeaderBoard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellTableViewRankingLeaderBoard.xib; sourceTree = "<group>"; };
 		52C59FA12818E133007A69AE /* CellResultColletionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellResultColletionViewCell.swift; sourceTree = "<group>"; };
 		52C59FA22818E133007A69AE /* CellResultColletionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellResultColletionViewCell.xib; sourceTree = "<group>"; };
 		52C59FA52818E1A7007A69AE /* UICollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
@@ -431,6 +449,7 @@
 		529504432816793100B54BAD /* DayNhayScreen */ = {
 			isa = PBXGroup;
 			children = (
+				52B46ABA284DCC8800998BDF /* LeaderBoard */,
 				5224F60B282A0E4A0040BC27 /* Alert */,
 				52D09241281A303C00F192BC /* Home */,
 				52FDF7532817DFF00019E372 /* DayNhayResult */,
@@ -466,6 +485,46 @@
 				52A45FA82818EFEF00F89CAB /* CellResultTBV.xib */,
 			);
 			path = "Cell Result TableView ";
+			sourceTree = "<group>";
+		};
+		52B46ABA284DCC8800998BDF /* LeaderBoard */ = {
+			isa = PBXGroup;
+			children = (
+				52B46ABB284DCC9C00998BDF /* LeaderBoardRouter.swift */,
+				52B46ABC284DCC9C00998BDF /* LeaderBoardInteractorInput.swift */,
+				52B46ABD284DCC9C00998BDF /* LeaderBoardViewController.swift */,
+				52B46ABE284DCC9C00998BDF /* LeaderBoardViewModel.swift */,
+				52B46ABF284DCC9C00998BDF /* LeaderBoardViewController.xib */,
+				52B46ACA284DD07A00998BDF /* Cell Table View Leader Board */,
+			);
+			path = LeaderBoard;
+			sourceTree = "<group>";
+		};
+		52B46ACA284DD07A00998BDF /* Cell Table View Leader Board */ = {
+			isa = PBXGroup;
+			children = (
+				52B46ACF284DD09A00998BDF /* Statistical */,
+				52B46AD0284DD0A700998BDF /* Ranking */,
+			);
+			path = "Cell Table View Leader Board";
+			sourceTree = "<group>";
+		};
+		52B46ACF284DD09A00998BDF /* Statistical */ = {
+			isa = PBXGroup;
+			children = (
+				52B46ACB284DD09700998BDF /* CellTableViewStatisticalLeaderBoard.swift */,
+				52B46ACC284DD09700998BDF /* CellTableViewStatisticalLeaderBoard.xib */,
+			);
+			path = Statistical;
+			sourceTree = "<group>";
+		};
+		52B46AD0284DD0A700998BDF /* Ranking */ = {
+			isa = PBXGroup;
+			children = (
+				52B46AD1284DD0BD00998BDF /* CellTableViewRankingLeaderBoard.swift */,
+				52B46AD2284DD0BD00998BDF /* CellTableViewRankingLeaderBoard.xib */,
+			);
+			path = Ranking;
 			sourceTree = "<group>";
 		};
 		52C59FA02818E111007A69AE /* Cell ResultCollectionView */ = {
@@ -643,6 +702,7 @@
 				52FDF75D2817E00D0019E372 /* DayNhayResultScreenViewController.xib in Resources */,
 				52C59FA42818E133007A69AE /* CellResultColletionViewCell.xib in Resources */,
 				5238E74A27F9F62400235A2D /* CustomCell.xib in Resources */,
+				52B46ACE284DD09700998BDF /* CellTableViewStatisticalLeaderBoard.xib in Resources */,
 				5279F45327F9A0D900A1F151 /* TrainingDetailViewController.xib in Resources */,
 				5224F61A282A26310040BC27 /* AlertInputTime.xib in Resources */,
 				5295045228169DAB00B54BAD /* DsachBaiTapTableViewCell.xib in Resources */,
@@ -655,9 +715,11 @@
 				5295044D2816795D00B54BAD /* DayNhayScreenViewController.xib in Resources */,
 				5224F615282A11CD0040BC27 /* CellTableViewTimePicker.xib in Resources */,
 				522A58D127F8B2F1008B45E0 /* HomeScreenViewController.xib in Resources */,
+				52B46AD4284DD0BD00998BDF /* CellTableViewRankingLeaderBoard.xib in Resources */,
 				522A58C027F8AE91008B45E0 /* MainTabBarController.xib in Resources */,
 				522A58E727F8B329008B45E0 /* StoreScreenViewController.xib in Resources */,
 				52FDF7662817E7F70019E372 /* CellResultTableViewHeader.xib in Resources */,
+				52B46AC4284DCC9C00998BDF /* LeaderBoardViewController.xib in Resources */,
 				522A58DC27F8B310008B45E0 /* MessagesScreenViewController.xib in Resources */,
 				5287C5A7282A445F003C6A8A /* AlertStopJumpViewController.xib in Resources */,
 				52D0924C281A305F00F192BC /* CountDownScreenViewController.xib in Resources */,
@@ -723,11 +785,13 @@
 				52FDF76A2817E81E0019E372 /* CellResultTableViewCellBody.swift in Sources */,
 				522A58F027F8B361008B45E0 /* TrainingScreenInteractorInput.swift in Sources */,
 				522A58CD27F8B2F1008B45E0 /* HomeScreenRouter.swift in Sources */,
+				52B46ACD284DD09700998BDF /* CellTableViewStatisticalLeaderBoard.swift in Sources */,
 				52FDF74F2817C8020019E372 /* DayNhayDetailScreenInteractorInput.swift in Sources */,
 				522A58FA27F8B37A008B45E0 /* ProfileScreenRouter.swift in Sources */,
 				52A45FA92818EFEF00F89CAB /* CellResultTBV.swift in Sources */,
 				522A58EF27F8B361008B45E0 /* TrainingScreenRouter.swift in Sources */,
 				52FDF74E2817C8020019E372 /* DayNhayDetailScreenRouter.swift in Sources */,
+				52B46AC2284DCC9C00998BDF /* LeaderBoardViewController.swift in Sources */,
 				522A590027F8B3E0008B45E0 /* BaseViewController.swift in Sources */,
 				5238E74927F9F62400235A2D /* CustomCell.swift in Sources */,
 				5224F614282A11CD0040BC27 /* CellTableViewTimePicker.swift in Sources */,
@@ -750,6 +814,8 @@
 				5295044C2816795D00B54BAD /* DayNhayScreenViewModel.swift in Sources */,
 				522A58E427F8B329008B45E0 /* StoreScreenInteractorInput.swift in Sources */,
 				52C59FA62818E1A7007A69AE /* UICollectionView.swift in Sources */,
+				52B46AC0284DCC9C00998BDF /* LeaderBoardRouter.swift in Sources */,
+				52B46AC1284DCC9C00998BDF /* LeaderBoardInteractorInput.swift in Sources */,
 				52FDF7652817E7F70019E372 /* CellResultTableViewHeader.swift in Sources */,
 				522A58FB27F8B37A008B45E0 /* ProfileScreenInteractorInput.swift in Sources */,
 				52D0924B281A305F00F192BC /* CountDownScreenViewModel.swift in Sources */,
@@ -765,6 +831,7 @@
 				522A58FD27F8B37A008B45E0 /* ProfileScreenViewModel.swift in Sources */,
 				5279F44527F998D500A1F151 /* TrainingTableViewCell.swift in Sources */,
 				522A58DB27F8B310008B45E0 /* MessagesScreenViewModel.swift in Sources */,
+				52B46AD3284DD0BD00998BDF /* CellTableViewRankingLeaderBoard.swift in Sources */,
 				5279F44F27F9A0D900A1F151 /* TrainingDetailRouter.swift in Sources */,
 				522A58BF27F8AE91008B45E0 /* MainTabBarController.swift in Sources */,
 				5279F45027F9A0D900A1F151 /* TrainingDetailInteractorInput.swift in Sources */,
@@ -773,6 +840,7 @@
 				522A58CF27F8B2F1008B45E0 /* HomeScreenViewController.swift in Sources */,
 				522A58C327F8AF11008B45E0 /* BaseNavigationController.swift in Sources */,
 				52C59FA32818E133007A69AE /* CellResultColletionViewCell.swift in Sources */,
+				52B46AC3284DCC9C00998BDF /* LeaderBoardViewModel.swift in Sources */,
 				5238E74527F9F61300235A2D /* CustomHeader.swift in Sources */,
 				522A58CE27F8B2F1008B45E0 /* HomeScreenInteractorInput.swift in Sources */,
 				52FDF76F2817E8510019E372 /* CellResultTableViewFooter.swift in Sources */,

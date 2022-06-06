@@ -13,6 +13,7 @@ import UIKit
 protocol DayNhayScreenRouterProtocol {
     func goToDayNhayDetailScreen(with exerciseType: ExerciseTypes)
     func goToCountDownScreen(with exerciseType: ExerciseTypes)
+    func goToLeaderBoardScreen()
 }
 
 // MARK: - DayNhayScreen Router
@@ -47,5 +48,10 @@ extension DayNhayScreenRouter: DayNhayScreenRouterProtocol {
         preController.countDownResponseDelegate = viewController
         preController.modalPresentationStyle = .fullScreen
         self.viewController?.present(preController, animated: true, completion: nil)
+    }
+    
+    func goToLeaderBoardScreen() {
+        let controller = LeaderBoardRouter.setupModule()
+        self.viewController?.navigationController?.pushViewController(controller, animated: true)
     }
 }

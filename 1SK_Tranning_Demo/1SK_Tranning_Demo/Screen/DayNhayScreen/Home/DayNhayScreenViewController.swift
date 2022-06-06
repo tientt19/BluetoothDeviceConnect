@@ -61,6 +61,10 @@ class DayNhayScreenViewController: BaseViewController {
     @IBAction func dismissVC(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
+    
+    @IBAction func onLeaderBoardTap(_ sender: UIButton) {
+        self.router.goToLeaderBoardScreen()
+    }
 }
 
 //MARK: - UITableViewDataSource
