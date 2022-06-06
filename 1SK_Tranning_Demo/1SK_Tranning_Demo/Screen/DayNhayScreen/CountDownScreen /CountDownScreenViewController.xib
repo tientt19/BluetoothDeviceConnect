@@ -75,7 +75,7 @@
                 <constraint firstItem="mow-3p-BUi" firstAttribute="leading" secondItem="KlH-tW-6zV" secondAttribute="leading" id="PKC-7b-kHW"/>
                 <constraint firstItem="mow-3p-BUi" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="o78-wQ-xYN"/>
             </constraints>
-            <point key="canvasLocation" x="348" y="-152"/>
+            <point key="canvasLocation" x="-578" y="-168"/>
         </view>
     </objects>
 </document>

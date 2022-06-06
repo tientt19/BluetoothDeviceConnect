@@ -86,7 +86,7 @@ extension DayNhayScreenViewController: UITableViewDataSource {
         case 1:
             cell.lbl_exerciseName.text = "Nhảy hẹn giờ"
         case 2:
-            cell.lbl_exerciseName.text = "Nhảy đếm ngược"
+            cell.lbl_exerciseName.text = "Nhảy hẹn giờ"
         default:
             break
         }

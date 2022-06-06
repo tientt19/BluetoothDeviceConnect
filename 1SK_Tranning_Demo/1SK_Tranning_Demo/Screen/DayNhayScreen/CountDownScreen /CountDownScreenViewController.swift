@@ -26,7 +26,7 @@ class CountDownScreenViewController: BaseViewController {
     var countDownResponseDelegate: CountDownResponeProtocol?
     var exerciseType: ExerciseTypes!
     var circleProgressView = CircleProgressView()
-    
+ 
     @IBOutlet weak var view_countDown: UIView!
     @IBOutlet weak var view_countDown_Parent: UIView!
     @IBOutlet weak var lbl_start: UILabel!

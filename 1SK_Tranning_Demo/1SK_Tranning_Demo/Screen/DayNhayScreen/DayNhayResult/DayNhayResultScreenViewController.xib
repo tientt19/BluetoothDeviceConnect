@@ -78,7 +78,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="DKq-VK-Tyu" secondAttribute="trailing" constant="16" id="BIN-N4-hhL"/>
                                 <constraint firstItem="DKq-VK-Tyu" firstAttribute="leading" secondItem="wer-Fv-BdK" secondAttribute="leading" constant="16" id="HbX-aG-U7z"/>
